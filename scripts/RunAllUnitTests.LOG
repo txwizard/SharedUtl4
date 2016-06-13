@@ -1,0 +1,43 @@
+2016/06/11 20:56:46	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 20:56
+2016/06/11 20:56:48	EOJ RunAllUnitTests.CMD
+2016/06/11 21:02:41	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 21:02
+2016/06/11 21:02:53	EOJ RunAllUnitTests.CMD
+2016/06/11 21:19:28	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 21:19
+2016/06/11 21:20:10	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 21:20
+2016/06/11 21:20:15	EOJ RunAllUnitTests.CMD
+2016/06/11 21:45:46	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 21:45
+2016/06/11 21:45:46	Step 1 of 5: Establish the data directory as the current working directory.
+2016/06/11 21:45:46	Step 2 of 5: Set the working directory to C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+2016/06/11 21:45:46	Step 3 of 5 Begin: Decide which build to execute.
+2016/06/11 21:45:46	Step 3 of 5 Done: Build = Debug.
+2016/06/11 21:45:46	Step 4 of 5: ..\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+2016/06/11 21:45:50	Step 4 of 5: Done!
+2016/06/11 21:45:50	Step 5 of 5: Save the output file into which this record is being written by appending a time stamp to its base name.
+2016/06/11 21:45:50	EOJ RunAllUnitTests.CMD
+2016/06/11 21:53:46	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 21:53
+2016/06/11 21:53:46	Step 1 of 5: Establish the data directory as the current working directory.
+2016/06/11 21:53:46	Step 2 of 5: Set the working directory to C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+2016/06/11 21:53:46	Step 3 of 5 Begin: Decide which build to execute.
+2016/06/11 21:53:46	Step 3 of 5 Done: Build = Debug.
+2016/06/11 21:53:46	Step 4 of 5: ..\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+2016/06/11 21:53:50	Step 4 of 5: Done!
+2016/06/11 21:53:50	Step 5 of 5: Save the output file into which this record is being written by appending a time stamp to its base name.
+2016/06/11 21:53:50	EOJ RunAllUnitTests.CMD
+2016/06/11 22:43:44	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 22:39
+2016/06/11 22:43:44	Step 1 of 5: Establish the data directory as the current working directory.
+2016/06/11 22:43:44	Step 2 of 5: Set the working directory to C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+2016/06/11 22:43:44	Step 3 of 5 Begin: Decide which build to execute.
+2016/06/11 22:43:44	Step 3 of 5 Done: Build = Debug.
+2016/06/11 22:43:44	Step 4 of 5: ..\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+2016/06/11 22:43:48	Step 4 of 5: Done!
+2016/06/11 22:43:48	Step 5 of 5: Save the output file into which this record is being written by appending a time stamp to its base name.
+2016/06/11 22:43:48	EOJ RunAllUnitTests.CMD
+2016/06/12 00:49:00	BOJ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\scripts\RunAllUnitTests.CMD, version 2016-06-11 22:39
+2016/06/12 00:49:00	Step 1 of 5: Establish the data directory as the current working directory.
+2016/06/12 00:49:00	Step 2 of 5: Set the working directory to C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+2016/06/12 00:49:00	Step 3 of 5 Begin: Decide which build to execute.
+2016/06/12 00:49:00	Step 3 of 5 Done: Build = Debug.
+2016/06/12 00:49:00	Step 4 of 5: ..\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+2016/06/12 00:49:09	Step 4 of 5: Done!
+2016/06/12 00:49:09	Step 5 of 5: Save the output file into which this record is being written by appending a time stamp to its base name.
+2016/06/12 00:49:09	EOJ RunAllUnitTests.CMD

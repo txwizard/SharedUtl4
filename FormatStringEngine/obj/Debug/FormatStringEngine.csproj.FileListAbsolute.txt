@@ -1,0 +1,37 @@
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\WizardWrx.FormatStringEngine.Properties.Resources.resources
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.FormatStringEngine.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.FormatStringEngine.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\WizardWrx.FormatStringEngine.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\WizardWrx.FormatStringEngine.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.AnyCSV.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.AnyCSV.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.ASCIIInfo.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.ASCIIInfo.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.ASCIIInfo.xml
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.AnyCSV.xml
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.FormatStringEngine.XML
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.FormatStringEngine.XML
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.FormatStringEngine.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.FormatStringEngine.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.AnyCSV.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.ASCIIInfo.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.DLLServices2.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.AnyCSV.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.AnyCSV.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.ASCIIInfo.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.ASCIIInfo.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.DLLServices2.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.DLLServices2.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\FormatStringEngine.csprojResolveAssemblyReference.cache
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\WizardWrx.FormatStringEngine.Properties.Resources.resources
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\FormatStringEngine.csproj.GenerateResource.Cache
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\WizardWrx.FormatStringEngine.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\obj\Debug\WizardWrx.FormatStringEngine.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.BitMath.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.BitMath.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.BitMath.xml

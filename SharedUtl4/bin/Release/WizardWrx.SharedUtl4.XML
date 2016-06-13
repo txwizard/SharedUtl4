@@ -1,0 +1,2514 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WizardWrx.SharedUtl4</name>
+    </assembly>
+    <members>
+        <member name="T:WizardWrx.Cryptography.DigestFile">
+            <summary>
+            Static methods for computing message digests for files, using the most
+            common algorithms.
+            
+            iMPORTANT: Since files are read in binary, they are loaded directly
+            into the hash algorithm as byte arrays. This means that the digest
+            of a file of ASCII characters and the hash of the file contents read
+            into a CLR string object, which is a string of Unicode characters,
+            will differ. The reason for this is that the string of Unicode 
+            characters yields a different byte stream than the byte stream that
+            came from reading the file in binary mode.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestFile.MD5Hash(System.String)">
+             <summary>
+             Given the name of a file, return its MD5 message digest as a 32 
+             character string of hexadecimal digits.
+             </summary>
+             <param name="pstrFileName">
+             String containing the name of the file to be digested. See Remarks
+             for important information about the internal implementation.
+             
+             iMPORTANT: Since files are read in binary, they are loaded directly
+             into the hash algorithm as byte arrays. This means that the digest
+             of a file of ASCII characters and the hash of the file contents read
+             into a CLR string object, which is a string of Unicode characters,
+             will differ. The reason for this is that the string of Unicode 
+             characters yields a different byte stream than the byte stream that
+             came from reading the file in binary mode.
+             </param>
+             <returns>
+             The message digest, consisting of a string of 32 hexadecimal
+             characters. This string is identical with the strings returned by
+             the reference implementation, published by Dr. Ronald Rivest, who is
+             credited with inventing the MD5 digest algorithm.
+             </returns>
+            <remarks>
+             Since the internal hashing implementations expect byte arrays, the
+             input string must be converted. The Encoding.Default.GetBytes method
+             is called upon to convert the string into a byte array.
+             
+             A slightly modified version of the Rivest code, written in ANSI C,
+             is the engine in my MD5WIN stand-alone program and my MD5Digest
+             Windows Dynamic Link Library.
+             
+             However, this function uses a MD5CryptoServiceProvider object, which
+             provides a managed interface to the Cryptographic Service Provider
+             in the host's installation of Microsoft Windows. I chose this over
+             the 100% managed implementation for two reasons.
+             
+             1) The CSP implementation uses native machine code for the
+             computation, and should outperform managed code on large plaintexts.
+             
+             2) By using the native implementation, the CLR is eliminated as a
+             potential point of failure due to a weakness in the implementation
+             of the algorithm.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestFile.SHA1Hash(System.String)">
+            <summary>
+            Given the name of a file, return its SHA-1 message digest as a 32
+            character string of hexadecimal digits.
+            </summary>
+            <param name="pstrFileName">
+            String containing the name of the file to be digested.
+            
+            iMPORTANT: Since files are read in binary, they are loaded directly
+            into the hash algorithm as byte arrays. This means that the digest
+            of a file of ASCII characters and the hash of the file contents read
+            into a CLR string object, which is a string of Unicode characters,
+            will differ. The reason for this is that the string of Unicode 
+            characters yields a different byte stream than the byte stream that
+            came from reading the file in binary mode.
+            </param>
+            <returns>
+            The message digest, consisting of a string of 40 hexadecimal
+            characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestFile.SHA256Hash(System.String)">
+            <summary>
+            Given the name of a file, return its SHA-256 message digest as a 64
+            character string of hexadecimal digits.
+            </summary>
+            <param name="pstrFileName">
+            String containing the name of the file to be digested.
+            
+            iMPORTANT: Since files are read in binary, they are loaded directly
+            into the hash algorithm as byte arrays. This means that the digest
+            of a file of ASCII characters and the hash of the file contents read
+            into a CLR string object, which is a string of Unicode characters,
+            will differ. The reason for this is that the string of Unicode 
+            characters yields a different byte stream than the byte stream that
+            came from reading the file in binary mode.
+            </param>
+            <returns>
+            The message digest, consisting of a string of 64 hexadecimal
+            characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestFile.SHA384Hash(System.String)">
+            <summary>
+            Given the name of a file, return its SHA-384 message digest as a 96
+            character string of hexadecimal digits.
+            </summary>
+            <param name="pstrFileName">
+            String containing the name of the file to be digested.
+            
+            iMPORTANT: Since files are read in binary, they are loaded directly
+            into the hash algorithm as byte arrays. This means that the digest
+            of a file of ASCII characters and the hash of the file contents read
+            into a CLR string object, which is a string of Unicode characters,
+            will differ. The reason for this is that the string of Unicode 
+            characters yields a different byte stream than the byte stream that
+            came from reading the file in binary mode.
+            </param>
+            <returns>
+            The message digest, consisting of a string of 64 hexadecimal
+            characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestFile.SHA512Hash(System.String)">
+            <summary>
+            Given the name of a file, return its SHA-512 message digest as a 128
+            character string of hexadecimal digits.
+            </summary>
+            <param name="pstrFileName">
+            String containing the name of the file to be digested.
+            
+            iMPORTANT: Since files are read in binary, they are loaded directly
+            into the hash algorithm as byte arrays. This means that the digest
+            of a file of ASCII characters and the hash of the file contents read
+            into a CLR string object, which is a string of Unicode characters,
+            will differ. The reason for this is that the string of Unicode 
+            characters yields a different byte stream than the byte stream that
+            came from reading the file in binary mode.
+            </param>
+            <returns>
+            The message digest, consisting of a string of 64 hexadecimal
+            characters.
+            </returns>
+        </member>
+        <member name="T:WizardWrx.Cryptography.DigestString">
+            <summary>
+            Static methods for computing message digests for strings, using the most
+            common algorithms.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestString.SHA256Hash(System.String)">
+            <summary>
+            Given a string, return its SHA-256 message digest as a 64
+            character string of hexadecimal digits.
+            </summary>
+            <param name="strPlaintext">
+            Supply a pointer to the string to be digested.
+            </param>
+            <returns>
+            The return value is a message digest, consisting of a string of 64
+            hexadecimal characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestString.SHA256Hash(System.Byte[])">
+            <summary>
+            Given a byte array, return its SHA-256 message digest as a 64
+            character string of hexadecimal digits.
+            </summary>
+            <param name="pabytPlainText">
+            Supply a pointer to the byte array to be digested.
+            </param>
+            <returns>
+            The return value is a message digest, consisting of a string of 64
+            hexadecimal characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestString.SHA384Hash(System.String)">
+            <summary>
+            Given a string, return its SHA-384 message digest as a 96
+            character string of hexadecimal digits.
+            </summary>
+            <param name="strPlaintext">
+            Supply a pointer to the string to be digested.
+            </param>
+            <returns>
+            The return value is a message digest, consisting of a string of 96
+            hexadecimal characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestString.SHA384Hash(System.Byte[])">
+            <summary>
+            Given a byte array, return its SHA-384 message digest as a 96
+            character string of hexadecimal digits.
+            </summary>
+            <param name="pabytPlainText">
+            Supply a pointer to the byte array to be digested.
+            </param>
+            <returns>
+            The return value is a message digest, consisting of a string of 96
+            hexadecimal characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestString.SHA512Hash(System.String)">
+            <summary>
+            Given a string, return its SHA-512 message digest as a 128
+            character string of hexadecimal digits.
+            </summary>
+            <param name="strPlaintext">
+            Supply a pointer to the string to be digested.
+            </param>
+            <returns>
+            The return value is a message digest, consisting of a string of 128
+            hexadecimal characters.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Cryptography.DigestString.SHA512Hash(System.Byte[])">
+            <summary>
+            Given a byte array, return its SHA-512 message digest as a 128
+            character string of hexadecimal digits.
+            </summary>
+            <param name="pabytPlainText">
+            Supply a pointer to the byte array to be digested.
+            </param>
+            <returns>
+            The return value is a message digest, consisting of a string of 128
+            hexadecimal characters.
+            </returns>
+        </member>
+        <member name="T:WizardWrx.ErrorMessage">
+            <summary>
+            This displays the error messages that accompany exit codes.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ErrorMessage.ARRAY_ALLOCATE_NONE">
+            <summary>
+            Unless overridden, the display routines use this string as input to
+            a string.Format derivative.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ErrorMessage.#ctor">
+            <summary>
+            The default constructor creates an empty instance, and overrides its DisplayFormat property.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ErrorMessage.#ctor(System.UInt32,System.String)">
+            <summary>
+            Create a basic message.
+            </summary>
+            <param name="exitcode">
+            Specify the associated exit code.
+            
+            Please see the remarks.
+            </param>
+            <param name="message">
+            Specify the associated message, which may contain format items.
+            
+            Please see the remarks.
+            </param>
+            <remarks>
+            When loading messages from a table that is indexed by exit code, 
+            including the success exit code (zero), use a classic FOR loop to
+            enumerate the elements, and the loop index can do double duty as the
+            exit code.
+            
+            Be aware that the constructors of this class specify the message
+            first, followed by the exit code, because the message goes into the
+            Label property of the base class, while the exit code goes into the
+            Value property.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ErrorMessage.#ctor(System.UInt32,System.String,System.Object[])">
+            <summary>
+            Create a message that substitutes additional values supplied at run
+            time.
+            </summary>
+            <param name="exitcode">
+            Specify the associated exit code.
+            
+            Please see the remarks.
+            </param>
+            <param name="message">
+            Specify the associated message, which may contain format items.
+            
+            Please see the remarks.
+            </param>
+            <param name="supplementarydetails">
+            Use this argument to supply a list of one or more extra items to be
+            substituted into the message at run time.
+            </param>
+            <remarks>
+            When loading messages from a table that is indexed by exit code, 
+            including the success exit code (zero), use a classic FOR loop to
+            enumerate the elements, and the loop index can do double duty as the
+            exit code.
+            
+            Be aware that the constructors of this class specify the message
+            first, followed by the exit code, because the message goes into the
+            Label property of the base class, while the exit code goes into the
+            Value property.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ErrorMessage.#ctor(System.UInt32,System.String,System.String,System.Object[])">
+            <summary>
+            Create a message that substitutes additional values supplied at run
+            time.
+            </summary>
+            <param name="exitcode">
+            Specify the associated exit code.
+            
+            Please see the remarks.
+            </param>
+            <param name="message">
+            Specify the associated message, which may contain format items.
+            
+            Please see the remarks.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            
+            Overriding this format string is independent of format item tokens
+            that may be embedded in the message text.
+            </param>
+            <param name="supplementarydetails">
+            Use this argument to supply a list of one or more extra items to be
+            substituted into the message at run time.
+            </param>
+            <remarks>
+            When loading messages from a table that is indexed by exit code, 
+            including the success exit code (zero), use a classic FOR loop to
+            enumerate the elements, and the loop index can do double duty as the
+            exit code.
+            
+            Be aware that the constructors of this class specify the message
+            first, followed by the exit code, because the message goes into the
+            Label property of the base class, while the exit code goes into the
+            Value property.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ErrorMessage.FormatDetail">
+            <summary>
+            Use the defaut format string, along with the exit code, message, and
+            any SupplementaryDetails items stored with the instance to format
+            and return a message string.
+            </summary>
+            <returns>
+            The return value is a complete message, ready to display on a system
+            console or in a message box, or to record in a log file.
+            
+            Please see the Remarks.
+            </returns>
+            <remarks>
+            Following is an outline of how I anticipate using this class.
+            
+            1) At startup, values known at that time, such as the initial
+            working directory name or program startup time, version, etc., go
+            into a static SupplementaryDetails arrat that belongs to all 
+            instances.
+            
+            2) Additional information that is also known at startup, but is
+            relevant for only a subset of messages, goes into a collection that
+            is stored with the message in its instance SupplementaryDetails
+            array.
+            
+            3) When the message is generated, last minute details that become
+            available when the message is generated, such as, for example, the
+            name of a file that cannot be opened, are fed into this method.
+            
+            Here is how the two collections work together.
+            
+            1) Format item 0 is reserved for the exit code.
+            
+            2) Format item 1 is reserved for the predefined message.
+            
+            3) Additional format items, if any, map to elements of one or both
+            SupplementaryDetails arrays, which are joined end to end.
+            
+            4) Any format item may appear in either the message format or the
+            message, itself. Theoretically, a format item can appear in both,
+            since the message is constructed by passing it through string.Format
+            before passing it, along with the the format string stored directly
+            or indirectly in the instance, to string.Format.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ErrorMessage.FormatDetail(System.Object[])">
+            <summary>
+            Use the defaut format string, along with the exit code, message,
+            any SupplementaryDetails items stored with the instance and passed
+            into the method to format and return a message string.
+            </summary>
+            <param name="supplementarydetails">
+            Specify addtional details, such as might be unavailable when the
+            message collection is constructed, presumably at startup.
+            </param>
+            <returns>
+            The return value is a complete message, ready to display on a system
+            console or in a message box, or to record in a log file.
+            
+            Please see the Remarks.
+            </returns>
+            <remarks>
+            Following is an outline of how I anticipate using this class.
+            
+            1) At startup, values known at that time, such as the initial
+            working directory name or program startup time, version, etc., go
+            into a static SupplementaryDetails arrat that belongs to all 
+            instances.
+            
+            2) Additional information that is also known at startup, but is
+            relevant for only a subset of messages, goes into a collection that
+            is stored with the message in its instance SupplementaryDetails
+            array.
+            
+            3) When the message is generated, last minute details that become
+            available when the message is generated, such as, for example, the
+            name of a file that cannot be opened, are fed into this method.
+            
+            Here is how the two collections work together.
+            
+            1) Format item 0 is reserved for the exit code.
+            
+            2) Format item 1 is reserved for the predefined message.
+            
+            3) Additional format items, if any, map to elements of one or both
+            SupplementaryDetails arrays, which are joined end to end.
+            
+            4) Any format item may appear in either the message format or the
+            message, itself. Theoretically, a format item can appear in both,
+            since the message is constructed by passing it through string.Format
+            before passing it, along with the the format string stored directly
+            or indirectly in the instance, to string.Format.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ErrorMessage.FormatDetail(System.Object[],System.String)">
+            <summary>
+            Use the supplied format string, along with the exit code, message,
+            any SupplementaryDetails items stored with the instance and passed
+            into the method to format and return a message string.
+            </summary>
+            <param name="supplementarydetails">
+            Specify addtional details, such as might be unavailable when the
+            message collection is constructed, presumably at startup.
+            </param>
+            <param name="displayformat">
+            Specify the string to substitute for the DisplayFormat string that
+            is otherwise visible to the instance.
+            </param>
+            <returns>
+            The return value is a complete message, ready to display on a system
+            console or in a message box, or to record in a log file.
+            
+            Please see the Remarks.
+            </returns>
+            <remarks>
+            Following is an outline of how I anticipate using this class.
+            
+            1) At startup, values known at that time, such as the initial
+            working directory name or program startup time, version, etc., go
+            into a static SupplementaryDetails arrat that belongs to all 
+            instances.
+            
+            2) Additional information that is also known at startup, but is
+            relevant for only a subset of messages, goes into a collection that
+            is stored with the message in its instance SupplementaryDetails
+            array.
+            
+            3) When the message is generated, last minute details that become
+            available when the message is generated, such as, for example, the
+            name of a file that cannot be opened, are fed into this method.
+            
+            Here is how the two collections work together.
+            
+            1) Format item 0 is reserved for the exit code.
+            
+            2) Format item 1 is reserved for the predefined message.
+            
+            3) Additional format items, if any, map to elements of one or both
+            SupplementaryDetails arrays, which are joined end to end.
+            
+            4) Any format item may appear in either the message format or the
+            message, itself. Theoretically, a format item can appear in both,
+            since the message is constructed by passing it through string.Format
+            before passing it, along with the the format string stored directly
+            or indirectly in the instance, to string.Format.
+            </remarks>
+        </member>
+        <member name="F:WizardWrx.ErrorMessage._strDisplayFormat">
+            <summary>
+            The instance display format gets its own string, which is NULL,
+            unless the instance has a dedicated message format string.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ErrorMessage.s_strDefaultFormatString">
+            <summary>
+            The private storage for the default format string is initialized
+            from a private constant.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ErrorMessage.DisplayFormat">
+            <summary>
+            Return the custom instance format string if there is one. Otherwise,
+            return the default string stored in in the shared string.
+            
+            New values are accepted without question, and a null or empty string
+            reinstates the default format.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ErrorMessage.Message">
+            <summary>
+            The message string is accepted at face value.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ErrorMessage.SupplementaryDetails">
+            <summary>
+            This instance property gets or sets a collection of items to be
+            incorporated into error messages at run time. Use this property to
+            store values known at program startup.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ErrorMessage.ExitCode">
+            <summary>
+            The exit code is accepted at face value. Note, however, that only
+            positive integers are supported, since this class relies upon it as
+            an indexer.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ErrorMessage.DefaultFormatString">
+            <summary>
+            This static (Shared in Visual Basic) property gets or sets the
+            default message format string. Passing a null reference (Nothing in
+            Visual Basic) or the empty string resets the property to its hard
+            coded default value.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ErrorMessage.DetailFormatItems">
+            <summary>
+            This static (Shared in Visual Basic) property gets or sets the
+            default array of additional format items to be incorporated into
+            some or all messages. Passing a null reference (Nothing in Visual 
+            Basic) destroys the array.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ErrorMessagesCollection">
+            <summary>
+            This class is a specialized derivative of ReportDetails; its specialty
+            is managing error messages that correspond to exit codes.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ErrorMessagesCollection.ERR_SUCCESS">
+            <summary>
+            The default exit code of a Windows program is zero.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ErrorMessagesCollection.ERR_RUNTIME">
+            <summary>
+            Exit code 1 is reserved for misceallaneous runtime exceptions.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ErrorMessagesCollection.#ctor(System.Int32)">
+            <summary>
+            Create the collection, and reserve room for the expected number of
+            messages.
+            </summary>
+            <param name="capacity">
+            Specify the capacity, which might be the length of the array that
+            contains the messages. Better yet, use the next overload, which
+            accepts the whole array, from which it derives the capacity.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ErrorMessagesCollection.#ctor(System.String[])">
+            <summary>
+            Create the collection, and load an array of string into it.
+            </summary>
+            <param name="messages">
+            Specify the array of strings to load into the collection.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ErrorMessagesCollection.FormatDetail(System.UInt32)">
+            <summary>
+            Get the message returned by the default FormatDetail method on the
+            specified ErrorMessage object.
+            </summary>
+            <param name="exitcode">
+            Specify the exit code, cast to the unsigned integer type expected by
+            the ErrorExit method on the application state manager.
+            </param>
+            <returns>
+            The return value is a complete message, ready to display on a system
+            console or in a message box, or to record in a log file.
+            
+            Please see the Remarks on <see cref="T:WizardWrx.ErrorMessage"/>.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ErrorMessagesCollection.FormatDetail(System.UInt32,System.Object[])">
+            <summary>
+            Get the message returned by the FormatDetail method on the specified
+            ErrorMessage object that takes a SupplementaryDetails array.
+            </summary>
+            <param name="exitcode">
+            Specify the exit code, cast to the unsigned integer type expected by
+            the ErrorExit method on the application state manager.
+            </param>
+            <param name="supplementarydetails">
+            Specify addtional details, such as might be unavailable when the
+            message collection is constructed, presumably at startup.
+            </param>
+            <returns>
+            The return value is a complete message, ready to display on a system
+            console or in a message box, or to record in a log file.
+            
+            Please see the Remarks on <see cref="T:WizardWrx.ErrorMessage"/>.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ErrorMessagesCollection.FormatDetail(System.UInt32,System.Object[],System.String)">
+            <summary>
+            Get the message returned by the FormatDetail method on the specified
+            ErrorMessage object that takes a SupplementaryDetails array and a
+            custom format string.
+            </summary>
+            <param name="exitcode">
+            Specify the exit code, cast to the unsigned integer type expected by
+            the ErrorExit method on the application state manager.
+            </param>
+            <param name="supplementarydetails"></param>
+            <param name="displayformat">
+            Specify a new format string to override the default string assigned
+            to the class.
+            </param>
+            <returns>
+            The return value is a complete message, ready to display on a system
+            console or in a message box, or to record in a log file.
+            
+            Please see the Remarks on <see cref="T:WizardWrx.ErrorMessage"/>.
+            </returns>
+        </member>
+        <member name="T:WizardWrx.ListHelpers">
+            <summary>
+            This class exposes methods for merging sorted lists of items, and to
+            simplify working with the values returned through the IComparable 
+            interface.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ListHelpers.CompareTwoOfAKind``1(``0,``0)">
+            <summary>
+            Compare two objects of a kind. See Remarks.
+            </summary>
+            <typeparam name="T">
+            Both comparands must implement the IComparable interface.
+            </typeparam>
+            <param name="pReference">
+            The object against which to make the comparison.
+            </param>
+            <param name="pComparand">
+            A second object of the same type against which to compare.
+            </param>
+            <returns>
+            The return value is a member of the CompareResult enumeration, which
+            reduces evaluation of results returned by the CompareTo method to a
+            three-case switch statement.
+            </returns>
+            <exception cref="T:System.NullReferenceException">
+            A NullReferenceException exception is thrown when pReference is null.
+            The CompareTo method of the object's IComparable interface is
+            expected to return a LessThan result when pComparand is null. See
+            Remarks.
+            </exception>
+            <remarks>
+            This method encapsulates the CompareTo method of a class T,
+            returning a member of the CompareResult enumeration in place of the
+            arbitrary zero or positive or negative integer specified in the
+            IComparable interface. This syntactic sugar enables its return value
+            to be processed by a switch block, rather than a nested IF block.
+            
+            Whether or not I wrote it into the this, calling CompareTo on a null
+            pReference object would elicit a NullReference exception. Having the
+            application throw the exception permits it to supply a more
+            informative message than the one that the CLR would have generated.
+            For a two-argument function, the generic message is ambiguous.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ListHelpers.MergeNewItemsIntoArray``1(``0[],``0[])">
+            <summary>
+            Merge two sorted lists, returning a new sorted list containg the new
+            or updated items from a second list. Please see Remarks.
+            </summary>
+            <typeparam name="T">
+            All three lists (both inputs, paMasterList and paNewItems, and the
+            returned list) must contain objects of the same type, and that type
+            must implement the IComparable interface and have a parameterless
+            default constructor.
+            </typeparam>
+            <param name="paMasterList">
+            This array is the master list. Items without matching items in list
+            paNewItems are preserved. Please see Remarks.
+            </param>
+            <param name="paNewItems">
+            An item that matches an item in list paMasterList replaces it. An
+            item that doesn't match any existing item in list paMasterList is
+            merged into it. Please see Remarks.
+            </param>
+            <returns>
+            The returned list contains everything in list paNewItems, and
+            everything in list paMasterList that has no matching item in list
+            paMasterList. Please see Remarks. Since both input lists are sorted,
+            the new list is also sorted.
+            </returns>
+            <remarks>
+            The goal of this routine is to merge two lists, the first of which
+            is treated as a master list, into which new and updated items from
+            from the second list are merged.
+            
+            Merging is based on comparing items from both lists based on the
+            values returned by their respective CompareTo methods. Values that
+            return zero (equality) are merged by replacing the value from the
+            first list, represented by the first argument (paMasterList) with
+            that from the second list, represented by the second argument
+            (paNewItems).
+            
+            This algorithm imposes four requirements on its inputs.
+            
+            1) Both input arrays must be composed of objects of the same type.
+            
+            2) That type must implement the IComparable interface.
+            
+            3) That type must have a default constructor.
+            
+            4) Both input arrays must be sorted.
+            
+            In return, it makes the following four guarantees.
+            
+            1) Every item in array paNewItems will become part of the new list.
+            
+            2) Every item in array paMasterList that has no matching value in
+            array paNewItems will become part of the new list.
+            
+            3) Every item in array paNewItems that matches an item in array
+            paMasterList replaces that matching item.
+            
+            4) Every item in array paNewItems that doesn't match any item in
+            paMasterList is added to the list.
+            
+            On input, both lists must be sorted, which is the first reason that
+            the objects in the arrays must implement IComparable. The second
+            reason is that this routine must compare the two lists in order to
+            merge them correctly. The comparison happens in CompareTwoOfAKind, a
+            companion routine that also takes generics meeting the first of the
+            two specified constraints.
+            </remarks>
+        </member>
+        <member name="T:WizardWrx.ListHelpers.CompareResult">
+            <summary>
+            The CompareTwoOfAKind method returns a member of this enumeration,
+            providing for the CompareTo method of the IComparable interface that
+            it encapsulates with a tad of syntactic sugar.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.CompareResult.LessThan">
+            <summary>
+            Second argument, pComparand, is less than the first argument,
+            pReference.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.CompareResult.EqualTo">
+            <summary>
+            Both arguments are equal.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.CompareResult.GreaterThan">
+            <summary>
+            Second argument, pComparand, is greater than the first argument,
+            pReference.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ListHelpers.MergeSource">
+            <summary>
+            This enumeration is used internally by the MergeNewItemsIntoArray
+            method, where its use simplifies management of its internal state.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.MergeSource.Undetermined">
+            <summary>
+            This is the state at the beginning of the first iteration, until
+            method CompareTwoOfAKind evaluates the first item in each list.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.MergeSource.AddItemFromMasterList">
+            <summary>
+            The outcome of the comparison is a decision to add the current
+            item in the master list, which comes before the current item in
+            the list of new items.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.MergeSource.AddItemFromNewList">
+            <summary>
+            The outcome of the comparison is a decision to add the current
+            item in the list of new items, which is either a newer version
+            of the current item in the master list, or a completely new item
+            that comes next in the sort order defined by the class CompareTo
+            method.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.MergeSource.FinishFromMasterList">
+            <summary>
+            All items in the list of new items have been merged. Finish by
+            appending the remaining items in the master list, all of which
+            follow the last item in the list of new items in the sort order
+            defined by the class CompareTo method.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ListHelpers.MergeSource.FinishFromNewItemsList">
+            <summary>
+            All items in the master list have been merged. Fihish by
+            appending the remaining items in the list of new items, all of
+            which follow the last item in the list of new items in the sort
+            order defined by the class CompareTo method.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ReportDetail">
+            <summary>
+            Instances of this class are generic report details, with labels and
+            formats for printing them.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.DEFAULT_FORMAT">
+            <summary>
+            Use this format for reports, unless the caller overrides it.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.THROW_ON_INVALID_STATE">
+            <summary>
+            When the FormatDetail method is called before the object is fully
+            initialized, throw an System.InvalidOperationException exception.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.RETURN_ON_INVALID_STATE">
+            <summary>
+            When the FormatDetail method is called before the object is fully
+            initialized, return an error message. Since the returned value is
+            expected to go into a file of some kind (which may be a print file),
+            this is a much cheaper way of handling the exception. However, as is
+            almost always true, there is a cost, because throwing an exception
+            typically causes the application to return a nonzero exit code, but
+            writing it into a file, per se, yields an exit code of zero.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.OnLabelChanged(WizardWrx.ReportDetail.LabelChangedEventArgs)">
+            <summary>
+            Raise this event to signal listeners that the length of the label
+            changed.
+            </summary>
+            <param name="e">
+            The LabelChangedEventArgs method is populated with the new and old
+            label length, so that only the difference is added to the total.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor">
+            <summary>
+            The default constructor creates an empty ReportDetail.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String)">
+            <summary>
+            Create a ReportDetail, and set its Label property.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,WizardWrx.ReportDetail.ItemDisplayOrder)">
+            <summary>
+            Create a ReportDetail, and set its Label and DisplayOrder
+            properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,WizardWrx.ReportDetail.ItemDisplayOrder,System.String)">
+            <summary>
+            Create a ReportDetail, and set its Label, DisplayOrder, and 
+            DisplayFormat, and SupplementaryDetails properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,WizardWrx.ReportDetail.ItemDisplayOrder,System.String,System.Object[])">
+            <summary>
+            Create a ReportDetail, and set its Label, DisplayOrder, 
+            DisplayFormat properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+            <param name="supplementarydetails">
+            Override the default SupplementaryDetails property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object)">
+            <summary>
+            Create a ReportDetail, and set its Label and Value properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="pobjValue">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object,WizardWrx.ReportDetail.ItemDisplayOrder)">
+            <summary>
+            Create a ReportDetail, and set its Label and Value properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="value">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object,WizardWrx.ReportDetail.ItemDisplayOrder,System.String)">
+            <summary>
+            Create a ReportDetail, and set its Label, Value, DisplayOrder, and
+            DisplayFormat properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="value">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object,WizardWrx.ReportDetail.ItemDisplayOrder,System.String,System.Object[])">
+            <summary>
+            Create a ReportDetail, and set its Label, Value, DisplayOrder,
+            DisplayFormat, and SupplementaryDetails properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="value">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+            <param name="supplementarydetails">
+            Override the default SupplementaryDetails property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.String)">
+            <summary>
+            Create a ReportDetail, and set its Label and DisplayValue properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.String,WizardWrx.ReportDetail.ItemDisplayOrder)">
+            <summary>
+            Create a ReportDetail, and set its Label and DisplayValue properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.String,WizardWrx.ReportDetail.ItemDisplayOrder,System.String)">
+            <summary>
+            Create a ReportDetail, and set its Label, DisplayValue,
+            DisplayOrder, and DisplayFormat properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.String,WizardWrx.ReportDetail.ItemDisplayOrder,System.String,System.Object[])">
+            <summary>
+            Create a ReportDetail, and set its Label, DisplayValue,
+            DisplayOrder, DisplayFormat, and SupplementaryDetails properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+            <param name="supplementarydetails">
+            Override the default SupplementaryDetails property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object,System.String)">
+            <summary>
+            Create a ReportDetail, and set its Label. native value, and
+            DisplayValue properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="pobjValue">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object,System.String,WizardWrx.ReportDetail.ItemDisplayOrder)">
+            <summary>
+            Create a ReportDetail, and set its Label. native value, 
+            DisplayValue, and DisplayOrder properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="pobjValue">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object,System.String,WizardWrx.ReportDetail.ItemDisplayOrder,System.String)">
+            <summary>
+            Create a ReportDetail, and set its Label. native value, 
+            DisplayValue, DisplayOrder, and DisplayFormat properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="pobjValue">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.#ctor(System.String,System.Object,System.String,WizardWrx.ReportDetail.ItemDisplayOrder,System.String,System.Object[])">
+            <summary>
+            Create a ReportDetail, and set its Label. native value, 
+            DisplayValue, DisplayOrder, DisplayFormat, and SupplementaryDetails
+            properties.
+            </summary>
+            <param name="label">
+            Initial value for label, which can be neither null, nor empty.
+            </param>
+            <param name="pobjValue">
+            Initial data value, as an Object, which MAY be a null reference.
+            </param>
+            <param name="displayvalue">
+            Initial string representation of data value, which MAY be a null
+            reference or an empty string.
+            </param>
+            <param name="itemdisplayorder">
+            DisplayOrder must be greater than zero.
+            </param>
+            <param name="displayformat">
+            Override the default DisplayFormat property.
+            </param>
+            <param name="supplementarydetails">
+            Override the default SupplementaryDetails property.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatDetail">
+            <summary>
+            Return a formatted detail record, ready to print.
+            </summary>
+            <returns>
+            The return value is a formatted string, if a label and value are
+            present. Otherwise, an error message is returned for printing.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatDetail(System.UInt32)">
+            <summary>
+            Return a formatted detail record, ready to print.
+            </summary>
+            <param name="puintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <returns>
+            The return value is a string that can be fed directly to a WriteLine
+            method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatDetail(System.UInt32,System.UInt32)">
+            <summary>
+            Return a formatted detail record, ready to print.
+            </summary>
+            <param name="puintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <param name="puintTotalitems">
+            Specify the total number of items in the list, which becomes part of
+            the third format item, {2}, in the detail item format string.
+            </param>
+            <returns>
+            The return value is a string that can be fed directly to a WriteLine
+            method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatDetail(System.Int32)">
+            <summary>
+            Return a formatted detail record, ready to print.
+            </summary>
+            <param name="pintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <returns>
+            The return value is a string that can be fed directly to a WriteLine
+            method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatDetail(System.Int32,System.UInt32)">
+            <summary>
+            Return a formatted detail record, ready to print.
+            </summary>
+            <param name="pintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <param name="puintTotalitems">
+            Specify the total number of items in the list, which becomes part of
+            the third format item, {2}, in the detail item format string.
+            </param>
+            <returns>
+            The return value is a string that can be fed directly to a WriteLine
+            method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.GetPaddedLabel(System.Int32)">
+            <summary>
+            Return a padded label string.
+            </summary>
+            <param name="pintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <returns>
+            If this instance has a label, pad it as indicated, otherwise, behave
+            as if FormatDetail got the call.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.GetPaddedLabel(System.UInt32)">
+            <summary>
+            Return a padded label string.
+            </summary>
+            <param name="puintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <returns>
+            If this instance has a label, pad it as indicated, otherwise, behave
+            as if FormatDetail got the call.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.GetPaddedValue(System.Int32,WizardWrx.FormatStringEngine.FormatItem.Alignment,System.String)">
+            <summary>
+            Return an aligned field item string.
+            </summary>
+            <param name="pintWidthOfWidestValue">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestValue property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <param name="penmAlignment">
+            Specify Left or Right. Format items, per se, don't support center
+            alignment.
+            </param>
+            <param name="pstrFormatString">
+            Specify a Standard Numeric, Date, or Text format string or a custom
+            string composed around a standard string.
+            </param>
+            <returns>
+            The returned string is ready to insert into a complete format string
+            for use with string.Format, Console.WriteLine, and their numerous
+            cousins.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.GetPaddedValue(System.UInt32,WizardWrx.FormatStringEngine.FormatItem.Alignment,System.String)">
+            <summary>
+            Return an aligned field item string.
+            </summary>
+            <param name="puintWidthOfWidestValue">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestValue property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <param name="penmAlignment">
+            Specify Left or Right. Format items don't support center alignment.
+            </param>
+            <param name="pstrFormatString">
+            Specify a Standard Numeric, Date, or Text format string or a custom
+            string composed around a standard string.
+            </param>
+            <returns>
+            The returned string is ready to insert into a complete format string
+            for use with string.Format, Console.WriteLine, and their numerous
+            cousins.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.TestState(WizardWrx.ReportDetail.State)">
+            <summary>
+            Determine whether the condition represented by a member of the State
+            enumeration is true.
+            </summary>
+            <param name="penmState">
+            The member of the State enumeration to evaluate.
+            </param>
+            <returns>
+            True if State is true, else False.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatLabelAndValue(System.Int32,System.UInt32)">
+            <summary>
+            This method encapsulates the code that runs in both FormatDetail
+            methods unless the label property is uninitialized.
+            </summary>
+            <param name="pintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <param name="puintTotalitems">
+            Specify the total number of items in the list, which becomes part of
+            the third format item, {2}, in the detail item format string.
+            </param>
+            <returns>
+            The returned string can be passed directly to any WriteLine method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatLabelWithPadding(System.Int32)">
+            <summary>
+            This routine implements both overloads of GetPaddedLabel.
+            </summary>
+            <param name="pintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <returns>
+            If this instance has a label, pad it as indicated, otherwise, behave
+            as if FormatDetail got the call.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.FormatValueWithPadding(System.Int32,WizardWrx.FormatStringEngine.FormatItem.Alignment,System.String)">
+            <summary>
+            This private method implements both overloads of GetPaddedValue.
+            </summary>
+            <param name="pintWidthOfWidestValue">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestValue property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <param name="penmAlignment">
+            Specify Left or Right. Format items, per se, don't support center
+            alignment.
+            </param>
+            <param name="pstrFormatString">
+            Specify a Standard Numeric, Date, or Text format string or a custom
+            string composed around a standard string.
+            </param>
+            <returns>
+            The returned string is ready to insert into a complete format string
+            for use with string.Format, Console.WriteLine, and their numerous
+            cousins.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.GatherFormatItemValues(System.String,System.String,System.UInt32)">
+            <summary>
+            Gather the label, value, item number, and extra items, if any, into
+            one array of objects.
+            </summary>
+            <param name="label">
+            Specify the field label, which replaces the first format item, {0}.
+            </param>
+            <param name="displayvalue">
+            Specify the field value, which replaces the second format item, {1}.
+            </param>
+            <param name="puintTotalitems">
+            Specify the total number of items in the list, or zero to suppress
+            its inclusion in the report details.
+            </param>
+            <returns>
+            The return value is an array of generic Object variables, ready to
+            pass into the static string.Format method, or any of the others that
+            have the same signature.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.SelectLabel(System.Int32)">
+            <summary>
+            If the ReportDetails is initialized (not null), return a padded
+            label. Otherwise, return a unpadded label.
+            </summary>
+            <param name="pintWidthOfWidestLabel">
+            Specify the length, in characters, of the longest string 
+            representation of all items in a collection. The intent is that the
+            details for a report go into a ReportDetails collection, which has a
+            WidthOfWidestLabel property that was originally acquired indirectly,
+            through a reference to the collection that originally occupied this
+            slot in the argument list.
+            </param>
+            <returns>
+            if puintWidthOfWidestLabel is greater than zero, GetPaddedLabel is
+            called on this instance, passing the puintWidthOfWidestLabel value
+            for its use. Otherwise, the label stored in the instance is returned
+            as is.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.ReportMissingLabel">
+            <summary>
+            Either return a message, or put it into an System.InvalidOperationException
+            exception if the ThrowOnInvalidState property is set to TRUE. 
+            
+            Please see the associated Remarks topic.
+            </summary>
+            <returns>
+            Unless ThrowOnInvalidState is true, return a message that takes the
+            place of the expected message on the report.
+            
+            Please see the associated Remarks topic.
+            </returns>
+            <remarks>
+            When this happens, look for your error in the routine that created
+            the instance that reported the error. 
+            
+            If  the static ThrowOnInvalidState property is True, your program
+            throws an System.InvalidOperationException exception. Otherwise, the same
+            message that would have gone into the exception report is recorded
+            on the report.
+            </remarks>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.ThrowOnInvalidState">
+            <summary>
+            The state of this flag determines what happens when FormatDetail is
+            called when the object is partially initialized.
+            
+            The default action, False (RETURN_ON_INVALID_STATE) is the behavior
+            originally programmed into it.
+            
+            When set to True, (THROW_ON_INVALID_STATE), the message that would
+            have been returned becomes the Message property of an 
+            System.InvalidOperationException exception.
+            </summary>
+        </member>
+        <member name="E:WizardWrx.ReportDetail.LabelChanged">
+            <summary>
+            Delegates register here.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.DetailState">
+            <summary>
+            Report on the state of the instance, for evaluating its readiness
+            for use on a report.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.DisplayFormat">
+            <summary>
+            Get or set the default format string to use with the label and value
+            to display an item on a report. See remarks for critical
+            information.
+            </summary>
+            <remarks>
+            The first three format items, {0}, {1}, and {2} are reserved for the
+            label, value, and item number. Additional format items, if any, are
+            populated from the objects in the SupplementaryDetails array.
+            
+            The FormatDetail method creates a new object array with enough room
+            to hold the SupplementaryDetails array, plus three, fills it by
+            inserting the label, value, and item number into the first three
+            slots, and appending the SupplementaryDetails array, if it exists,
+            and passes the whole array to string.Format.
+            
+            Unless its value differs from the current static (default) value,
+            this property stays NULL. When callers query this property, the
+            static property is returned if the instance property is null. Hence,
+            the property behaves like a instance property, without wasting space
+            to store duplicates of the default value. Hence, output routines
+            need not check both properties.
+            </remarks>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.SupplementaryDetails">
+            <summary>
+            This property gives read/write access to the SupplementaryDetails
+            property, an array of Objects for use with the DisplayFormat
+            property. See remarks for critical information.
+            </summary>
+            <seealso cref="P:WizardWrx.ReportDetail.DisplayFormat"/>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.DisplayOrder">
+            <summary>
+            Get or set the unsigned integer that determines the order in which
+            this item is returned from a sorted collection.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.DisplayValue">
+            <summary>
+            Get or set the string representation of data value, which MAY be a 
+            null reference or an empty string.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.Label">
+            <summary>
+            New value for label, which can be neither null, nor empty.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.Value">
+            <summary>
+            Gets or sets the data value, as an Object, which MAY be a null
+            reference.
+            
+            Please see Remarks for important details.
+            </summary>
+            <remarks>
+            To make the class a tad more robust, if the rhe property is null,
+            the DisplayValue is returned, unless it is also null. This gets
+            around an ambiguity that causes the constructor to put a String into
+            the DisplayValue property, unless it is downcast to Object.
+            </remarks>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.DetailFormat">
+            <summary>
+            This property gives read/write access to the DetailFormat property,
+            a string that is shared by all instances. See remarks for critical
+            information.
+            </summary>
+            <remarks>
+            The first two format items, {0} and {1}, are reserved for the label
+            and value properties. Additional format items, if any, may be filled
+            from the DetailFormatItems array.
+            </remarks>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.DetailFormatItems">
+            <summary>
+            This property gives read/write access to the DetailFormatItems
+            property, an array of Objects that is shared by all instances. See 
+            remarks for critical information.
+            </summary>
+            <remarks>
+            The first two format items, {0} and {1}, are reserved for the label
+            and value properties. Additional format items, if any, may be filled
+            from this array.
+            
+            The instance message formatter takes items from this array as needed
+            to fill the remaining format items.
+            </remarks>
+        </member>
+        <member name="T:WizardWrx.ReportDetail.ItemDisplayOrder">
+            <summary>
+            This one-member structure prevents the Common Language Runtime from
+            misdirecting the unsigned integer Value argument of a constructor, 
+            which might have a valid value of zero, into a constructor that
+            expects a DisplayOrder value, which is prohibited from being zero.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.ItemDisplayOrder.Order">
+            <summary>
+            With some help from an IComparable implementation, this governs
+            the order of appearance of items in the report.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.ItemDisplayOrder.#ctor(System.UInt32)">
+            <summary>
+            Hide the display order value, an unsigned integer, from the CLR.
+            </summary>
+            <param name="itemdisplayorder">
+            Specify the unsigned integer display order value to hide inside
+            this structure.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.ItemDisplayOrder.op_Implicit(WizardWrx.ReportDetail.ItemDisplayOrder)~System.UInt32">
+            <summary>
+            Implicitly convert an ItemDisplayOrder to its true type, which
+            is unsigned integer.
+            </summary>
+            <param name="itemdisplayorder">
+            Specify the ItemDisplayOrder to be implicitly cast to unsigned
+            integer.
+            </param>
+            <returns>
+            The return value is the unsigned integer that is wrapped inside
+            this structure.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.ItemDisplayOrder.op_Implicit(System.UInt32)~WizardWrx.ReportDetail.ItemDisplayOrder">
+            <summary>
+            Implicitly convert an unsigned integer to the ItemDisplayOrder
+            type that is intended to protect it from receiving unsigned 
+            integers that are intended to be treated as report values.
+            </summary>
+            <param name="itemdisplayorder">
+            The return value is the input value, wrapped in a new
+            ItemDisplayOrder structure.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.ItemDisplayOrder.CompareTo(WizardWrx.ReportDetail.ItemDisplayOrder)">
+            <summary>
+            This method implements iComparable for instances of the 
+            ItemDisplayOrder structure.
+            </summary>
+            <param name="itemDisplayOrder">
+            Specify the ItemDisplayOrder to be compared against the current
+            instance.
+            </param>
+            <returns>
+            The return value is a standard CompareTo result, applied to the
+            integers wrapped inside the two operands.
+            </returns>
+        </member>
+        <member name="T:WizardWrx.ReportDetail.State">
+            <summary>
+            This enumeration keeps track of the state of the instance.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.Empty">
+            <summary>
+            The instance is empty.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.HaveLabel">
+            <summary>
+            The Label property has been set.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.HaveValueObject">
+            <summary>
+            The Value property has been set.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.HaveValueString">
+            <summary>
+            The DisplayValue property has been set.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.HaveListOrder">
+            <summary>
+            The ListOrder property has been set.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.HaveFormatItems">
+            <summary>
+            Either the SupplementaryDetails property is set, or it can 
+            inherit an array from the static DetailFormatItems property.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.HaveValue">
+            <summary>
+            One or both of the DsiplayValue and Value properties has been set.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetail.State.HaveLabelAndValue">
+            <summary>
+            The Label property has been set, as has either or both of the Value properties.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ReportDetail.LabelChangedEventArgs">
+            <summary>
+            The LabelChanged event needs to pass two integers to the event sink.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportDetail.LabelChangedEventArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            LabelChangedEventArgs has one public constructor, which creates
+            and fully initializes the instance. 
+            </summary>
+            <param name="pintNewLength">
+            The new length can't simply be added.
+            </param>
+            <param name="pintOldLength">
+            The old length can bear any relation to the new length.
+            </param>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.LabelChangedEventArgs.NewLength">
+            <summary>
+            The new length is added to the accumulated total.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetail.LabelChangedEventArgs.OldLength">
+            <summary>
+            The old length is subtracted from the total.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ReportDetails">
+            <summary>
+            This class holds the details for a report. Static object locks are used
+            throughout to ensure synchronized access.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportDetails.DEFAULT_DISPLAY_ORDER_INCREMENT">
+            <summary>
+            The default increment value is 100. With automatic incrementation,
+            this is almost certainly overkill. On the other hand, the
+            applications that I anticipate for this class should have plenty of
+            headroom in the provided unsigned integer.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportDetails.Add(WizardWrx.ReportDetail)">
+            <summary>
+            Override the New method in the base class, because it's lots cheaper
+            than using an event.
+            </summary>
+            <param name="prDtl">
+            The ReportDetail item to add to the collection.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetails.#ctor">
+            <summary>
+            Construct an empty list.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportDetails.#ctor(System.Collections.Generic.ICollection{WizardWrx.ReportDetail})">
+            <summary>
+            Construct a list with an initial capacity sufficient to hold the
+            whole ICollection, but check them in one by one.
+            </summary>
+            <param name="pICollection">
+            The collection from which to construct the list. Any member that is
+            a ReportDetail is added. Others are discarded, so that the finished
+            collection is homogenous.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetails.#ctor(System.Int32)">
+            <summary>
+            Construct an empty list, with a specified initial capacity.
+            </summary>
+            <param name="pintCapacity">
+            Set the initial capacity of the list to this value.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetails.ListAllItems">
+            <summary>
+            List each item in a new line on the system console.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportDetails.ListAllItems(System.IO.TextWriter)">
+            <summary>
+            List each item in a new line on the specified TextWriter.
+            </summary>
+            <param name="pswOut">
+            Specify the open TextWriter on which to write the report.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ReportDetails.ListAllItemsInArray">
+            <summary>
+            Fill an array of strings with report items.
+            </summary>
+            <returns>
+            The return value is an array of strings, one per item in the
+            collection. Each string is a report item, ready to send to a text
+            file or for further modification, since the lines aren't terminated.
+            </returns>
+        </member>
+        <member name="P:WizardWrx.ReportDetails.GroupDetails">
+            <summary>
+            Gets or sets the value (contents) of the GroupDetails array of
+            generic object variables intended for inclusion in reports.
+            </summary>
+            <remarks>
+            Use this array to store objects intended to appear in multiple lines
+            of a report, such as a description of their source, creation date,
+            or similar attributes that apply to the collection as a whole.
+            </remarks>
+        </member>
+        <member name="P:WizardWrx.ReportDetails.Increment">
+            <summary>
+            Unless the object being added has one of its own, the local Add
+            method multiplies the count, plus 1, by this increment to set its
+            DisplayOrder property.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetails.WidthOfWidestLabel">
+            <summary>
+            Gets the width, in characters, of the widest label.
+            
+            If the class is empty, the return value is zero.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetails.WidthOfWidestLabelUnsigned">
+            <summary>
+            Gets the width, in characters, of the widest label, as an unsigned 
+            integer.
+            
+            If the class is empty, the return value is zero.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetails.WidthOfWidestValue">
+            <summary>
+            Gets the width, in characters, of the widest value in the
+            collection.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ReportDetails.WidthOfWidestValueUnsigned">
+            <summary>
+            Gets the width, in characters, of the widest value in the
+            collection, as an unsigned integer.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ReportHelpers">
+            <summary>
+            This static class exposes methods to help prepare strings for use on
+            reports.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportHelpers.DOUBLE_SPACE">
+            <summary>
+            Overlooked constant - two consecutive spaces.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportHelpers.EMBEDDED_TAB">
+            <summary>
+            Tab characters, as they must be entered into resource (.RESX) strings.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportHelpers.OUTPUT_TAB">
+            <summary>
+            Tab characters, as they must appear in the string before it can be
+            used.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ReportHelpers.DetailTemplateFromLabels(System.String)">
+            <summary>
+            Given a formatted string for a label row, generate a format string
+            for the corresponding detail row.
+            </summary>
+            <param name="pstrReportLabels">
+            Label string for which to generate a detail string.
+            </param>
+            <returns>
+            String, for use with string.Format method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportHelpers.DetailTemplateFromLabels(System.String,System.Char)">
+            <summary>
+            Given a formatted string for a label row, generate a format string
+            for the corresponding detail row.
+            </summary>
+            <param name="pstrReportLabels">
+            Label string for which to generate a detail string.
+            </param>
+            <param name="pchrFieldSeparator">
+            Character to use in lieu of TAB as field separator.
+            </param>
+            <returns>
+            String, for use with string.Format method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportHelpers.MaxStringLength``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Given an array of objects of any type, return the length of the
+            longest string made from them. See Remarks.
+            </summary>
+            <typeparam name="T">
+            This is a generic method; its argument may be of any type. This 
+            method needs only its ToString method.
+            </typeparam>
+            <param name="plstObjs">
+            This argument expects an array of objects, which may be of different
+            kinds.
+            
+            Since the generic List class has a constructor that takes an array,
+            which it copies into the new list that it returns, you can use this
+            method to process arrays by specifying a new List of the appropriate
+            type for this argument.
+            For additional information, please see the Remarks section.
+            </param>
+            <example>
+            The following example returns the length of the longest string 
+            contained in array astrLinesFromFile, an array of strings.
+            
+            int intLogestLine = WizardWrx.ReportHelpers.MaxStringLength ( new List&lt;string&gt; ( astrLinesFromFile ) );
+            
+            Note use of the List constructor, which transforms the array into a
+            disposable generic List.
+            </example>
+            <returns>
+            The return value is the length of the longest string made from the
+            objects in the input array. Since it is intended for use with the
+            PadRight method on a string, it is cast to int. See Remarks.
+            </returns>
+            <remarks>
+            The goal of this routine is to determine the maximum number of
+            characters required to represent any of a collection of objects such
+            as labels or members of an enumerated type. This method has at least
+            three use cases.
+            
+            1) Pad the strings to a uniform length, so that all of a set of
+            labeled values aligns vertically.
+            
+            2) Construct a key from several substrings, such that the substrings
+            are of uniform length, and the keys can be grouped by any of the
+            leading substrings, and ordered by the values of the last substring.
+            
+            3) Construct a composite format string that reserves enough room for
+            the widest item in the list, so that whatever follows it on a report
+            line aligns vertically.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ReportHelpers.CreateFormatString(System.String,System.Char)">
+            <summary>
+            Given a formatted string for a label row, generate a format string
+            for the corresponding detail row. See Remarks.
+            </summary>
+            <param name="pstrReportLabels">
+            Label string for which to generate a detail string.
+            </param>
+            <param name="pchrFieldSeparator">
+            Character to use in lieu of TAB as field separator.
+            </param>
+            <returns>
+            String, for use with string.Format method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ReportHelpers.CreateLastToken(System.String,System.Char)">
+            <summary>
+            The last token is appended without a field delimiter. See Remarks.
+            </summary>
+            <param name="pstrTokenTemplate">
+            The token used for the preceding operations is fed into this routine
+            to have its delimiter removed. See Remarks.
+            </param>
+            <param name="pchrFieldSeparator">
+            Obviously, this routine needs a copy of the delimiter character, but
+            its use is a bit more complex. See Remarks.
+            </param>
+            <returns>
+            Regardless of whether the delimiter is a TAB, which requires special
+            handling, or another character, the return value is a bare token.
+            See Remarks.
+            </returns>
+            <remarks>
+            Since they are escaped when entered into a .NET resource (.RESX)
+            file, such TAB characters must be handled a tad differently, using
+            the doubly escaped token that represents a TAB character embedded in
+            a resource string as the first argument to the Replace method on the
+            input string, pstrTokenTemplate. To cover the case where the string
+            is a constant, embedded in the source file, this case must call the
+            Replace method on the new string returned by the first Replace call,
+            passing a string representation of the regular TAB character, since
+            the replacement is the empty string.
+            
+            In all other cases, the Replace method is called once, using the
+            actual delimiter character, pchrFieldSeparator.
+            </remarks>
+        </member>
+        <member name="T:WizardWrx.ReportHelpers.Alignment">
+            <summary>
+            Set the penmAlignment argument of the AdjustToMaximumWidth method to
+            a member of this enumeration.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportHelpers.Alignment.Left">
+            <summary>
+            Align text to left.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ReportHelpers.Alignment.Right">
+            <summary>
+            Align text to right.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.StringThings">
+            <summary>
+            Provide static methods to perform frequently required tasks that involve
+            parsing or modifying strings such as command line arguments coming in
+            and messages going out.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.StringThings.AdjustNumberOfNoun(System.UInt32,System.String,System.String,System.String)">
+            <summary>
+            If the count of objects to which a noun refers is greater than 1,
+            replace its singular form with its plural form. Use this method to
+            generate grammatically correct sentences in which the noun's number
+            is grammatically correct.
+            </summary>
+            <param name="puintNumber">
+            Base the adjustment on this number.
+            </param>
+            <param name="pstrNounSingular">
+            Specify the noun to adjust, which is assumed to be in its singular
+            form, and that its plural is the same word with the letter "S"
+            appended.
+            </param>
+            <param name="pstrPhrase">
+            Replace all instances of pstrNoun in this string with the plural of
+            pstrNoun if pintNumber is greater than 1.
+            </param>
+            <param name="pstrPluralForm">
+            Specify the plural form of pstrSingularForm, either outright or as a
+            plus sign followed immediately by the suffix to append.
+            
+            If this arguments is a null reference or the empty string, the
+            hard coded default suffix, a lower case s, is appended.
+            </param>
+            <returns>
+            The return value is pstrPhrase, amended if needed to reflect the
+            correct number for pstrNoun.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.StringThings.CountUnresolvedEnvironmentStrings(System.String)">
+            <summary>
+            Scan a string for environment string delimiter characters left
+            behind by an environment string expansion.
+            </summary>
+            <param name="pstrInput">
+            Specify a string that has had its environment strings expanded.
+            </param>
+            <returns>
+            The return value is the count of remaining environment string
+            delimiters. Please see the remarks for additional information.
+            </returns>
+            <remarks>
+            There are two reasons that such delimiters might be left behind.
+            
+            1) The input string contains environment strings that have no like
+            named strings in the environment block that belongs to the process.
+            
+            2) The input string contains a malformed string that is missing one
+            of its delimiting tokens.
+            
+            This routine is a wrapper for WizardWrx.StringTricks.CountSubstrings
+            that supplies the required token. Since you could as well call that
+            routine directory, this routine is syntactic sugar.
+            </remarks>
+            <seealso cref="M:WizardWrx.StringThings.ReportUnresolvedEnvironmentStrings(System.String,System.UInt32,System.UInt32)"/>
+        </member>
+        <member name="M:WizardWrx.StringThings.ReportUnresolvedEnvironmentStrings(System.String,System.UInt32,System.UInt32)">
+            <summary>
+            Display a string that contains unmatched environment strings or
+            unmatched environment string delimiters, followed by details about
+            the locations of the errors.
+            </summary>
+            <param name="pstrInput">
+            Specify a string that has had its environment strings expanded.
+            </param>
+            <param name="puintNEnvStrDlms">
+            Specify the count of unmatched delimiters. A companion routine,
+            UnresolvedEnvironmentStrings, can deliver the count, although the
+            call cannot be nested. Please see the remarks.
+            </param>
+            <param name="puintExitCode">
+            This routine is intended to report the error and exit the calling
+            console application, returning the specified value as its exit code.
+            </param>
+            <remarks>
+            This routine never returns control to its caller. Hence, the calling
+            routine must capture the count returned by companion method
+            UnresolvedEnvironmentStrings and call this routine only if it is
+            greater than zero. The reasoning behind this is that the program
+            should not proceed with the specified inputs.
+            </remarks>
+            <see cref="M:WizardWrx.StringThings.CountUnresolvedEnvironmentStrings(System.String)"/>
+        </member>
+        <member name="T:WizardWrx.Utl">
+            <summary>
+            This static class exposes miscellaneous enumerations, constants, and 
+            methods that don't really fit into any other class.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.BEGINNING_OF_BUFFER">
+            <summary>
+            Always start writing whole blocks at the beginning of the allocated
+            buffer, which is precisely sized to hold one block.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.EXCLUDE_LABEL_ROW">
+            <summary>
+            Many methods process labeled delimited text files, and frequently
+            need to exclude the label row from consideration, for example, when
+            setting the initial capacity of a collection.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.FIRST_RECORD">
+            <summary>
+            There are several methods that need to know if they are dealing with
+            the first record of the whole file or of a block.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.NUMERIC_FORMAT_PERCENTAGE">
+            <summary>
+            Use this format string, followed by an optional precision 
+            specification digit, to format a number as a percentage.
+            
+            Be aware that the formatter handles the decimal place shift.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.NUMERIC_FORMAT_INTEGER_NO_DECIMAL">
+            <summary>
+            Use this format string to format an integer without any digits
+            following the (absent) decimal point.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.ARRAY_FIRST_ELEMENT">
+            <summary>
+            Arrays subscripting starts at zero. End of discussion.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.ARRAY_INVALID_INDEX">
+            <summary>
+            Since array subscripting starts at zero, it follows that minus one
+            is an invalid subscript, which has all sorts of uses, such as
+            initializing a subscript so that you can tell when it is used for
+            the first time.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.ARRAY_NEXT_ELEMENT">
+            <summary>
+            There are many opportunities when plus one really means "the next
+            element in the array." Use this constant to document such cases.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.ARRAY_SUBSCRIPT_TO_ORDINAL">
+            <summary>
+            Derive the ordinal of an element by adding this constant to its
+            subscript. Likewise, subtract it from an ordinal to derive the
+            corresponding subscript.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.BEGINNING">
+            <summary>
+            Beginning is an alias for ARRAY_FIRST_ELEMENT.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.NONE_YET">
+            <summary>
+            Use this to signify that zero means "none yet."
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.s_achrOneTab">
+            <summary>
+            Supply a TAB character, as a one-element array, for splitting.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.Utl.ByteArrayToHexDigitString(System.Byte[])">
+            <summary>
+            Convert a byte array into a printable hexadecimal representation.
+            </summary>
+            <param name="pbytInputData">
+            Specify the byte array to be formatted. Any byte array will do.
+            </param>
+            <returns>
+            The return value is a string that should contain two characters for
+            each byte in the array.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Utl.DisplayPercentage(System.Int32,System.Int32)">
+            <summary>
+            Divide the Part by the Whole, and return the quotient expressed and
+            formatted as a percentage, to the default precision specified in the
+            current culture.
+            </summary>
+            <param name="pintPart">
+            Part is the integer that represents the amount of work that has been
+            completed. Both pintPart and pintWhole nus t be expressed in the same
+            units.
+            </param>
+            <param name="pintWhole">
+            Whole is the integer that represents the total work to be done. Both
+            pintPart and pintWhole nus t be expressed in the same units.
+            </param>
+            <returns>
+            The return value is a string representation of the two inputs, 
+            expressed and formatted as a percentage.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Utl.DisplayPercentage(System.Int64,System.Int64)">
+            <summary>
+            Divide the Part by the Whole, and return the quotient expressed and
+            formatted as a percentage, to the default precision specified in the
+            current culture.
+            </summary>
+            <param name="plngPart">
+            Part is the integer that represents the amount of work that has been
+            completed. Both pintPart and pintWhole nus t be expressed in the same
+            units.
+            </param>
+            <param name="plngWhole">
+            Whole is the integer that represents the total work to be done. Both
+            pintPart and pintWhole nus t be expressed in the same units.
+            </param>
+            <returns>
+            The return value is a string representation of the two inputs, 
+            expressed and formatted as a percentage.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Utl.DisplayPercentage(System.Double,System.Double)">
+            <summary>
+            Divide the Part by the Whole, and return the quotient expressed and
+            formatted as a percentage, to the default precision specified in the
+            current culture.
+            </summary>
+            <param name="pdblPart">
+            Part is the integer that represents the amount of work that has been
+            completed. Both pintPart and pintWhole nus t be expressed in the same
+            units.
+            </param>
+            <param name="pdblgWhole">
+            Whole is the integer that represents the total work to be done. Both
+            pintPart and pintWhole nus t be expressed in the same units.
+            </param>
+            <returns>
+            The return value is a string representation of the two inputs, 
+            expressed and formatted as a percentage.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Utl.DisplayPercentage(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Divide the Part by the Whole, and return the quotient expressed and
+            formatted as a percentage, to the precision specified in the third
+            (pintPrecision) argument.
+            </summary>
+            <param name="pintPart">
+            Part is the integer that represents the amount of work that has been
+            completed. Both pintPart and pintWhole nus t be expressed in the same
+            units.
+            </param>
+            <param name="pintWhole">
+            Whole is the integer that represents the total work to be done. Both
+            pintPart and pintWhole nus t be expressed in the same units.
+            </param>
+            <param name="pintPrecision">
+            The precision is an integer that specifies the number of places to
+            show after the decimal point.
+            </param>
+            <returns>
+            The return value is a string representation of the two inputs, 
+            expressed and formatted as a percentage.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Utl.DisplayPercentage(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Divide the Part by the Whole, and return the quotient expressed and
+            formatted as a percentage, to the precision specified in the third
+            (pintPrecision) argument.
+            </summary>
+            <param name="plngPart">
+            Part is the integer that represents the amount of work that has been
+            completed. Both pintPart and pintWhole nus t be expressed in the same
+            units.
+            </param>
+            <param name="plngWhole">
+            Whole is the integer that represents the total work to be done. Both
+            pintPart and pintWhole nus t be expressed in the same units.
+            </param>
+            <param name="pintPrecision">
+            The precision is an integer that specifies the number of places to
+            show after the decimal point.
+            </param>
+            <returns>
+            The return value is a string representation of the two inputs, 
+            expressed and formatted as a percentage.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Utl.DisplayPercentage(System.Double,System.Double,System.Int32)">
+            <summary>
+            Divide the Part by the Whole, and return the quotient expressed and
+            formatted as a percentage, to the precision specified in the third
+            (pintPrecision) argument.
+            </summary>
+            <param name="pdblPart">
+            Part is the value that represents the amount of work that has been
+            completed. Both pintPart and pintWhole nus t be expressed in the same
+            units.
+            </param>
+            <param name="pdblWhole">
+            Whole is the value that represents the total work to be done. Both
+            pintPart and pintWhole nus t be expressed in the same units.
+            </param>
+            <param name="pintPrecision">
+            The precision is an integer that specifies the number of places to
+            show after the decimal point.
+            </param>
+            <returns>
+            The return value is a string representation of the two inputs, 
+            expressed and formatted as a percentage.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.Utl.LoadTextFileFromCallingAssembly(System.String)">
+            <summary>
+            Load the lines of a plain ASCII text file that has been stored with
+            the assembly as a embedded resource into an array of native strings.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the fully qualified resource name, which is its source file
+            name appended to the default application namespace.
+            </param>
+            <returns>
+            The return value is an array of Unicode strings, each of which is
+            the text of a line from the original text file, sans terminator.
+            </returns>
+            <see cref="M:WizardWrx.Utl.LoadTextFileFromAnyAssembly(System.String,System.Reflection.Assembly)"/>
+            <seealso cref="M:WizardWrx.Utl.LoadTextFileFromEntryAssembly(System.String)"/>
+        </member>
+        <member name="M:WizardWrx.Utl.LoadTextFileFromEntryAssembly(System.String)">
+            <summary>
+            Load the lines of a plain ASCII text file that has been stored with
+            the assembly as a embedded resource into an array of native strings.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the fully qualified resource name, which is its source file
+            name appended to the default application namespace.
+            </param>
+            <returns>
+            The return value is an array of Unicode strings, each of which is
+            the text of a line from the original text file, sans terminator.
+            </returns>
+            <see cref="M:WizardWrx.Utl.LoadTextFileFromAnyAssembly(System.String,System.Reflection.Assembly)"/>
+            <seealso cref="M:WizardWrx.Utl.LoadTextFileFromCallingAssembly(System.String)"/>
+        </member>
+        <member name="M:WizardWrx.Utl.LoadTextFileFromAnyAssembly(System.String,System.Reflection.Assembly)">
+            <summary>
+            Load a text file from any assembly. Since file resources are stored
+            in binary form, and are read, in binary mode, into a byte array, a
+            file that contains ASCII text must be converted into native .NET
+            strings. This routine hides the work required to make that happen.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the fully qualified resource name, which is its source file
+            name appended to the default application namespace.
+            </param>
+            <param name="pasmSource">
+            Pass in a reference to the Assembly from which you expect to load
+            the text file. Use any means at your disposal to obtain a reference
+            from the System.Reflection namespace.
+            </param>
+            <returns></returns>
+            <seealso cref="M:WizardWrx.Utl.LoadTextFileFromCallingAssembly(System.String)"/>
+            <seealso cref="M:WizardWrx.Utl.LoadTextFileFromEntryAssembly(System.String)"/>
+        </member>
+        <member name="M:WizardWrx.Utl.GetInternalResourceName(System.String,System.Reflection.Assembly)">
+            <summary>
+            Use the list of Manifest Resource Names returned by method
+            GetManifestResourceNames on a specified assembly. Each of several
+            methods employs a different mechanism to identify the assembly of
+            interest.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the name of the file from which the embedded resource was
+            created. Typically, this will be the local name of the file in the
+            source code tree.
+            </param>
+            <param name="pasmSource">
+            Pass a reference to the Assembly that is supposed to contain the
+            desired resource.
+            </param>
+            <returns>
+            If the function succeeds, the return value is the internal name of
+            the requested resource, which is fed to GetManifestResourceStream on
+            the same assembly, which returns a read-only Stream backed by the
+            embedded resource. If the specified resource is not found, it
+            returns null (Nothing in Visual Basic).
+            </returns>
+        </member>
+        <member name="T:WizardWrx.Utl.YesNo">
+            <summary>
+            This enumeration maps a DataEase Yes/No field.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.YesNo.Unspecified">
+            <summary>
+            The input field is either empty or its value is invalid.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.YesNo.No">
+            <summary>
+            The input field is set to no.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.YesNo.Yes">
+            <summary>
+            The input field is set to yes.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.Utl.GateSystemType">
+            <summary>
+            Evaluate a DataEase GateSystemType choice field.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.GateSystemType.Unknown">
+            <summary>
+            The input field is either empty or its value is invalid.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.GateSystemType.DIGI">
+            <summary>
+            The input field is set to DIGI (DigiGate).
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.GateSystemType.PTI">
+            <summary>
+            The input field is set to PTI, which encompasses both Falcon
+            2000 and StorLogix.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.Utl.GateSystemType.WHAM">
+            <summary>
+            The input is set to WHAM (Webster Security Systems). So far as I
+            know, the only location that ever had a WHAM system was the old
+            Peabody, MA location.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_CANNOT_PARSE">
+            <summary>
+              Looks up a localized string similar to ERROR: The CreateFormatString method cannot process the specified format string.{1}    Specified format string = {0}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_COMMA_AND_LITERAL">
+            <summary>
+              Looks up a localized string similar to , and.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_COMPARAND_IS_WRONG_TYPE">
+            <summary>
+              Looks up a localized string similar to ERROR: The specified object is a {0}.{2}Type must be {1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_DETAIL_FORMAT_CANNOT_BE_NULL_OR_BLANK">
+            <summary>
+              Looks up a localized string similar to ERROR: The DetailFormat property cannot be a null reference or empty string..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_DISPLAY_ORDER_CANNOT_BE_ZERO">
+            <summary>
+              Looks up a localized string similar to ERROR: The DisplayOrder property cannot be set to zero..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_EMBEDDED_RESOURCE_NOT_FOUND">
+            <summary>
+              Looks up a localized string similar to Resource {0} cannot be found in assembly {1}..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_EMBEDDED_RESOURCE_READ_ERROR">
+            <summary>
+              Looks up a localized string similar to An error occurred while reading a file from resources embedded in the assembly.{3}Internal Name = {0}{3}File Length (bytes) = {1}{3}Bytes successfully read = {2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_REPORT_ITEM_IS_NULL">
+            <summary>
+              Looks up a localized string similar to ERROR: No value has been assigned to this object..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_REPORT_ITEM_IS_UNLABELED">
+            <summary>
+              Looks up a localized string similar to ERROR: This detail object is incomplete. It needs a label..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_SPECIFIED_LABEL_IS_NULL_OR_BLANK">
+            <summary>
+              Looks up a localized string similar to ERROR: Label property of a ReportDetail cannot be null or blank..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_START_CHARACTER">
+            <summary>
+              Looks up a localized string similar to starting at character position {0}{1}{2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_THIS_REPORTITEM_IS_NULL">
+            <summary>
+              Looks up a localized string similar to ERROR: The value of the report item labeled {0} has not been set..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_UNLABELED">
+            <summary>
+              Looks up a localized string similar to * UNLABELED *.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_UNRESLOVED_ENVIRONEMT_STRINGS">
+            <summary>
+              Looks up a localized string similar to INPUT ERROR: Specified input string {0}{2}             contains {1} unresolved environment variable.{2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.ERRMSG_VARIABLE_LITERAL">
+            <summary>
+              Looks up a localized string similar to variable.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.INCREMENT_CANNOT_BE_ZERO">
+            <summary>
+              Looks up a localized string similar to Must be greater than zero..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.Properties.Resources.INCREMENT_PROPERTY_VALUE">
+            <summary>
+              Looks up a localized string similar to Increment Property Value.
+            </summary>
+        </member>
+    </members>
+</doc>

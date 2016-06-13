@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERRMSG_INVALID_TEST_INDEX" xml:space="preserve">
+    <value>The specified test index, {0}, is too high.{2}Valid values are positive integers less than {1}.</value>
+    <comment>The DoThisTest method formats an error message from this template.</comment>
+  </data>
+  <data name="ERRMSG_LITERAL_ERROR" xml:space="preserve">
+    <value>error</value>
+    <comment>This literal is made plural if the error count is greater than 1.</comment>
+  </data>
+  <data name="ERRMSG_RUNTIME" xml:space="preserve">
+    <value>The application terminated with a run-time exception.</value>
+  </data>
+  <data name="ERRMSG_SUCCESS" xml:space="preserve">
+    <value>The application ran without errors.</value>
+    <comment>This is a dummy exception.</comment>
+  </data>
+  <data name="IDS_ASCII_TABLE_ITEM" xml:space="preserve">
+    <value>Character {0} ({1}): Display Value = {2}{3}</value>
+    <comment>ASCII_Table_Gen prints each detail through this template. The third format item is either empty, or a parenthesized comment.</comment>
+  </data>
+  <data name="IDS_ASCII_TABLE_PREAMBLE" xml:space="preserve">
+    <value>{0}The following table lists key attributes of every ASCII character.{0}</value>
+    <comment>ASCII_Table_Gen prints that message above the table.</comment>
+  </data>
+  <data name="IDS_BAD_MASTER_LABEL_ROW" xml:space="preserve">
+    <value>The format of the label row in the master input file is invalid.{3}It should contain {0} TAB delimited fields.{3}The supplied label contains {1} fields.{3}The label row follows.{2}{3}</value>
+  </data>
+  <data name="IDS_COMPARETO_MISMATCH" xml:space="preserve">
+    <value>Comparison must involve objects of the same type.</value>
+  </data>
+  <data name="IDS_DATAFILE_FQFN" xml:space="preserve">
+    <value>Fully Qualified Name of Input File</value>
+  </data>
+  <data name="IDS_DATAFILE_LINES" xml:space="preserve">
+    <value>Number of Lines in Input File</value>
+  </data>
+  <data name="IDS_DATAFILE_MODDATE" xml:space="preserve">
+    <value>Date Input File Last Modified</value>
+  </data>
+  <data name="IDS_DATAFILE_SIZE" xml:space="preserve">
+    <value>Size, in Bytes, of Input File</value>
+  </data>
+  <data name="IDS_DATA_DIRECTORY_NAME" xml:space="preserve">
+    <value>Data Directory = {0}</value>
+  </data>
+  <data name="IDS_DATA_SOURCE" xml:space="preserve">
+    <value>Source of Test Data</value>
+  </data>
+  <data name="IDS_DESCR_MASTER_FILE" xml:space="preserve">
+    <value>Master File</value>
+  </data>
+  <data name="IDS_DESCR_NEWITEMS_FILE" xml:space="preserve">
+    <value>New Items File</value>
+  </data>
+  <data name="IDS_DESCR_OUTPUT_FILE" xml:space="preserve">
+    <value>Output File</value>
+  </data>
+  <data name="IDS_INCONSISTENT_INPUTS" xml:space="preserve">
+    <value>Input files are inconsistent{2}Label row of master file = {0}{2}Label Row of current file = {1}</value>
+  </data>
+  <data name="IDS_INVALID_KEY" xml:space="preserve">
+    <value>Key field {0} in record {1} is invalid. All keys must be integers.</value>
+  </data>
+  <data name="IDS_LENGTH_OF_LONGEST" xml:space="preserve">
+    <value>Length of Longest Line</value>
+  </data>
+  <data name="IDS_MAX_STRLEN_BEGIN" xml:space="preserve">
+    <value>{0}Begin Tests of MaxStringLength Method:{0}</value>
+  </data>
+  <data name="IDS_MAX_STRLEN_END" xml:space="preserve">
+    <value>{0}MaxStringLength tests completed{0}</value>
+  </data>
+  <data name="IDS_MERGENEWITEMSINTOARRAY_BEGIN" xml:space="preserve">
+    <value>{0}Begin Tests of MergeNewItemsIntoArray Method:{0}</value>
+  </data>
+  <data name="IDS_MERGENEWITEMSINTOARRAY_END" xml:space="preserve">
+    <value>{0}MergeNewItemsIntoArray tests completed{0}</value>
+  </data>
+  <data name="IDS_MERGENEWITEMSINTOARRAY_LABELS" xml:space="preserve">
+    <value>Description\tFileName\tModDate\tSize\tLineCount</value>
+  </data>
+  <data name="IDS_MSG_BATCH" xml:space="preserve">
+    <value>{2}{0} {1}{2}</value>
+    <comment>Use this string to format the messages that print at the beginning and end of a batch of tests.</comment>
+  </data>
+  <data name="IDS_MSG_BEGIN" xml:space="preserve">
+    <value>Begin</value>
+    <comment>Append this to messages that print at the beginning af a batch of tests.</comment>
+  </data>
+  <data name="IDS_MSG_DONE" xml:space="preserve">
+    <value>Done!</value>
+    <comment>Append this to messages that print at the conclusion af a batch of tests.</comment>
+  </data>
+  <data name="IDS_MSG_FILE_NOT_FOUND" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
+  <data name="IDS_MSG_LONGEST_LABEL" xml:space="preserve">
+    <value>Longest Label = {0}</value>
+  </data>
+  <data name="IDS_MSG_LONGEST_VALUE" xml:space="preserve">
+    <value>Longest Value = {0}{1}</value>
+  </data>
+  <data name="IDS_MSG_REPORT_LABEL_1" xml:space="preserve">
+    <value>Report Label 1</value>
+  </data>
+  <data name="IDS_MSG_REPORT_LABEL_2" xml:space="preserve">
+    <value>Report Label 2</value>
+  </data>
+  <data name="IDS_MSG_REPORT_LABEL_3" xml:space="preserve">
+    <value>Report Label 3 Is Longer</value>
+  </data>
+  <data name="IDS_MSG_REPORT_LABEL_4" xml:space="preserve">
+    <value>Report Label 4 Shorter</value>
+  </data>
+  <data name="IDS_MSG_REPORT_LABEL_5" xml:space="preserve">
+    <value>Report Label 5</value>
+  </data>
+  <data name="IDS_REALLY_LONG_STRING" xml:space="preserve">
+    <value>This long string is for testing another routine, for use in right-alingining numeric values in a report.</value>
+  </data>
+  <data name="IDS_TEST_BEGIN" xml:space="preserve">
+    <value>    Test # {0}:{1}</value>
+  </data>
+  <data name="IDS_TEST_END" xml:space="preserve">
+    <value>{1}    Test # {0} done{1}</value>
+  </data>
+  <data name="IDS_TEST_FAIL" xml:space="preserve">
+    <value>FAIL</value>
+  </data>
+  <data name="IDS_TEST_PASS" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="IDS_UNSUPPORTED_DATASOURCE" xml:space="preserve">
+    <value>Internal variable _enmDataSource has an unsupported value of {0}</value>
+  </data>
+  <data name="MSG_EXCETIONS_COUNTED" xml:space="preserve">
+    <value>{1}Total exceptions logged = {0}</value>
+  </data>
+  <data name="MSG_FORMAT_ERROR_DETAILS" xml:space="preserve">
+    <value>    Details for error {0}: </value>
+  </data>
+  <data name="MSG_NEW_TEST" xml:space="preserve">
+    <value>{2}Case {0} of {1}:{2}</value>
+    <comment>ReportHelpersTests uses this string as a label, along with a a ReportDetails collection.</comment>
+  </data>
+  <data name="MSG_PENMALIGNMENT" xml:space="preserve">
+    <value>    Argument penmAlignment, a Alignment</value>
+    <comment>ReportHelpersTests uses this string as a label, along with a a ReportDetails collection.</comment>
+  </data>
+  <data name="MSG_PSTRFORMATSTRING" xml:space="preserve">
+    <value>    Argument pstrFormatString, a string</value>
+    <comment>ReportHelpersTests uses this string as a label, along with a a ReportDetails collection.</comment>
+  </data>
+  <data name="MSG_PUINTITEMINDEX" xml:space="preserve">
+    <value>    Argument puintItemIndex, a uint</value>
+    <comment>ReportHelpersTests uses this string as a label, along with a a ReportDetails collection.</comment>
+  </data>
+  <data name="MSG_PUINTMAXIMUMWIDTH" xml:space="preserve">
+    <value>    Argument puintMaximumWidth, a uint</value>
+    <comment>ReportHelpersTests uses this string as a label, along with a a ReportDetails collection.</comment>
+  </data>
+  <data name="MSG_REPORT_DETAILS_AUTO_ORDERED" xml:space="preserve">
+    <value>{0}The DisplayOrder properties are auto-generated.{0}</value>
+  </data>
+  <data name="MSG_REPORT_DETAILS_SELECTIVELY_OVERRIDDEN" xml:space="preserve">
+    <value>{0}The DisplayOrder properties of selected items were explicitly set.{0}</value>
+  </data>
+  <data name="MSG_REPORT_DETAILS_SORTED" xml:space="preserve">
+    <value>{0}The test collection is sorted.{0}</value>
+  </data>
+  <data name="MSG_REPORT_DETAILS_UNSORTED" xml:space="preserve">
+    <value>{0}The test collection is UNsorted.{0}</value>
+  </data>
+  <data name="MSG_SAMPLE_FORMAT_STRING" xml:space="preserve">
+    <value>Token 0 = {0}, Token 1 ={1}, Token 2 - {2}, Token 3 = {3}</value>
+    <comment>ReportHelpersTests uses this string to exercise the UpgradeFormatItem method.</comment>
+  </data>
+  <data name="MSG_SHOW_SAMPLE_BEFORE_AND_AFTER" xml:space="preserve">
+    <value>{2}    Sample Format: Before Transformation = {0}{2}                   After Transformation  = {1}{2}</value>
+    <comment>ReportHelpersTests uses this string to document the performance of the UpgradeFormatItem method.</comment>
+  </data>
+  <data name="MSG_UPGRADED_FORMAT" xml:space="preserve">
+    <value>    Upgraded Format String</value>
+    <comment>ReportHelpersTests uses this string as a label, along with a a ReportDetails collection.</comment>
+  </data>
+</root>

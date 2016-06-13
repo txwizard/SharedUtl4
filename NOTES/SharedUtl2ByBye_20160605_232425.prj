@@ -1,0 +1,31 @@
+[Project ID]
+	Signature=UE Proj: v.1
+[PUI]
+.ENIGMA.DAVE.pui=f582e0af-9c5f-4527-ab9b-e6936d4042be
+[Project Information]
+	Use Relative Directory=1
+	Relative to Project File=1
+	Include Sub Directories=1
+	Project Tagfile=
+	Project Wordfile=
+	Project TpFile=
+	Filter=
+	Create Tagfile=0
+[Files]
+	0=..\..\_Deprecated_Libraries\SharedUtl2\SharedUtl2\
+	1=..\..\DLLServices2\DLLServices2\
+	2=..\SharedUtl4_TestStand\Program.cs
+	3=..\..\DLLServices2\DLLServices2\SpecialCharacters.cs
+	4=WizardWrx.SharedUtl4_and_Siblings_Version_1.4.TXT
+	5=..\..\_Deprecated_Libraries\SharedUtl2\SharedUtl2\StandardConstants.cs
+	6=..\..\DLLServices2\DLLServices2\Properties\Resources.resx
+	7=..\..\DLLServices2\DLLServices2\NumericFormats.cs
+	8=..\..\DLLServices2\DLLServices2\MagicNumbers.cs
+	9=..\..\DLLServices2\DLLServices2\MagicBooleans.cs
+	10=..\..\DLLServices2\DLLServices2\ArrayInfo.cs
+	11=..\..\DLLServices2\DLLServices2\SpecialStrings.cs
+	12=..\SharedUtl4\
+[Group Filter]
+	..\..\_Deprecated_Libraries\SharedUtl2\SharedUtl2\=*.cs
+	..\..\DLLServices2\DLLServices2\=*.CS
+	..\SharedUtl4\=*.CS

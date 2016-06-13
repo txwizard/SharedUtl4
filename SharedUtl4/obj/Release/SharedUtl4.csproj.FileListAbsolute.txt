@@ -1,0 +1,55 @@
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\WizardWrx.SharedUtl4.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\WizardWrx.SharedUtl4.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.XML
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\WizardWrx.Properties.Resources.resources
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.BitMath.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ConsoleAppAids2.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.FormatStringEngine.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.AnyCSV.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ASCIIInfo.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.DLLServices2.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.FormatStringEngine.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.BitMath.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ConsoleAppAids2.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ConsoleAppAids2.xml
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.AnyCSV.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ASCIIInfo.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.DLLServices2.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.DLLServices2.xml
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ASCIIInfo.xml
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.BitMath.xml
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.FormatStringEngine.xml
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.AnyCSV.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.XML
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.BitMath.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ConsoleAppAids2.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.DLLServices2.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.FormatStringEngine.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.AnyCSV.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ASCIIInfo.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\Newtonsoft.Json.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.FormatStringEngine.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.FormatStringEngine.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.BitMath.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.BitMath.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ConsoleAppAids2.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ConsoleAppAids2.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.DLLServices2.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.DLLServices2.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.AnyCSV.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.AnyCSV.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ASCIIInfo.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.ASCIIInfo.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\Newtonsoft.Json.xml
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\SharedUtl4.csprojResolveAssemblyReference.cache
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\WizardWrx.Properties.Resources.resources
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\SharedUtl4.csproj.GenerateResource.Cache
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\WizardWrx.SharedUtl4.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\obj\Release\WizardWrx.SharedUtl4.pdb

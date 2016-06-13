@@ -1,0 +1,1354 @@
+            Development Notes for WizardWrx.SharedUtl4, version 2.1
+
+================================================================================
+
+System.TypeInitializationException was unhandled
+  Message=The type initializer for 'SharedUtl4_TestStand.MergeNewItemsIntoArray_Tester' threw an exception.
+  Source=SharedUtl4_TestStand
+  TypeName=SharedUtl4_TestStand.MergeNewItemsIntoArray_Tester
+  StackTrace:
+       at SharedUtl4_TestStand.MergeNewItemsIntoArray_Tester..ctor(String pstrMasterFileName, String pstrNewItemsFileName, String pstrOutputFileName)
+       at SharedUtl4_TestStand.Program.MergeNewItemsIntoArray_Tests() in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Program.cs:line 130
+       at SharedUtl4_TestStand.Program.Main(String[] args) in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Program.cs:line 60
+       at System.AppDomain._nExecuteAssembly(Assembly assembly, String[] args)
+       at System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+       at Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+       at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+       at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+       at System.Threading.ThreadHelper.ThreadStart()
+  InnerException: System.FormatException
+       Message=Input string was not in a correct format.
+       Source=mscorlib
+       StackTrace:
+            at System.Text.StringBuilder.FormatError()
+            at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+            at System.String.Format(IFormatProvider provider, String format, Object[] args)
+            at System.String.Format(String format, Object arg0)
+            at WizardWrx.ReportHelpers.DetailFormatStringFromLabels(String pstrReportLabels, Char pchrFieldSeparator) in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportHelpers.cs:line 191
+            at WizardWrx.ReportHelpers.DetailTemplateFromLabels(String pstrReportLabels) in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportHelpers.cs:line 87
+            at SharedUtl4_TestStand.MergeNewItemsIntoArray_Tester..cctor() in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs:line 49
+       InnerException:
+
+
+        pstrReportLabels    "Description\tFileName\tModDate\tSize\tLineCount"   string
+
+------ Build started: Project: SharedUtl4, Configuration: Release Any CPU ------
+Build started 01/04/2013 01:28:48.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/04/2013 01:28:48 (01/04/2013 07:28:48 UTC)
+          Build Number = 27
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\WizardWrx.SharedUtl4.dll" to "bin\Release\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Release\WizardWrx.SharedUtl4.pdb" to "bin\Release\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.27.2666
+          File Date  = 01/04/2013 01:28:52 (01/04/2013 07:28:52 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/04/2013 01:28:52 (01/04/2013 07:28:52 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:03.98
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Release x86 ------
+Build started 01/04/2013 01:28:52.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/04/2013 01:28:52 (01/04/2013 07:28:52 UTC)
+          Build Number = 45
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Release\SharedUtl4_TestStand.Properties.Resources.resources
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\x86\Release\SharedUtl4_TestStand.exe /resource:obj\x86\Release\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" to "bin\Release\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.pdb" to "bin\Release\WizardWrx.SharedUtl4.pdb".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Release\SharedUtl4_TestStand.exe" to "bin\Release\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Release\SharedUtl4_TestStand.pdb" to "bin\Release\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe
+          Version    = 2.1.45.2668
+          File Date  = 01/04/2013 01:28:56 (01/04/2013 07:28:56 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/04/2013 01:28:56 (01/04/2013 07:28:56 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.34
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+
+SharedUtl4_TestStand, version 2.1.45.2668
+Begin @ 01/04/2013 01:29:18.228 (01/04/2013 07:29:18.228 UTC)
+
+Data Directory = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+
+Begin Tests of MaxStringLength Method:
+
+    Test # 1:
+
+Source of Test Data                = LinesInTextFile
+Fully Qualified Name of Input File = MaxStringLength.TXT
+Date Input File Last Modified      = 2012/11/19 11:49:33
+Size, in Bytes, of Input File      = 236
+Number of Lines in Input File      = 4
+Length of Longest Line             = 91
+
+    Test # 1 done
+
+
+MaxStringLength tests completed
+
+
+Begin Tests of MergeNewItemsIntoArray Method:
+
+    Test # 1:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Master.TXT       2012/11/21 12:08:53893     20
+New Items File  MergeNewItemsIntoArray_Case_01.TXT      2012/11/21 12:16:1392      1
+Output File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/04 01:30:09929     20
+
+    Test # 1 done
+
+    Test # 2:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/04 01:30:09929     20
+New Items File  MergeNewItemsIntoArray_Case_02.TXT      2012/11/21 12:18:5756      1
+Output File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/04 01:30:12974     21
+
+    Test # 2 done
+
+    Test # 3:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/04 01:30:12974     21
+New Items File  MergeNewItemsIntoArray_Case_03.TXT      2012/11/21 12:24:3752      1
+Output File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/04 01:30:151,015   22
+
+    Test # 3 done
+
+    Test # 4:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/04 01:30:151,015   22
+New Items File  MergeNewItemsIntoArray_Case_04.TXT      2012/11/21 12:26:3254      1
+Output File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/04 01:30:181,058   23
+
+    Test # 4 done
+
+    Test # 5:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/04 01:30:181,058   23
+New Items File  MergeNewItemsIntoArray_Case_05.TXT      2012/11/21 12:27:4197      2
+Output File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/04 01:30:241,144   25
+
+    Test # 5 done
+
+    Test # 6:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/04 01:30:241,144   25
+New Items File  MergeNewItemsIntoArray_Case_06.TXT      2012/11/21 12:31:47131     2
+Output File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/04 01:30:241,219   26
+
+    Test # 6 done
+
+    Test # 7:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/04 01:30:241,219   26
+New Items File  MergeNewItemsIntoArray_Case_07.TXT      2012/11/21 12:37:39142     3
+Output File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/04 01:30:241,350   29
+
+    Test # 7 done
+
+    Test # 8:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/04 01:30:241,350   29
+New Items File  MergeNewItemsIntoArray_Case_08.TXT      2012/11/21 12:44:18282     5
+Output File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/04 01:30:241,533   32
+
+    Test # 8 done
+
+    Test # 9:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/04 01:30:241,533   32
+New Items File  MergeNewItemsIntoArray_Case_09.TXT      2012/11/21 12:48:12128     3
+Output File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/04 01:30:241,650   35
+
+    Test # 9 done
+
+    Test # 10:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/04 01:30:241,650   35
+New Items File  MergeNewItemsIntoArray_Case_10.TXT      2012/11/21 12:48:52146     3
+Output File     MergeNewItemsIntoArray_Output_10.TXT    2013/01/04 01:30:241,785   38
+
+    Test # 10 done
+
+
+MergeNewItemsIntoArray tests completed
+
+
+SharedUtl4_TestStand End
+01/04/2013 01:30:25.056 (01/04/2013 07:30:25.056 UTC)
+Elapsed time: 0:00:01:06.875
+Please press the ENTER (Return) key to exit the program.
+
+
+------ Build started: Project: SharedUtl4, Configuration: Release Any CPU ------
+Build started 01/04/2013 01:38:33.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/04/2013 01:38:33 (01/04/2013 07:38:33 UTC)
+          Build Number = 28
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\WizardWrx.SharedUtl4.dll" to "bin\Release\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Release\WizardWrx.SharedUtl4.pdb" to "bin\Release\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.28.2958
+          File Date  = 01/04/2013 01:38:36 (01/04/2013 07:38:36 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/04/2013 01:38:37 (01/04/2013 07:38:37 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:03.98
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Release x86 ------
+Build started 01/04/2013 01:38:37.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/04/2013 01:38:37 (01/04/2013 07:38:37 UTC)
+          Build Number = 46
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Release\SharedUtl4_TestStand.Properties.Resources.resources
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\x86\Release\SharedUtl4_TestStand.exe /resource:obj\x86\Release\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" to "bin\Release\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.pdb" to "bin\Release\WizardWrx.SharedUtl4.pdb".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Release\SharedUtl4_TestStand.exe" to "bin\Release\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Release\SharedUtl4_TestStand.pdb" to "bin\Release\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe
+          Version    = 2.1.46.2960
+          File Date  = 01/04/2013 01:38:41 (01/04/2013 07:38:41 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/04/2013 01:38:41 (01/04/2013 07:38:41 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.37
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+
+
+
+===============================================================================
+01/04/2013 01:39:05
+===============================================================================
+
+The only place in which DetailTemplateFromLabels is called by the test stand is
+the static constructor of class MergeNewItemsIntoArray_Tester.
+
+
+===============================================================================
+01/05/2013 01:57:51
+===============================================================================
+
+        _strOutputFileName  "C:\\Documents and Settings\\DAG\\My Documents\\Visual Studio 2010\\Projects\\WizardWrx_Libs\\SharedUtl4\\Test_Data\\MergeNewItemsIntoArray_Output_01.TXT"  string
+
+------ Build started: Project: SharedUtl4, Configuration: Debug Any CPU ------
+Build started 01/05/2013 02:32:24.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 02:32:24 (01/05/2013 08:32:24 UTC)
+          Build Number = 35
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /doc:bin\Debug\WizardWrx.SharedUtl4.XML /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.35.4573
+          File Date  = 01/05/2013 02:32:27 (01/05/2013 08:32:27 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/05/2013 02:32:28 (01/05/2013 08:32:28 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.09
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Debug x86 ------
+Build started 01/05/2013 02:32:28.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 02:32:28 (01/05/2013 08:32:28 UTC)
+          Build Number = 54
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\x86\Debug\SharedUtl4_TestStand.exe /resource:obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" to "bin\Debug\WizardWrx.ApplicationHelpers.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.xml" to "bin\Debug\WizardWrx.SharedUtl4.xml".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.pdb" to "bin\Debug\WizardWrx.ApplicationHelpers.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.xml" to "bin\Debug\WizardWrx.ApplicationHelpers.xml".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.exe" to "bin\Debug\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.pdb" to "bin\Debug\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+          Version    = 2.1.53.4576
+          File Date  = 01/05/2013 02:32:32 (01/05/2013 08:32:32 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/05/2013 02:32:32 (01/05/2013 08:32:32 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.39
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+MergeNewItemsIntoArray_Summary
+
+s_ReportLabels = "Description\tFileName\tModDate\tSize\tLineCount"
+
+Rename 's_ReportLabels' to 'sr_strReportLabels'
+
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(47,40): updated definition
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(50,89): updated reference
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(76,58): updated reference
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(83,33): updated reference
+
+
+Rename 's_ReportDetail' to 'sr_strReportDetail'
+
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(50,40): updated definition
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(120,21): updated reference
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(174,21): updated reference
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(190,21): updated reference
+
+
+Rename 's_DefaultDirName' to 'sr_strDefaultDirName'
+
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(51,40): updated definition
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs(143,50): updated reference
+
+
+System.ArgumentException was unhandled
+  Message=The following line cannot be parsed.
+Description|FileName|ModDate|Size|LineCount
+  Source=WizardWrx.SharedUtl4
+  StackTrace:
+       at WizardWrx.ReportHelpers.CreateFormatString                        ( String pstrReportLabels , Char pchrFieldSeparator )   in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportHelpers.cs     line 226
+       at WizardWrx.ReportHelpers.DetailTemplateFromLabels                  ( String pstrReportLabels , Char pchrFieldSeparator )   in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportHelpers.cs     line 110
+       at SharedUtl4_TestStand.Program.MergeNewItemsIntoArray_Tests         ( )                                                     in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Program.cs line 128
+       at SharedUtl4_TestStand.Program.Main                                 ( String[] args )                                       in C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Program.cs line  62
+       at System.AppDomain._nExecuteAssembly                                ( Assembly assembly       , String[] args           )
+       at System.AppDomain.ExecuteAssembly                                  ( String assemblyFile     , Evidence assemblySecurity , String[] args )
+       at Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly   ( )
+       at System.Threading.ThreadHelper.ThreadStart_Context                 ( Object state )
+       at System.Threading.ExecutionContext.Run                             ( ExecutionContext executionContext , ContextCallback callback , Object state )
+       at System.Threading.ThreadHelper.ThreadStart                         ( )
+  InnerException:
+
+
+===============================================================================
+01/05/2013 12:25:45
+===============================================================================
+
+            string strInputFileName = null;
+
+
+        intTestNumber               0                                                                                                                                                           int
+        strInitialMasterFile        "C:\\Documents and Settings\\DAG\\My Documents\\Visual Studio 2010\\Projects\\WizardWrx_Libs\\SharedUtl4\\Test_Data\\MergeNewItemsIntoArray_Master.TXT"     string
+        strOutputFilenmetemplate    "$$DATADIRNAME$$\\MergeNewItemsIntoArray_Output_$$CASENBR$$.TXT"                                                                                            string
+        strNewItemsListFileSpec     "MergeNewItemsIntoArray_Case_??.TXT"                                                                                                                        string
+        intMaxDigitsInCaseNumber    2                                                                                                                                                           int
+        strOutputFileFQFN           null                                                                                                                                                        string
+        strInputFileName            null                                                                                                                                                        string
+        strReportLabels             null                                                                                                                                                        string
++       lstReportDetails            null                                                                                                                                                        System.Collections.Generic.List<string>
+        strReportDetailTemplate     null                                                                                                                                                        string
+        astrSummaryReport           null                                                                                                                                                        string[]
+
+        strSummaryFileFQFN          "C:\\Documents and Settings\\DAG\\My Documents\\Visual Studio 2010\\Projects\\WizardWrx_Libs\\SharedUtl4\\Test_Data\\MergeNewItemsIntoArray_Summary.TXT"    string
+
+        public static string ReportLabels { get { return sr_strReportLabels; } }
+        sr_strReportLabels =        "Description\tFileName\tModDate\tSize\tLineCount"
+        ReportLabels       =        "Description\tFileName\tModDate\tSize\tLineCount"
+
+        string strReportLabels = MergeNewItemsIntoArray_Tester.ReportLabels.Replace
+                                 (
+                                    StandardConstants.TAB_CHAR ,
+                                    StandardConstants.DLM_PIPE
+                                 ) ;
+
+        strReportLabels             "Description|FileName|ModDate|Size|LineCount"                                                                                                               string
+
+            string strReportDetailTemplate = ReportHelpers.DetailTemplateFromLabels (
+                strReportLabels ,
+                StandardConstants.DLM_PIPE );
+
+        strReportLabels             "Description|FileName|ModDate|Size|LineCount"                                                                                                               string
+        StandardConstants.DLM_PIPE = 124 '|' char
+
+
+        public static string DetailTemplateFromLabels (
+            string pstrReportLabels ,
+            char pchrFieldSeparator )
+
+        pstrReportLabels            "Description|FileName|ModDate|Size|LineCount"   string
+        pchrFieldSeparator          124 '|'                                         char
+
+
+            return CreateFormatString (
+                pstrReportLabels ,
+                pchrFieldSeparator );
+
+        private static string CreateFormatString (
+            string pstrReportLabels ,
+            char pchrFieldSeparator )
+
+        pstrReportLabels            "Description|FileName|ModDate|Size|LineCount"   string
+        pchrFieldSeparator          124 '|'                                         char
+
+------ Build started: Project: SharedUtl4, Configuration: Debug Any CPU ------
+Build started 01/05/2013 14:30:04.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 14:30:04 (01/05/2013 20:30:04 UTC)
+          Build Number = 39
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /doc:bin\Debug\WizardWrx.SharedUtl4.XML /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.39.26103
+          File Date  = 01/05/2013 14:30:08 (01/05/2013 20:30:08 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/05/2013 14:30:08 (01/05/2013 20:30:08 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Debug x86 ------
+Build started 01/05/2013 14:30:08.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 14:30:08 (01/05/2013 20:30:08 UTC)
+          Build Number = 59
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\x86\Debug\SharedUtl4_TestStand.exe /resource:obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.xml" to "bin\Debug\WizardWrx.SharedUtl4.xml".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.exe" to "bin\Debug\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.pdb" to "bin\Debug\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+          Version    = 2.1.59.26106
+          File Date  = 01/05/2013 14:30:12 (01/05/2013 20:30:12 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/05/2013 14:30:12 (01/05/2013 20:30:12 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.29
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+
+                string strTokenTemplate = TOKEN_TEMPLATE.Replace (
+                    DELIMITER_TOKEN ,
+                    strFieldSeparatorAsString );
+
+        strTokenTemplate = "{##}\t"
+
+
+------ Build started: Project: SharedUtl4, Configuration: Debug Any CPU ------
+Build started 01/05/2013 14:48:28.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 14:48:28 (01/05/2013 20:48:28 UTC)
+          Build Number = 41
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /doc:bin\Debug\WizardWrx.SharedUtl4.XML /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.41.26655
+          File Date  = 01/05/2013 14:48:31 (01/05/2013 20:48:31 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/05/2013 14:48:32 (01/05/2013 20:48:32 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.01
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Debug x86 ------
+Build started 01/05/2013 14:48:32.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 14:48:32 (01/05/2013 20:48:32 UTC)
+          Build Number = 61
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\x86\Debug\SharedUtl4_TestStand.exe /resource:obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.xml" to "bin\Debug\WizardWrx.SharedUtl4.xml".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.exe" to "bin\Debug\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.pdb" to "bin\Debug\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+          Version    = 2.1.61.26657
+          File Date  = 01/05/2013 14:48:36 (01/05/2013 20:48:36 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/05/2013 14:48:36 (01/05/2013 20:48:36 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.40
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
++       sbFormat    {{0}    }   System.Text.StringBuilder
++       sbFormat    {{0}    }   System.Text.StringBuilder
+
+
+This was a false alarm.
+
+------ Build started: Project: SharedUtl4, Configuration: Debug Any CPU ------
+Build started 01/05/2013 14:56:48.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 14:56:48 (01/05/2013 20:56:48 UTC)
+          Build Number = 43
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /doc:bin\Debug\WizardWrx.SharedUtl4.XML /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.43.26905
+          File Date  = 01/05/2013 14:56:51 (01/05/2013 20:56:51 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/05/2013 14:56:52 (01/05/2013 20:56:52 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.03
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Debug x86 ------
+Build started 01/05/2013 14:56:52.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 14:56:52 (01/05/2013 20:56:52 UTC)
+          Build Number = 63
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\x86\Debug\SharedUtl4_TestStand.exe /resource:obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.xml" to "bin\Debug\WizardWrx.SharedUtl4.xml".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.exe" to "bin\Debug\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.pdb" to "bin\Debug\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+          Version    = 2.1.63.26908
+          File Date  = 01/05/2013 14:56:56 (01/05/2013 20:56:56 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/05/2013 14:56:56 (01/05/2013 20:56:56 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.34
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+Iteration 1:    +       sbFormat    {{0}    }                   System.Text.StringBuilder
+Iteration 2:    +       sbFormat    {{0}    {1} }               System.Text.StringBuilder
+Iteration 3:    +       sbFormat    {{0}    {1} {2} }           System.Text.StringBuilder
+Iteration 4:    +       sbFormat    {{0}    {1} {2} {3} }       System.Text.StringBuilder
+Iteration 5:    +       sbFormat    {{0}    {1} {2} {3} {4} }   System.Text.StringBuilder
+
+                        string strNewTemplate = strTokenTemplate.Replace (
+                            EMBEDDED_TAB ,
+                            StandardConstants.EMPTY_STRING );
+                        strNewTemplate = "{##}\t"
+
+                return sbFormat.ToString ( ).Replace (
+                    EMBEDDED_TAB ,
+                    OUTPUT_TAB );
+
+sr_strReportDetail = "{0}\t{1}\t{2}\t{3}\t{4}\t"
+
+MergeNewItemsIntoArray_Tester.ReportLabels  = "Description\tFileName\tModDate\tSize\tLineCount"
+strReportLabels                             = "Description|FileName|ModDate|Size|LineCount"
+
+            string strReportDetailTemplate = ReportHelpers.DetailTemplateFromLabels (
+                strReportLabels ,
+                StandardConstants.DLM_PIPE );
+
+        public static string DetailTemplateFromLabels (
+            string pstrReportLabels ,
+            char pchrFieldSeparator )
+
+        pstrReportLabels            "Description|FileName|ModDate|Size|LineCount"   string
+        pchrFieldSeparator          124 '|'                                         char
+
+        private static string CreateFormatString (
+            string pstrReportLabels ,
+            char pchrFieldSeparator )
+
+
+        pstrReportLabels            "Description|FileName|ModDate|Size|LineCount"   string
+        pchrFieldSeparator          124 '|'                                         char
+        strFieldSeparatorAsString   null                                            string
+
+            string strFieldSeparatorAsString = pchrFieldSeparator.ToString ( );
+
+        strFieldSeparatorAsString   "|"                                             string
+
+
+-       astrColumnLabels            {string[5]}                                     string[]
+            [0]                     "Description"                                   string
+            [1]                     "FileName"                                      string
+            [2]                     "ModDate"                                       string
+            [3]                     "Size"                                          string
+            [4]                     "LineCount"                                     string
+
+                string strTokenTemplate = TOKEN_TEMPLATE.Replace (
+                    DELIMITER_TOKEN ,
+                    strFieldSeparatorAsString );
+
+        strTokenTemplate            "{##}|"                                         string
+
+        strLabel                    "Description"                                   string
+
++       sbFormat                    {{0}|}                                          System.Text.StringBuilder
++       sbFormat                    {{0}|{1}|}                                      System.Text.StringBuilder
++       sbFormat                    {{0}|{1}|{2}|}                                  System.Text.StringBuilder
++       sbFormat                    {{0}|{1}|{2}|{3}|}                              System.Text.StringBuilder
++       sbFormat                    {{0}|{1}|{2}|{3}|{4}|}                          System.Text.StringBuilder
+
+------ Build started: Project: SharedUtl4, Configuration: Debug Any CPU ------
+Build started 01/05/2013 15:43:49.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 15:43:49 (01/05/2013 21:43:49 UTC)
+          Build Number = 44
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /doc:bin\Debug\WizardWrx.SharedUtl4.XML /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.44.28316
+          File Date  = 01/05/2013 15:43:52 (01/05/2013 21:43:52 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/05/2013 15:43:53 (01/05/2013 21:43:53 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.03
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Debug x86 ------
+Build started 01/05/2013 15:43:53.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/05/2013 15:43:53 (01/05/2013 21:43:53 UTC)
+          Build Number = 64
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\x86\Debug\SharedUtl4_TestStand.exe /resource:obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.xml" to "bin\Debug\WizardWrx.SharedUtl4.xml".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.exe" to "bin\Debug\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.pdb" to "bin\Debug\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+          Version    = 2.1.64.28318
+          File Date  = 01/05/2013 15:43:57 (01/05/2013 21:43:57 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/05/2013 15:43:57 (01/05/2013 21:43:57 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.40
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
++       sbFormat                {0}|{1}|{2}|{3}|{4}     System.Text.StringBuilder
+
+        strReportDetailTemplate "{0}|{1}|{2}|{3}|{4}"   string
+
+SharedUtl4_TestStand, version 2.1.69.31104
+Begin @ 01/05/2013 17:21:20.339 (01/05/2013 23:21:20.339 UTC)
+
+Data Directory = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+
+Begin Tests of MaxStringLength Method:
+
+    Test # 1:
+
+Source of Test Data                = LinesInTextFile
+Fully Qualified Name of Input File = MaxStringLength.TXT
+Date Input File Last Modified      = 2012/11/19 11:49:33
+Size, in Bytes, of Input File      = 236
+Number of Lines in Input File      = 4
+Length of Longest Line             = 91
+
+    Test # 1 done
+
+
+MaxStringLength tests completed
+
+
+Begin Tests of MergeNewItemsIntoArray Method:
+
+    Test # 1:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Master.TXT       2012/11/21 12:08:53   893          20
+New Items File  MergeNewItemsIntoArray_Case_01.TXT      2012/11/21 12:16:13    92           1
+Output File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/05 17:21:20   929          20
+
+    Test # 1 done
+
+    Test # 2:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/05 17:21:20   929          20
+New Items File  MergeNewItemsIntoArray_Case_02.TXT      2012/11/21 12:18:57    56           1
+Output File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/05 17:21:20   974          21
+
+    Test # 2 done
+
+    Test # 3:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/05 17:21:20   974          21
+New Items File  MergeNewItemsIntoArray_Case_03.TXT      2012/11/21 12:24:37    52           1
+Output File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/05 17:21:20 1,015          22
+
+    Test # 3 done
+
+    Test # 4:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/05 17:21:20 1,015          22
+New Items File  MergeNewItemsIntoArray_Case_04.TXT      2012/11/21 12:26:32   54            1
+Output File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/05 17:21:20 1,058          23
+
+    Test # 4 done
+
+    Test # 5:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/05 17:21:20 1,058          23
+New Items File  MergeNewItemsIntoArray_Case_05.TXT      2012/11/21 12:27:41    97           2
+Output File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/05 17:21:20 1,144          25
+
+    Test # 5 done
+
+    Test # 6:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/05 17:21:20 1,144          25
+New Items File  MergeNewItemsIntoArray_Case_06.TXT      2012/11/21 12:31:47   131           2
+Output File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/05 17:21:20 1,219          26
+
+    Test # 6 done
+
+    Test # 7:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/05 17:21:20 1,219          26
+New Items File  MergeNewItemsIntoArray_Case_07.TXT      2012/11/21 12:37:39   142           3
+Output File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/05 17:21:20 1,350          29
+
+    Test # 7 done
+
+    Test # 8:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/05 17:21:20 1,350          29
+New Items File  MergeNewItemsIntoArray_Case_08.TXT      2012/11/21 12:44:18   282           5
+Output File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/05 17:21:20 1,533          32
+
+    Test # 8 done
+
+    Test # 9:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/05 17:21:20 1,533          32
+New Items File  MergeNewItemsIntoArray_Case_09.TXT      2012/11/21 12:48:12   128           3
+Output File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/05 17:21:20 1,650          35
+
+    Test # 9 done
+
+    Test # 10:
+
+Description     FileName                                ModDate              Size   LineCount
+Master File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/05 17:21:20 1,650          35
+New Items File  MergeNewItemsIntoArray_Case_10.TXT      2012/11/21 12:48:52   146           3
+Output File     MergeNewItemsIntoArray_Output_10.TXT    2013/01/05 17:21:20 1,785          38
+
+    Test # 10 done
+
+
+MergeNewItemsIntoArray tests completed
+
+
+SharedUtl4_TestStand End 01/05/2013 17:21:20.651 (01/05/2013 23:21:20.651 UTC)
+Elapsed time: 0:00:00:00.312 Please press the ENTER (Return) key to exit the
+program.
+
+
+===============================================================================
+01/06/2013 11:45:48 - Adjust to cover the case where the input string is an
+                      embedded constant, rather than a string from a RESX file.
+===============================================================================
+
+
+------ Build started: Project: SharedUtl4, Configuration: Debug Any CPU ------
+Build started 01/06/2013 11:45:15.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/06/2013 11:45:16 (01/06/2013 17:45:16 UTC)
+          Build Number = 51
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /doc:bin\Debug\WizardWrx.SharedUtl4.XML /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.51.21159
+          File Date  = 01/06/2013 11:45:19 (01/06/2013 17:45:19 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/06/2013 11:45:19 (01/06/2013 17:45:19 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.03
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Debug x86 ------
+Build started 01/06/2013 11:45:19.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/06/2013 11:45:20 (01/06/2013 17:45:20 UTC)
+          Build Number = 71
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources 
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:DEBUG;TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\x86\Debug\SharedUtl4_TestStand.exe /resource:obj\x86\Debug\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll" to "bin\Debug\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.pdb" to "bin\Debug\WizardWrx.SharedUtl4.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.xml" to "bin\Debug\WizardWrx.SharedUtl4.xml".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.exe" to "bin\Debug\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Debug\SharedUtl4_TestStand.pdb" to "bin\Debug\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe
+          Version    = 2.1.71.21162
+          File Date  = 01/06/2013 11:45:24 (01/06/2013 17:45:24 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/06/2013 11:45:24 (01/06/2013 17:45:24 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.96
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+
+SharedUtl4_TestStand, version 2.1.71.21162
+Begin @ 01/06/2013 11:47:45.492 (01/06/2013 17:47:45.492 UTC)
+
+Data Directory = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+
+Begin Tests of MaxStringLength Method:
+
+    Test # 1:
+
+Source of Test Data                = LinesInTextFile
+Fully Qualified Name of Input File = MaxStringLength.TXT
+Date Input File Last Modified      = 2012/11/19 11:49:33
+Size, in Bytes, of Input File      = 236
+Number of Lines in Input File      = 4
+Length of Longest Line             = 91
+
+    Test # 1 done
+
+
+MaxStringLength tests completed
+
+
+Begin Tests of MergeNewItemsIntoArray Method:
+
+    Test # 1:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Master.TXT       2012/11/21 12:08:53     893     20
+New Items File  MergeNewItemsIntoArray_Case_01.TXT      2012/11/21 12:16:13     92      1
+Output File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/06 11:47:52     929     20
+
+    Test # 1 done
+
+    Test # 2:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/06 11:47:52     929     20
+New Items File  MergeNewItemsIntoArray_Case_02.TXT      2012/11/21 12:18:57     56      1
+Output File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/06 11:47:52     974     21
+
+    Test # 2 done
+
+    Test # 3:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/06 11:47:52     974     21
+New Items File  MergeNewItemsIntoArray_Case_03.TXT      2012/11/21 12:24:37     52      1
+Output File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/06 11:47:52     1,015   22
+
+    Test # 3 done
+
+    Test # 4:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/06 11:47:52     1,015   22
+New Items File  MergeNewItemsIntoArray_Case_04.TXT      2012/11/21 12:26:32     54      1
+Output File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/06 11:47:52     1,058   23
+
+    Test # 4 done
+
+    Test # 5:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/06 11:47:52     1,058   23
+New Items File  MergeNewItemsIntoArray_Case_05.TXT      2012/11/21 12:27:41     97      2
+Output File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/06 11:47:52     1,144   25
+
+    Test # 5 done
+
+    Test # 6:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/06 11:47:52     1,144   25
+New Items File  MergeNewItemsIntoArray_Case_06.TXT      2012/11/21 12:31:47     131     2
+Output File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/06 11:47:52     1,219   26
+
+    Test # 6 done
+
+    Test # 7:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/06 11:47:52     1,219   26
+New Items File  MergeNewItemsIntoArray_Case_07.TXT      2012/11/21 12:37:39     142     3
+Output File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/06 11:47:52     1,350   29
+
+    Test # 7 done
+
+    Test # 8:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/06 11:47:52     1,350   29
+New Items File  MergeNewItemsIntoArray_Case_08.TXT      2012/11/21 12:44:18     282     5
+Output File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/06 11:47:52     1,533   32
+
+    Test # 8 done
+
+    Test # 9:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/06 11:47:52     1,533   32
+New Items File  MergeNewItemsIntoArray_Case_09.TXT      2012/11/21 12:48:12     128     3
+Output File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/06 11:47:52     1,650   35
+
+    Test # 9 done
+
+    Test # 10:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/06 11:47:52     1,650   35
+New Items File  MergeNewItemsIntoArray_Case_10.TXT      2012/11/21 12:48:52     146     3
+Output File     MergeNewItemsIntoArray_Output_10.TXT    2013/01/06 11:47:52     1,785   38
+
+    Test # 10 done
+
+
+MergeNewItemsIntoArray tests completed
+
+
+SharedUtl4_TestStand End
+01/06/2013 11:47:54.242 (01/06/2013 17:47:54.242 UTC)
+Elapsed time: 0:00:00:08.796
+Please press the ENTER (Return) key to exit the program.
+
+
+------ Build started: Project: SharedUtl4, Configuration: Release Any CPU ------
+Build started 01/06/2013 11:59:39.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/06/2013 11:59:39 (01/06/2013 17:59:39 UTC)
+          Build Number = 53
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /doc:bin\Release\WizardWrx.SharedUtl4.XML /define:TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\WizardWrx.SharedUtl4.dll /target:library ReportDetail.cs ReportDetails.cs ReportHelpers.cs Properties\AssemblyInfo.cs ListHelpers.cs
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\WizardWrx.SharedUtl4.dll" to "bin\Release\WizardWrx.SharedUtl4.dll".
+  SharedUtl4 -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+  Copying file from "obj\Release\WizardWrx.SharedUtl4.pdb" to "bin\Release\WizardWrx.SharedUtl4.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+          Version    = 2.1.53.21591
+          File Date  = 01/06/2013 11:59:42 (01/06/2013 17:59:42 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\BuildHistory.LOG
+          File Date  = 01/06/2013 11:59:43 (01/06/2013 17:59:43 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.03
+------ Build started: Project: SharedUtl4_TestStand, Configuration: Release x86 ------
+Build started 01/06/2013 11:59:43.
+PreBuildEvent:
+  wwBldNbrMgr.exe "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ "
+  Build Task           = IncrementBuildNbr
+  AssemblyInfo File    = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+          Project Type = CSharp
+          File Date    = 01/06/2013 11:59:43 (01/06/2013 17:59:43 UTC)
+          Build Number = 73
+  Sleeping for 3 seconds
+  Waking from cat nap
+CoreResGen:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\ResGen.exe /useSourcePath /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /r:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /r:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" /compile Properties\Resources.resx,obj\x86\Release\SharedUtl4_TestStand.Properties.Resources.resources 
+CoreCompile:
+  C:\WINXP\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /define:TRACE /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\WINXP\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ApplicationHelpers\ApplicationHelpers\bin\Release\WizardWrx.ApplicationHelpers.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\ConsoleAppAids\ConsoleAppAids\bin\Release\WizardWrx.ConsoleAppAids.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl2\SharedUtl2\bin\Release\WizardWrx.SharedUtl2.dll" /reference:"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\x86\Release\SharedUtl4_TestStand.exe /resource:obj\x86\Release\SharedUtl4_TestStand.Properties.Resources.resources /target:exe /win32icon:WW_Icon1.ico MaxStringLength_Tester.cs MergeNewItemsIntoArray_Tester.cs Program.cs Properties\AssemblyInfo.cs Properties\Resources.Designer.cs Properties\Settings.Designer.cs Settings.cs TestItemSortByString.cs
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll" to "bin\Release\WizardWrx.SharedUtl4.dll".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.pdb" to "bin\Release\WizardWrx.SharedUtl4.pdb".
+  Copying file from "C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.xml" to "bin\Release\WizardWrx.SharedUtl4.xml".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "obj\x86\Release\SharedUtl4_TestStand.exe" to "bin\Release\SharedUtl4_TestStand.exe".
+  SharedUtl4_TestStand -> C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe
+  Copying file from "obj\x86\Release\SharedUtl4_TestStand.pdb" to "bin\Release\SharedUtl4_TestStand.pdb".
+PostBuildEvent:
+  wwBldNbrMgr.exe -r "-pC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\ " "-tC:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe"
+  Build Task           = RecordBuildDetails
+  Assembly File FQFN = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\SharedUtl4_TestStand.exe
+          Version    = 2.1.73.21593
+          File Date  = 01/06/2013 11:59:47 (01/06/2013 17:59:47 UTC)
+  Log File FQFN      = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\BuildHistory.LOG
+          File Date  = 01/06/2013 11:59:47 (01/06/2013 17:59:47 UTC)
+
+Build succeeded.
+
+Time Elapsed 00:00:04.42
+========== Build: 2 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+
+SharedUtl4_TestStand, version 2.1.73.21593
+Begin @ 01/06/2013 12:01:29.131 (01/06/2013 18:01:29.131 UTC)
+
+Data Directory = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\Test_Data
+
+Begin Tests of MaxStringLength Method:
+
+    Test # 1:
+
+Source of Test Data                = LinesInTextFile
+Fully Qualified Name of Input File = MaxStringLength.TXT
+Date Input File Last Modified      = 2012/11/19 11:49:33
+Size, in Bytes, of Input File      = 236
+Number of Lines in Input File      = 4
+Length of Longest Line             = 91
+
+    Test # 1 done
+
+
+MaxStringLength tests completed
+
+
+Begin Tests of MergeNewItemsIntoArray Method:
+
+    Test # 1:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Master.TXT       2012/11/21 12:08:53    893     20
+New Items File  MergeNewItemsIntoArray_Case_01.TXT      2012/11/21 12:16:13    92      1
+Output File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/06 12:01:29    929     20
+
+    Test # 1 done
+
+    Test # 2:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_01.TXT    2013/01/06 12:01:29    929     20
+New Items File  MergeNewItemsIntoArray_Case_02.TXT      2012/11/21 12:18:57    56      1
+Output File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/06 12:01:30    974     21
+
+    Test # 2 done
+
+    Test # 3:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_02.TXT    2013/01/06 12:01:30    974     21
+New Items File  MergeNewItemsIntoArray_Case_03.TXT      2012/11/21 12:24:37    52      1
+Output File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/06 12:01:30    1,015   22
+
+    Test # 3 done
+
+    Test # 4:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_03.TXT    2013/01/06 12:01:30    1,015   22
+New Items File  MergeNewItemsIntoArray_Case_04.TXT      2012/11/21 12:26:32    54      1
+Output File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/06 12:01:31    1,058   23
+
+    Test # 4 done
+
+    Test # 5:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_04.TXT    2013/01/06 12:01:31    1,058   23
+New Items File  MergeNewItemsIntoArray_Case_05.TXT      2012/11/21 12:27:41    97      2
+Output File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/06 12:01:31    1,144   25
+
+    Test # 5 done
+
+    Test # 6:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_05.TXT    2013/01/06 12:01:31    1,144   25
+New Items File  MergeNewItemsIntoArray_Case_06.TXT      2012/11/21 12:31:47    131     2
+Output File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/06 12:01:32    1,219   26
+
+    Test # 6 done
+
+    Test # 7:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_06.TXT    2013/01/06 12:01:32    1,219   26
+New Items File  MergeNewItemsIntoArray_Case_07.TXT      2012/11/21 12:37:39    142     3
+Output File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/06 12:01:32    1,350   29
+
+    Test # 7 done
+
+    Test # 8:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_07.TXT    2013/01/06 12:01:32    1,350   29
+New Items File  MergeNewItemsIntoArray_Case_08.TXT      2012/11/21 12:44:18    282     5
+Output File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/06 12:01:33    1,533   32
+
+    Test # 8 done
+
+    Test # 9:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_08.TXT    2013/01/06 12:01:33    1,533   32
+New Items File  MergeNewItemsIntoArray_Case_09.TXT      2012/11/21 12:48:12    128     3
+Output File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/06 12:01:34    1,650   35
+
+    Test # 9 done
+
+    Test # 10:
+
+Description     FileName        ModDate Size    LineCount
+Master File     MergeNewItemsIntoArray_Output_09.TXT    2013/01/06 12:01:34    1,650   35
+New Items File  MergeNewItemsIntoArray_Case_10.TXT      2012/11/21 12:48:52    146     3
+Output File     MergeNewItemsIntoArray_Output_10.TXT    2013/01/06 12:01:34    1,785   38
+
+    Test # 10 done
+
+
+MergeNewItemsIntoArray tests completed
+
+
+SharedUtl4_TestStand End
+01/06/2013 12:01:34.881 (01/06/2013 18:01:34.881 UTC)
+Elapsed time: 0:00:00:05.750
+Please press the ENTER (Return) key to exit the program.

@@ -1,0 +1,3393 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WizardWrx.ApplicationHelpers2</name>
+    </assembly>
+    <members>
+        <member name="T:WizardWrx.ApplicationHelpers2.PathPositions">
+            <summary>
+            Use these constants to document path string parsing.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.PathPositions.FQFN_PREFIX_START_POS">
+            <summary>
+            The FQFN prefix refers to the drive and path substring, ":\" which
+            starts in the second position of the substring, preceded by the
+            logical drive letter. In keeping with the treatment of strings and
+            substrings as arrays, its value is an index. Accordingly, its value
+            is equated to ArrayInfo.ARRAY_SECOND_ELEMENT.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.PathPositions.FQFN_PREFIX_START_LEN">
+            <summary>
+            The prefix of an absolute path string is TWO characters. Some very 
+            OLD programs, display little or no awareness of directories. Hence,
+            they render only the first of the two characters (the full colon).
+            
+            By this means, you can tell whether a path name is one of these
+            'old" path strings, or, at the very least, must be interpreted
+            relative to the logged directory on the specified logical drive.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.PathPositions.MAX_PATH">
+            <summary>
+            In theory, Windows NT supports really long file names that can run
+            to thousands of characters. However, due to the limitations of the
+            commonly used Windows file system APIs, the practical limit on the
+            length of a file name string remains stuck at MAX_PATH, 260
+            characters.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.PathPositions.UNC_HOSTNAME_PREFIX_POS">
+            <summary>
+            By their very nature, a canonical UNC path string is absolute, and
+            it must begin with two fixed characters, "\\". In keeping with the
+            treatment of string and substrings as arrays, its value is an index.
+            Accordingly, its value is equated to ArrayInfo.ARRAY_SECOND_ELEMENT.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.PathPositions.UNC_HOSTNAME_START_POS">
+            <summary>
+            Since a UNC path string begins with two fixed characters, it follows
+            that the hostname, itself, begins at offset 2 (character 3). In
+            keeping with the treatment of string and substrings as arrays, its
+            value is an index.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.IniFileReader">
+            <summary>
+            Provide a managed interface to GetPrivateProfileString in the Windows
+            API, with methods to retrieve the values of individual keys and lists of
+            the keys in a section or the sections in a file.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.IniFileReader.path">
+            <summary>
+            This string holds the fully qualified name of the private profile
+            file to process, which is passed into the constructor, but can be
+            changed as needed.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.IniFileReader.#ctor(System.String)">
+            <summary>
+            Construct an instance of the class.
+            </summary>
+            <param name="INIPath">
+            This string must be the fully qualified name of a well formed
+            private profile (INI) file.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.IniFileReader.GetSectionNames">
+            <summary>
+            The Function called to obtain the SectionHeaders, and returns them
+            in an Dynamic Array
+            </summary>
+            <returns>
+            The return value is an array of strings, each of which is the name
+            of a section.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.IniFileReader.GetEntryNames(System.String)">
+            <summary>
+            The Function called to obtain the EntryKeys from the given
+            SectionHeader string passed, and returns them in an Dynamic Array
+            </summary>
+            <param name="section">
+            This string must be the name of a section which is expected to be
+            present, though possibly empty.
+            </param>
+            <returns>
+            The return value is an array of strings, each of which is the name
+            of a key (entry) in the specified section.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.IniFileReader.GetEntryValue(System.String,System.String)">
+            <summary>
+            The Function called to obtain the EntryKey Value from the given
+            SectionHeader and EntryKey string passed, then returned
+            </summary>
+            <param name="section">
+            This string must be the name of a section that is expected to exist.
+            </param>
+            <param name="entry">
+            This string must be the name of a key (entry) that is expected to
+            exist, though it might be empty.
+            </param>
+            <returns>
+            The return value is a string, which may be empty.
+            </returns>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic">
+             <summary>
+             An instance of this class efficiently processes command line switches,
+             named arguments, and positional arguments, in such a way that they are
+             easily accessible. The command line is completely parsed in a single
+             pass.
+            
+             Switches, named arguments, and positional arguments may be freely mixed
+             in any way; your users aren't confined to specifying all switches and/or
+             named arguments first, last, or in any other order.
+            
+             Since command line parsing happens in the constructor, your code must
+             define all the rules in its parameters. To that end, there are 26
+             constructors, which provide access to all of the rich capabilities of
+             this object. In spite of the multitude of constructors, their
+             organization, coupled with consistent naming and documentation of their
+             arguments, is intended to make their features readily accessible.
+            
+             While it is fairly trivial to reverse engineer the underlying Dictionary
+             object, and read the arguments directly, the supported method of reading
+             them is through its methods: GetArgByName, GetArgByPosition, and
+             GetSwitchByName.
+             </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ARG_LIST_HAS_ARGS">
+            <summary>
+            When the ArgListIsEmpty property has this value, the command line
+            contains at least one argument. See Remarks.
+            </summary>
+            <remarks>
+            ArgListIsEmpty being false means only that there is an argument in
+            the command line, which may be invalid. Check the ArgMatching array
+            or the two invalid argument counters, InvalidNamedArgsInCmd and
+            InvalidSwitchesInCmd.
+            </remarks>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ARG_LIST_IS_EMPTY">
+            <summary>
+            When the ArgListIsEmpty property has this value, the command line is
+            empty, consisting solely of the name of the executing assembly.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.BLANK_AS_DEFAULT_ALLOWED">
+            <summary>
+            When the AllowEmptyStringAsDefault property has this value, an empty
+            string is permitted as a default value. See the Remarks section of 
+            the online documentation of the AllowEmptyStringAsDefault property
+            for complete details.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.BLANK_AS_DEFAULT_FORBIDDEN">
+            <summary>
+            When the AllowEmptyStringAsDefault property has this value, an empty
+            string as a default value is forbidden. See the Remarks section of 
+            the online documentation of the AllowEmptyStringAsDefault property
+            for complete details.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.FIRST_POSITIONAL_ARG">
+            <summary>
+            Use this constant with the GetArgByPosition method to get the first
+            positional argument, or as the initializer of a For loop to get all
+            positional arguments.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.NAME_VALUE_DELIMITER">
+            <summary>
+            This class uses the equal sign as its delimiter between the name and
+            value of named arguments.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.NONE">
+            <summary>
+            Counts are initialized to this value (zero). Making it public
+            simplifies coding well-documented tests.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.POSITIONAL_ARGS_COUNT_LIMIT">
+            <summary>
+            This constant defines the default number of positional arguments
+            that instances of this class will capture.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.SWITCH_IS_OFF">
+            <summary>
+            This symbolic name maps to a string representation of Boolean FALSE.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.SWITCH_IS_ON">
+            <summary>
+            This symbolic name maps to a string representation of Boolean TRUE.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.VALUE_NOT_SET">
+            <summary>
+            This symbolic constant maps to the empty string, and indicates that
+            a specified named or positional argument was omitted from the
+            command line.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor">
+            <summary>
+            Initialize an instance that supports exclusively positional
+            arguments.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Int32)">
+             <summary>
+             Initialize an instance that supports exclusively positional
+             arguments, and enforces a user-specified limit, in lieu of a default
+             limit of 99 positional arguments
+            
+             Please see Remarks for important security considerations.
+             </summary>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[])">
+            <summary>
+            Initialize the instance with a list of valid switches, all having a
+            default value of SWITCH_IS_OFF.
+            </summary>
+            <param name="pachrValidSwitches">
+            Array of characters, each of which is a valid (supported) switch.
+            All switches are initialized to SWITCH_IS_OFF.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.String[])">
+            <summary>
+            Initialize the instance with a list of valid named arguments, each
+            having a default value of VALUE_NOT_SET.
+            </summary>
+            <param name="pastrValidNamedArgs">
+            Array of strings, each of which is a valid (supported) argument
+            name. All arguments are initialized to VALUE_NOT_SET.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.String[])">
+            <summary>
+            Initialize the instance with lists of valid switches and named arguments.
+            </summary>
+            <param name="pachrValidSwitches">
+            Array of characters, each of which is a valid (supported) switch.
+            All switches are initialized to SWITCH_IS_OFF.
+            </param>
+            <param name="pastrValidNamedArgs">
+            Array of strings, each of which is a valid (supported) argument
+            name. All arguments are initialized to VALUE_NOT_SET.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String})">
+            <summary>
+            Initialize the instance with a list of valid switches, each having
+            the value specified in the corresponding item in pdctValidSwitches.
+            </summary>
+            <param name="pdctValidSwitches">
+            Dictinary, keyed by switch name, a character, containing its desired
+            default value, a string.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Initialize the instance with a list of valid named arguments, each
+            having the default value specified in the corresponding item in
+            pdctValidNamedArgs.
+            </summary>
+            <param name="pdctValidNamedArgs">
+            Dictinary, keyed by argument name, a string, containing its desired
+            default value, also a string.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Initialize the instance with a list of valid switches, each having
+            the default value specified in the corresponding item in
+            pdctValidSwitches, and a separate list of valid named arguments,
+            defined in the same manner.
+            </summary>
+            <param name="pdctValidSwitches">
+            Dictinary, keyed by switch name, a character, containing its desired
+            default value, a string.
+            </param>
+            <param name="pdctValidNamedArgs">
+            Dictinary, keyed by argument name, a string, containing its desired
+            default value, also a string.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with a list of valid switches, all having a
+            default value of SWITCH_IS_OFF.
+            </summary>
+            <param name="pachrValidSwitches">
+            Array of characters, each of which is a valid (supported) switch.
+            All switches are initialized to SWITCH_IS_OFF.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.String[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with a list of valid named arguments, each
+            having a default value of VALUE_NOT_SET.
+            </summary>
+            <param name="pastrValidNamedArgs">
+            Array of strings, each of which is a valid (supported) argument
+            name. All arguments are initialized to VALUE_NOT_SET.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.String[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with lists of valid switches and named arguments.
+            </summary>
+            <param name="pachrValidSwitches">
+            Array of characters, each of which is a valid (supported) switch.
+            All switches are initialized to SWITCH_IS_OFF.
+            </param>
+            <param name="pastrValidNamedArgs">
+            Array of strings, each of which is a valid (supported) argument
+            name. All arguments are initialized to VALUE_NOT_SET.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with a list of valid switches, each having
+            the value specified in the corresponding item in pdctValidSwitches.
+            </summary>
+            <param name="pdctValidSwitches">
+            Dictinary, keyed by switch name, a character, containing its desired
+            default value, a string.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.String,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with a list of valid named arguments, each
+            having the default value specified in the corresponding item in
+            pdctValidNamedArgs.
+            </summary>
+            <param name="pdctValidNamedArgs">
+            Dictinary, keyed by argument name, a string, containing its desired
+            default value, also a string.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.Collections.Generic.Dictionary{System.String,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with a list of valid switches, each having
+            the default value specified in the corresponding item in
+            pdctValidSwitches, and a separate list of valid named arguments,
+            defined in the same manner.
+            </summary>
+            <param name="pdctValidSwitches">
+            Dictinary, keyed by switch name, a character, containing its desired
+            default value, a string.
+            </param>
+            <param name="pdctValidNamedArgs">
+            Dictinary, keyed by argument name, a string, containing its desired
+            default value, also a string.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, all having a
+             default value of SWITCH_IS_OFF.
+             </summary>
+             <param name="pachrValidSwitches">
+             Array of characters, each of which is a valid (supported) switch.
+             All switches are initialized to SWITCH_IS_OFF.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.String[],System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid named arguments, each
+             having a default value of VALUE_NOT_SET.
+             </summary>
+             <param name="pastrValidNamedArgs">
+             Array of strings, each of which is a valid (supported) argument
+             name. All arguments are initialized to VALUE_NOT_SET.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.String[],System.Int32)">
+             <summary>
+             Initialize the instance with lists of valid switches and named arguments.
+             </summary>
+             <param name="pachrValidSwitches">
+             Array of characters, each of which is a valid (supported) switch.
+             All switches are initialized to SWITCH_IS_OFF.
+             </param>
+             <param name="pastrValidNamedArgs">
+             Array of strings, each of which is a valid (supported) argument
+             name. All arguments are initialized to VALUE_NOT_SET.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             the value specified in the corresponding item in pdctValidSwitches.
+             </summary>
+             <param name="pdctValidSwitches">
+             Dictinary, keyed by switch name, a character, containing its desired
+             default value, a string.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.String,System.String},System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid named arguments, each
+             having the default value specified in the corresponding item in
+             pdctValidNamedArgs.
+             </summary>
+             <param name="pdctValidNamedArgs">
+             Dictinary, keyed by argument name, a string, containing its desired
+             default value, also a string.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             the default value specified in the corresponding item in
+             pdctValidSwitches, and a separate list of valid named arguments,
+             defined in the same manner.
+             </summary>
+             <param name="pdctValidSwitches">
+             Dictinary, keyed by switch name, a character, containing its desired
+             default value, a string.
+             </param>
+             <param name="pdctValidNamedArgs">
+             Dictinary, keyed by argument name, a string, containing its desired
+             default value, also a string.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, all having a
+             default value of SWITCH_IS_OFF.
+             </summary>
+             <param name="pachrValidSwitches">
+             Array of characters, each of which is a valid (supported) switch.
+             All switches are initialized to SWITCH_IS_OFF.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.String[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid named arguments, each
+             having a default value of VALUE_NOT_SET.
+             </summary>
+             <param name="pastrValidNamedArgs">
+             Array of strings, each of which is a valid (supported) argument
+             name. All arguments are initialized to VALUE_NOT_SET.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.String[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with lists of valid switches and named arguments.
+             </summary>
+             <param name="pachrValidSwitches">
+             Array of characters, each of which is a valid (supported) switch.
+             All switches are initialized to SWITCH_IS_OFF.
+             </param>
+             <param name="pastrValidNamedArgs">
+             Array of strings, each of which is a valid (supported) argument
+             name. All arguments are initialized to VALUE_NOT_SET.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             the value specified in the corresponding item in pdctValidSwitches.
+             </summary>
+             <param name="pdctValidSwitches">
+             Dictinary, keyed by switch name, a character, containing its desired
+             default value, a string.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.String,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid named arguments, each
+             having the default value specified in the corresponding item in
+             pdctValidNamedArgs.
+             </summary>
+             <param name="pdctValidNamedArgs">
+             Dictinary, keyed by argument name, a string, containing its desired
+             default value, also a string.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.Collections.Generic.Dictionary{System.String,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             the default value specified in the corresponding item in
+             pdctValidSwitches, and a separate list of valid named arguments,
+             defined in the same manner.
+             </summary>
+             <param name="pdctValidSwitches">
+             Dictinary, keyed by switch name, a character, containing its desired
+             default value, a string.
+             </param>
+             <param name="pdctValidNamedArgs">
+             Dictinary, keyed by argument name, a string, containing its desired
+             default value, also a string.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.String[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with a list of valid switches, each having
+            the default value specified in the corresponding item in
+            pdctValidSwitches, and a separate list of valid named arguments, in
+            an array of strings, with the class supplying a standard default.
+            </summary>
+            <param name="pdctValidSwitches">
+            Dictinary, keyed by switch name, a character, containing its desired
+            default value, a string.
+            </param>
+            <param name="pastrValidNamedArgs">
+            Array of strings, each of which is a valid (supported) argument
+            name. All arguments are initialized to VALUE_NOT_SET.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.Collections.Generic.Dictionary{System.String,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching)">
+            <summary>
+            Initialize the instance with a list of valid named arguments, in
+            a dictionary strings, where each value is the corresponding default,
+            and a list of valid switches in an array of characters, with their
+            default values as the class default.
+            </summary>
+            <param name="pachrValidSwitches">
+            Array of characters, each of which is a valid (supported) switch.
+            All switches are initialized to SWITCH_IS_OFF.
+            </param>
+            <param name="pdctValidNamedArgs">
+            Dictinary, keyed by argument name, a string, containing its desired
+            default value, also a string.
+            </param>
+            <param name="penmArgMatching">
+            Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+            argument matching rules. At present, two rules are defined. See the
+            Intellisense documentation of any CmdLneArgs argument for details.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Initialize the instance with a list of valid switches, each having
+            the default value defined by the class, and a separate list of valid
+            named arguments, each defined as a DictionaryItem, with its default
+            value given in the value member.
+            </summary>
+            <param name="pachrValidSwitches">
+            Array of characters, each of which is a valid (supported) switch.
+            All switches are initialized to SWITCH_IS_OFF.
+            </param>
+            <param name="pdctValidNamedArgs">
+            Dictinary, keyed by argument name, a string, containing its desired
+            default value, also a string.
+            </param>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.Collections.Generic.Dictionary{System.String,System.String},WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             the default value defined by the class, and a separate list of valid
+             named arguments, each defined as a DictionaryItem, with its default
+             value given in the value member.
+             </summary>
+             <param name="pachrValidSwitches">
+             Array of characters, each of which is a valid (supported) switch.
+             All switches are initialized to SWITCH_IS_OFF.
+             </param>
+             <param name="pdctValidNamedArgs">
+             Dictinary, keyed by argument name, a string, containing its desired
+             default value, also a string.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.String[],WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching,System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             its default value defined by the value member of a DictionaryItem,
+             and a separate list of valid named arguments, each defined as a
+             DictionaryItem, with its default value given in the value member.
+             </summary>
+             <param name="pdctValidSwitches">
+             Dictinary, keyed by switch name, a character, containing its desired
+             default value, a string.
+             </param>
+             <param name="pastrValidNamedArgs">
+             Array of strings, each of which is a valid (supported) argument
+             name. All arguments are initialized to VALUE_NOT_SET.
+             </param>
+             <param name="penmArgMatching">
+             Use this member of the CmdLneArgs.ArgMatching enumeration to set the
+             argument matching rules. At present, two rules are defined. See the
+             Intellisense documentation of any CmdLneArgs argument for details.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Char[],System.Collections.Generic.Dictionary{System.String,System.String},System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             the default value defined by the class, and a separate list of valid
+             named arguments, each defined as a DictionaryItem, with its default
+             value given in the value member.
+             </summary>
+             <param name="pachrValidSwitches">
+             Array of characters, each of which is a valid (supported) switch.
+             All switches are initialized to SWITCH_IS_OFF.
+             </param>
+             <param name="pdctValidNamedArgs">
+             Dictinary, keyed by argument name, a string, containing its desired
+             default value, also a string.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.#ctor(System.Collections.Generic.Dictionary{System.Char,System.String},System.String[],System.Int32)">
+             <summary>
+             Initialize the instance with a list of valid switches, each having
+             its default value defined by the value member of a DictionaryItem,
+             and a separate list of valid named arguments, defined in an array of
+             strings, with the default value supplied by the class.
+             </summary>
+             <param name="pdctValidSwitches">
+             Dictinary, keyed by switch name, a character, containing its desired
+             default value, a string.
+             </param>
+             <param name="pastrValidNamedArgs">
+             Array of strings, each of which is a valid (supported) argument
+             name. All arguments are initialized to VALUE_NOT_SET.
+             </param>
+             <param name="pintPositionalArgCountLimit">
+             The default limit on the number of positional arguments is
+             POSITIONAL_ARGS_COUNT_LIMIT, which is currently set to 9. Use this
+             argument to set a lower or higher limit.
+            
+             A pintPositionalArgCountLimit value of less than zero is discarded
+             silently, and the default limit remains in force.
+            
+             Please see Remarks for important security considerations.
+             </param>
+             <remarks>
+             SECURITY NOTE
+            
+             All constructors in this class enforce a limit on the number of
+             positional arguments permitted. The default limit is 9, which is
+             defined as a public constant, POSITIONAL_ARGS_COUNT_LIMIT.
+            
+             This limit is imposed to protect your program from being fed an
+             excessively long command line, in an attempt to cause a denial of
+             service. Although few applications require more than nine positional
+             command line arguments, the level is made adjustable, to meet that
+             once per career need for more than nine arguments.
+            
+             While objects of this class cannot do anything about the number of
+             characters in the command line (That is the responsibility of the
+             Common Language Runtime.), they can, and do, limit the amount of
+             memory allowed to be consumed to hold arguments parsed from it.
+            
+             No such limits are imposed on switches and named arguments, because
+             the number of valid arguments (hence, the upper limit on memory
+             consumed by them) is under programmer control, and unlikely to be an
+             issue, since invalid arguments are discarded.
+            
+             WHY NINE?
+            
+             I chose the number nine mostly for historical reasons. Starting with
+             MS-DOS 1.0, the number of positional parameters supported by batch
+             files (without resorting to tricks with SHIFT) is 9.
+            
+             This limit has been carried forward into modern command processors,
+             including CMD.EXE, the default console mode command processor of
+             Windows NT, 2000, XP, Vista, etc.
+             </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByMultipleAliases(System.String[])">
+            <summary>
+            Return the value of an argument that has two or more aliases.
+            </summary>
+            <param name="pastrValiddArgNames">
+            This is an array of strings, each of which is the name of a command
+            line argument that is a synonymn. See Remarks.
+            </param>
+            <returns>
+            The return value is the specified value, or its default value, of
+            none of the synonymns appears in the input. See Remarks.
+            </returns>
+            <remarks>
+            Arguments are evaluated in the order specified in pastrValiddArgNames,
+            Synonymns are assumed to return the same default value.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByName(System.String)">
+            <summary>
+            Given the external name of a named argument (the name that was
+            supplied to the constructor), return its value, which is either the
+            value given on the command line or the default specified in this
+            method call.
+            </summary>
+            <param name="pstrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <returns>
+            If the requested name is valid, and the argument was entered on the
+            command line, the value supplied on the command line is returned. If
+            the argument was omitted from the command line, or if the specified
+            name is invalid, the value specified in argument pstrDefault is
+            returned.
+            </returns>
+            <remarks>
+            This overload is a wrapper around the second overload,
+            GetArgByName ( int, string ), which does the real work.
+            This method calls it internally, passing a default value of
+            VALUE_NOT_SET.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByName(System.String,System.String)">
+            <summary>
+            Given the external name of a named argument (the name that was
+            supplied to the constructor), return its value, which is either the
+            value given on the command line or the default specified in this
+            method call.
+            </summary>
+            <param name="pstrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <param name="pstrDefault">
+            Specify a default value to return if the argument was omitted from
+            the command line, or VALUE_NOT_SET or a null reference (Nothing in
+            Visual Basic), to use an empty string as the default.
+            </param>
+            <returns>
+            If the requested name is valid, and the argument was entered on the
+            command line, the value supplied on the command line is returned. If
+            the argument was omitted from the command line, or if the specified
+            name is invalid, the value specified in argument pstrDefault is
+            returned.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByName(System.String,System.String,System.Boolean)">
+            <summary>
+            Given the external name of a named argument (the name that was
+            supplied to the constructor), return its value, which is either the
+            value given on the command line or the default specified in this
+            method call.
+            </summary>
+            <param name="pstrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <param name="pstrDefault">
+            Specify a default value to return if the argument was omitted from
+            the command line, or VALUE_NOT_SET or a null reference (Nothing in
+            Visual Basic), to use an empty string as the default.
+            </param>
+            <param name="pfAllowEmptyStringAsDefault">
+            Set this to TRUE if you want an empty string for the value of the
+            pstrDefault argument treated as a valid default value. Otherwise,
+            empty strings are treated as null references (Nothing in Visual
+            Basic).
+            </param>
+            <returns>
+            If the requested name is valid, and the argument was entered on the
+            command line, the value supplied on the command line is returned. If
+            the argument was omitted from the command line, or if the specified
+            name is invalid, the value specified in argument pstrDefault is
+            returned.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByNameAsChar(System.String)">
+            <summary>
+            Given the external name of a named argument (the name that was
+            supplied to the constructor), return its value, which is either the
+            value given on the command line or the default specified in this
+            method call.
+            </summary>
+            <param name="pstrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <returns>
+            If the requested name is valid, and the argument was entered on the
+            command line, the value supplied on the command line is returned. If
+            the argument was omitted from the command line, or if the specified
+            name is invalid, the value specified in argument pchrDefault is
+            returned.
+            </returns>
+            <remarks>
+            This method returns through GetArgByName, by way of 
+            FirstCharFromString. Hence, everything that applies to either of
+            them applies as well to this method.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByNameAsChar(System.String,System.Char)">
+            <summary>
+            Given the external name of a named argument (the name that was
+            supplied to the constructor), return its value, which is either the
+            value given on the command line or the default specified in this
+            method call.
+            </summary>
+            <param name="pstrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <param name="pchrDefault">
+            Specify a default value to return if the argument was omitted from
+            the command line, or VALUE_NOT_SET or a null reference (Nothing in
+            Visual Basic), to use a null character as the default.
+            </param>
+            <returns>
+            If the requested name is valid, and the argument was entered on the
+            command line, the value supplied on the command line is returned. If
+            the argument was omitted from the command line, or if the specified
+            name is invalid, the value specified in argument pchrDefault is
+            returned.
+            </returns>
+            <remarks>
+            This method returns through GetArgByName, by way of 
+            FirstCharFromString. Hence, everything that applies to either of
+            them applies as well to this method.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByNameAsChar(System.String,System.Char,System.Boolean)">
+            <summary>
+            Given the external name of a named argument (the name that was
+            supplied to the constructor), return its value, which is either the
+            value given on the command line or the default specified in this
+            method call.
+            </summary>
+            <param name="pstrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <param name="pchrDefault">
+            Specify a default value to return if the argument was omitted from
+            the command line, or VALUE_NOT_SET or a null reference (Nothing in
+            Visual Basic), to use a null character as the default.
+            </param>
+            <param name="pfAllowEmptyStringAsDefault">
+            Set this to TRUE if you want an empty string for the value of the
+            pstrDefault argument treated as a valid default value. Otherwise,
+            empty strings are treated as null references (Nothing in Visual
+            Basic).
+            </param>
+            <returns>
+            If the requested name is valid, and the argument was entered on the
+            command line, the value supplied on the command line is returned. If
+            the argument was omitted from the command line, or if the specified
+            name is invalid, the value specified in argument pchrDefault is
+            returned.
+            </returns>
+            <remarks>
+            This method returns through GetArgByName, by way of 
+            FirstCharFromString. Hence, everything that applies to either of
+            them applies as well to this method.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetSwitchByNameAsInt(System.Char)">
+            <summary>
+            If the value of a switch is an integer, return it. Otherwise, return
+            zero.
+            </summary>
+            <param name="pchrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <returns>
+            This method passes the value returned by GetArgByName to the 
+            int.TryParse method. Hence, everything that applies to either of
+            them applies as well to this method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetSwitchByNameAsInt(System.Char,System.Int32)">
+            <summary>
+            If the value of a switch is an integer, return it. Otherwise, return
+            pintDefault.
+            </summary>
+            <param name="pchrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <param name="pintDefault">
+            Specify a default value to return if the argument was omitted from
+            the command line.
+            </param>
+            <returns>
+            This method passes the value returned by GetArgByName to the 
+            int.TryParse method. Hence, everything that applies to either of
+            them applies as well to this method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetSwitchByNameAsInt(System.Char,System.Int32,System.Boolean)">
+            <summary>
+            If the value of a switch is an integer, return it. Otherwise, return
+            pintDefault.
+            </summary>
+            <param name="pchrArgName">
+            Specify the external name of the argument, as it was identified to
+            the constructor.
+            </param>
+            <param name="pintDefault">
+            Specify a default value to return if the argument was omitted from
+            the command line.
+            </param>
+            <param name="pfAllowEmptyStringAsDefault">
+            Set this to TRUE if you want an empty string for the value of the
+            pstrDefault argument treated as a valid default value. Otherwise,
+            empty strings are treated as null references (Nothing in Visual
+            Basic).
+            </param>
+            <returns>
+            This method passes the value returned by GetArgByName to the 
+            int.TryParse method. Hence, everything that applies to either of
+            them applies as well to this method.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByPosition(System.Int32)">
+            <summary>
+            Get a positional argument by its ordinal position.
+            </summary>
+            <param name="pintIndex">
+            Position of argument in list. Arguments are numbered from 1.
+            </param>
+            <returns>
+            The argument value at the ordinal position specified by pintIndex is
+            returned, unless pintIndex is out of range, in which case an empty
+            string is returned.
+            </returns>
+            <remarks>
+            This overload is a wrapper around the second overload,
+            GetArgByPosition ( int, string ), which does the real work.
+            This method calls it internally, passing a default value of
+            VALUE_NOT_SET.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetArgByPosition(System.Int32,System.String)">
+            <summary>
+            Get a positional argument by its ordinal position.
+            </summary>
+            <param name="pintIndex">
+            Position of argument in list. Arguments are numbered from 1.
+            </param>
+            <param name="pstrDefault">
+            Default value to return if argument ordinal is greater than the
+            number of positional arguments entered on the command line.
+            </param>
+            <returns>
+            The argument value at the ordinal position specified by pintIndex is
+            returned, unless pintIndex is out of range, in which case, the
+            default value specified in pstrDefault is returned.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetBooleanSwitchByName(System.Char)">
+            <summary>
+            Test for the presence of a defined switch. The modifier, if any, is
+            ignored.
+            </summary>
+            <param name="pchrName">
+            Chracter to identify switch. This must be one of the characters
+            stored in the array, or used as keys in the dicctionary passed into
+            the instance constructor.
+            </param>
+            <returns>
+            The return value is TRUE if the switch is present, with or without a
+            modifier (which is ignored). Otherwise, the return value is FALSE.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetSwitchByName(System.Char)">
+            <summary>
+            Return the value stored for a switch argument.
+            </summary>
+            <param name="pchrName">
+            Chracter to identify switch. This must be one of the characters
+            stored in the array, or used as keys in the dicctionary passed into
+            the instance constructor.
+            </param>
+            <returns>
+            If the switch was defined in the constructor, and it was specified
+            on the command line of the executing assembly, the value defined on
+            the command line is returned. Otherwise, the default value, if any,
+            passed into the constructor is returned. Failing both of those, the
+            generic default value constant, SWITCH_IS_OFF, is returned.
+            </returns>
+            <remarks>
+            This overload is a wrapper around the other overload,
+            GetSwitchByName ( char, string ), which does the real work.
+            This method calls it internally, passing a default value of
+            SWITCH_IS_OFF.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetSwitchByName(System.Char,System.String)">
+            <summary>
+            Return the value stored for a switch argument.
+            </summary>
+            <param name="pchrName">
+            Chracter to identify switch. This must be one of the characters
+            stored in the array, or used as keys in the dicctionary passed into
+            the instance constructor.
+            </param>
+            <param name="pstrDefault">
+            Default value to return if argument pchrName is not in the list of
+            valid switches passed into the constructor. See pchrName.
+            </param>
+            <returns>
+            If the switch was defined in the constructor, and it was specified
+            on the command line of the executing assembly, the value defined on
+            the command line is returned. Otherwise, the default value, if any,
+            passed into the constructor is returned. Failing both of those, the
+            generic default value constant, SWITCH_IS_OFF, is returned.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.GetSwitchByName(System.Char,System.String,System.Boolean)">
+            <summary>
+            Return the value stored for a switch argument.
+            </summary>
+            <param name="pchrName">
+            Chracter to identify switch. This must be one of the characters
+            stored in the array, or used as keys in the dicctionary passed into
+            the instance constructor.
+            </param>
+            <param name="pstrDefault">
+            Default value to return if argument pchrName is not in the list of
+            valid switches passed into the constructor. See pchrName.
+            </param>
+            <param name="pfAllowEmptyStringAsDefault">
+            Set this to TRUE if you want an empty string for the value of the
+            pstrDefault argument treated as a valid default value. Otherwise,
+            empty strings are treated as null references (Nothing in Visual
+            Basic).
+            </param>
+            <returns>
+            If the switch was defined in the constructor, and it was specified
+            on the command line of the executing assembly, the value defined on
+            the command line is returned. Otherwise, the default value, if any,
+            passed into the constructor is returned. Failing both of those, the
+            generic default value constant, SWITCH_IS_OFF, is returned.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.FirstCharFromString(System.String)">
+            <summary>
+            Extract the first character from a string, and return it as a char
+            value type.
+            </summary>
+            <param name="pstrIn">
+            The first character in this string is returned.
+            </param>
+            <returns>
+            The return value is the first character of string pstrIn, as a
+            scalar value type.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            If the input string, pstrIn, is null or empty, an ArgumentException
+            is thrown. See the next overload for an alternative that doesn't
+            throw exeptions.
+            </exception>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.FirstCharFromString(System.String,System.Char)">
+            <summary>
+            Extract the first character from a string, and return it as a char
+            value type.
+            </summary>
+            <param name="pstrIn">
+            The first character in this string is returned.
+            </param>
+            <param name="pchrDefault">
+            If string pstrIn is null or empty, this character is returned.
+            </param>
+            <returns>
+            The return value is the first character of string pstrIn, as a
+            scalar value type.
+            </returns>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgListIsEmpty">
+             <summary>
+             This property returns True (ARG_LIST_IS_EMPTY) when the command line
+             is devoid of arguments.
+            
+             Otherwise, it returns False (ARG_LIST_HAS_ARGS), indicating that the
+             command line contains at least one argument. See Remarks.
+             </summary>
+             <remarks>
+             ArgListIsEmpty being false means only that there is an argument in
+             the command line, which may be invalid. Check the ArgMatching array
+             or the two invalid argument counters, InvalidNamedArgsInCmd and
+             InvalidSwitchesInCmd.
+             </remarks>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.AllowEmptyStringAsDefault">
+            <summary>
+            The value of this property determines how the GetArgDefaultToUse and
+            GetSwitchDefaultToUse methods treat an empty string supplied as a
+            default value to return. See Remarks for complete details.
+            </summary>
+            <remarks>
+            The AllowEmptyStringAsDefault property is initialized to FALSE, to
+            maintain backwards compatibility with previous versions of the
+            library that exports this class.
+            
+            By default switches return a string value of "OFF" to indicate their
+            omission from the command line. To override this behavior, you must
+            call the two-argument overload of GetSwitchDefaultToUse, specifying
+            a default string value as the second argument.
+            
+            Prior to version 2.0, this overload treated both null references
+            (Nothing in Visual Basic) and empty strings equally, returning the
+            class default value of "OFF" in both cases.
+            
+            Beginning with version 2.0, this behavior can be overridden in one
+            of two ways.
+            
+            1) Setting the AllowEmptyStringAsDefault property to TRUE (signified
+            by symbolic constant BLANK_AS_DEFAULT_ALLOWED) changes the behavior
+            for the entire class for the rest of its lifetime, or until it is
+            set back to its default, whichever comes first.
+            
+            2) Calling method GetSwitchDefaultToUse or GetArgDefaultToUse with a
+            third (Boolean) argument that affects only the behavior of that one
+            call, regardless of the current AllowEmptyStringAsDefault setting.
+            This method leaves the AllowEmptyStringAsDefault property unchanged.
+            </remarks>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgumentMatching">
+            <summary>
+            Although you cannot change the rules in the middle of the game,
+            transparency is highly desireable.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgumentTypeArray">
+            <summary>
+            This property is an array of ArgType enumerated types, which has one
+            element for each command line argument. Use this list to find and
+            report invalid command line arguments, if any.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.DefinedNamedArgs">
+            <summary>
+            Count of named arguments defined by the constructor.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.DefinedSwitches">
+            <summary>
+            Count of switches defined by the constructor.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.InvalidArgsCount">
+            <summary>
+            Total number of invalid arguments found in the command line. This is
+            the sum of InvalidNamedArgsInCmd and InvalidSwitchesInCmd. Use it as
+            a quick check for invalid arguments.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.InvalidNamedArgsInCmd">
+            <summary>
+            Count of invalid named arguments found in the command line.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.InvalidSwitchesInCmd">
+            <summary>
+            Count of invalid switches found in the command line.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.PositionalArgsInCmdLine">
+            <summary>
+            Count of positional arguments found in the command line.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ValidNamedArgsInCmdLine">
+            <summary>
+            Count of valid named arguments found in the command line.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ValidSwitchesInCmdLine">
+            <summary>
+            Count of valid switches found in the command line.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching">
+            <summary>
+            Argument matching may be either case sensitive (default) or case
+            insensitve (by constructor override). Constructor argument
+            penmArgMatching is of this type.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching.CaseSensitive">
+            <summary>
+            Argument matching is case sensitive.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgMatching.CaseInsensitive">
+            <summary>
+            Argument matching is case insesnitive.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgType">
+             <summary>
+             Arguments may be of three types:
+            
+             1) Named
+             2) Positional
+             3) Switch
+            
+             Further, the first and third types may be invalid arguments of their
+             respective types. That is, a switch may be invalid, or the name of a
+             Named Argument may be invalid.        ///
+             </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgType.InvalidNamed">
+            <summary>
+            The specified argument appears to be a named argument, but its
+            name is undefined (not on the list of valid names).
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgType.InvalidSwitch">
+            <summary>
+            The specified argument appears to be a switch, but its name is
+            undefined (not on the list of valid switch characters).
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgType.Named">
+            <summary>
+            The argument is named, and its value is in the list of valid
+            names.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgType.Positional">
+            <summary>
+            The argument is positional. That is, it is neither a named
+            argument, nor a switch. Its meaning is defined by its order of
+            appearance in the command line.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CmdLneArgsBasic.ArgType.Switch">
+            <summary>
+            The argument is a switch, and its value is in the list of valid
+            switch characters.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.ArrayInfo">
+            <summary>
+            This class organizes constants and routines for working with arrays. The
+            constants are mostly synonymns for constants that exist in other classes
+            and assemblies.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ArrayInfo.ARRAY_FIRST_ELEMENT">
+            <summary>
+            Since array subscripts start at zero, the first element of any array
+            is zero. Since the same holds for most things that go into square
+            brackets or are called some kind of index, this constant works as
+            well with indexes.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ArrayInfo.ARRAY_IS_EMPTY">
+            <summary>
+            The Length and LongLength properties of an array return zero
+            (ARRAY_IS_EMPTY) when the array is empty.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ArrayInfo.ARRAY_INVALID_INDEX">
+            <summary>
+            It follows from the fact that array indices count from zero that
+            anything less is invalid.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ArrayInfo.INDEX_FROM_ORDINAL">
+            <summary>
+            If ORDINAL_FROM_INDEX is +1, then its inverse should be -1. Thus,
+            both operations are additions, which are typically a tad faster,
+            since they don't have to manage a Carry flag.
+            </summary>
+            <seealso cref="F:WizardWrx.ApplicationHelpers2.ArrayInfo.ORDINAL_FROM_INDEX"/>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ArrayInfo.ARRAY_SECOND_ELEMENT">
+            <summary>
+            There is an amazing number of situations that require a refeerence
+            to the second element of an array or list.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ArrayInfo.NEXT_INDEX">
+            <summary>
+            The next index is plus one, which is ambiguous, at best, in code
+            listings.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ArrayInfo.ORDINAL_FROM_INDEX">
+            <summary>
+            This grain of syntactic sugar is used in OrdinalFromIndex and made
+            visible as documentation and for coding similar math inline when
+            space permits.
+            </summary>
+            <seealso cref="F:WizardWrx.ApplicationHelpers2.ArrayInfo.ORDINAL_FROM_INDEX"/>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.ArrayInfo.IndexFromOrdinal(System.Int32)">
+            <summary>
+            Given an ordinal, such as an array element count, return the
+            equivalent index (subscript) value.
+            </summary>
+            <param name="pintOrdinal">
+            Specify the ordinal to convert.
+            </param>
+            <returns>
+            The return value is the index equivalent to pintIndex.
+            </returns>
+            <remarks>
+            Mathematically, the index is pintOrdinal - ORDINAL_FROM_INDEX.
+            Hence, this routine is syntactic sugar, which a good optimizer will
+            optimize away by inlining.
+            </remarks>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.ArrayInfo.OrdinalFromIndex(System.Int32)"/>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.ArrayInfo.OrdinalFromIndex(System.Int32)">
+            <summary>
+            Given an index, such as an array subscript, return the equivalent
+            ordinal value.
+            </summary>
+            <param name="pintIndex">
+            Specify the index to convert.
+            </param>
+            <returns>
+            The return value is the ordinal equivalent to pintIndex.
+            </returns>
+            <remarks>
+            Mathematically, the ordinal is pintIndex + ORDINAL_FROM_INDEX.
+            Hence, this routine is syntactic sugar, which a good optimizer will
+            optimize away by inlining.
+            </remarks>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.ArrayInfo.IndexFromOrdinal(System.Int32)"/>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.Util">
+            <summary>
+            This static class exposes utility constants and methods that run the
+            gamut from syntactic sugar to functions that hide useful, but somewhat
+            obscure capabilities of the Microsoft Base Class Library.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.FileMatchesRegExpMask(System.String,System.String)">
+            <summary>
+            Match file names against a true regular expression, as opposed to
+            the anemic masks supported by DOS and Windows. Though occasionally
+            referred to as regular expressions, file specifications that use
+            DOS wild cards are a far cry from true regular expressions.
+            </summary>
+            <param name="pstrPathString">
+            Specify the path string to match against PCRE pstrRegExpToMatch.
+            </param>
+            <param name="pstrRegExpToMatch">
+            Specify the Perl Compatible Regular Expression against which to
+            evaluate pstrFileName. 
+            </param>
+            <returns>
+            The function returns TRUE if neither string is null or empty AND
+            pstrRegExpToMatch matches PCRE pstrFileName.
+            </returns>
+            <remarks>
+            This method could have been coded inline. However, since I have at
+            least one other project in the works that requires it, I segregated
+            it in this routine in this small, easily navigable class.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.GetRegDwordValue(Microsoft.Win32.RegistryKey,System.String,System.Int32)">
+            <summary>
+            Get a REG_DWORD value from the Windows Registry.
+            </summary>
+            <param name="phRegKey">
+            Specify the handle of the Registry key where the value is expected
+            to exist. This must be the key that holds the value, since neither
+            RegistryKey.GetValueKind, nor RegistryKey.GetValue supports paths.
+            </param>
+            <param name="pstrValueName">
+            Specify the name, sans square brackets, which aren't needed, since
+            the string is the unqualified name of a value.
+            </param>
+            <param name="pintDefault">
+            Although a DWORD seems logically more like an unsigned integer, I am
+            somewhat surprised that the framework casts it to int, which carries
+            a sign. Nevertheless, since the return is cast to int, so is its
+            default, which is returned if the specified value is absent, or if
+            it exists, but has a different type (ValueKind) property.
+            </param>
+            <returns>
+            If the named value exists in the specified key, it is returned, as a
+            SIGNED integer. Otherwise, the value specified in pintDefault, also
+            signed, is returned.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.GetRegMultiStringValue(Microsoft.Win32.RegistryKey,System.String)">
+            <summary>
+            Return the multiple values stored in a REG_MULTI_SZ Registry value.
+            </summary>
+            <param name="phRegKey">
+            Pass in a handle to the Registry subkey that is supposed to contain
+            the required REG_MULTI_SZ value.
+            </param>
+            <param name="pstrValueName">
+            pass in a string that contains the name of the value to be queried
+            and returned if present. See notes in the Return Value comment.
+            </param>
+            <returns>
+            If the function succeeds, the return value is an array of strings
+            that contains one string for each substring in the REG_MULTI_SZ
+            value.
+            
+            If the value specified by pstrValueName is missing entirely, an
+            empty array is returned.
+            
+            If the requested string is something other than REG_MULTI_SZ, this
+            method treats the call as a degenerate case, returning an array of
+            one element if the value is either REG_SZ or REG_EXPAND_SZ.
+            
+            ALL other types return empty arrays.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            If phRegKey is a null reference (Nothing in Visual Basic), this
+            method throws an ArgumentNullException exception.
+            
+            Likewise, if pstrValueName is either null or empty, it is treated as
+            a null reference.
+            </exception>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.IsFirstForIteration(System.Int32,System.Int32)">
+            <summary>
+            Return TRUE if the FOR loop driven by pintLoopIndex is on its first
+            iteration.
+            </summary>
+            <param name="pintLoopIndex">
+            Specify the integer loop index.
+            </param>
+            <param name="pintInitialValue">
+            Specify the integer initial value.
+            </param>
+            <returns>
+            This function returns TRUE if the index of a FOR loop is at its
+            value, indicating the first iteration of the loop.
+            </returns>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.IsLastForIterationLE(System.Int32,System.Int32)"/>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.MoreForIterationsToComeLE(System.Int32,System.Int32)"/>        
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.IsLastForIterationLE(System.Int32,System.Int32)">
+            <summary>
+            Return TRUE if the FOR loop driven by pintLoopIndex is on its last
+            iteration, given that the limit criterion is pintLoopIndex is less
+            than or equal to pintLimit.
+            </summary>
+            <param name="pintLoopIndex">
+            Specify the integer loop index.
+            </param>
+            <param name="pintLimit">
+            Specify the integer limit value.
+            </param>
+            <returns>
+            This function returns TRUE if the next increment of the loop index
+            would set it equal to pintLimit, stopping the loop without another
+            iteration.
+            </returns>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.IsFirstForIteration(System.Int32,System.Int32)"/>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.MoreForIterationsToComeLE(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromCallingAssembly(System.String)">
+            <summary>
+            Load the lines of a plain ASCII text file that has been stored with
+            the assembly as a embedded resource into an array of native strings.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the fully qualified resource name, which is its source file
+            name appended to the default application namespace.
+            </param>
+            <returns>
+            The return value is an array of Unicode strings, each of which is
+            the text of a line from the original text file, sans terminator.
+            </returns>
+            <see cref="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromAnyAssembly(System.String,System.Reflection.Assembly)"/>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromEntryAssembly(System.String)"/>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromEntryAssembly(System.String)">
+            <summary>
+            Load the lines of a plain ASCII text file that has been stored with
+            the assembly as a embedded resource into an array of native strings.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the fully qualified resource name, which is its source file
+            name appended to the default application namespace.
+            </param>
+            <returns>
+            The return value is an array of Unicode strings, each of which is
+            the text of a line from the original text file, sans terminator.
+            </returns>
+            <see cref="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromAnyAssembly(System.String,System.Reflection.Assembly)"/>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromCallingAssembly(System.String)"/>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromAnyAssembly(System.String,System.Reflection.Assembly)">
+            <summary>
+            Load the lines of a plain ASCII text file that has been stored with
+            a specified assembly as a embedded resource into an array of native
+            strings.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the fully qualified resource name, which is its source file
+            name appended to the default application namespace.
+            </param>
+            <param name="pasmSource">
+            Pass in a reference to the Assembly from which you expect to load
+            the text file. Use any means at your disposal to obtain a reference
+            from the System.Reflection namespace.
+            </param>
+            <returns></returns>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromCallingAssembly(System.String)"/>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.LoadTextFileFromEntryAssembly(System.String)"/>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.LoadBinaryResourceFromAnyAssembly(System.String,System.Reflection.Assembly)">
+            <summary>
+            Load the named embeeded binary resoruce into a byte array.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the external name of the file as it appears in the source
+            file tree and the Solution Explorer.
+            </param>
+            <param name="pasmSource">
+            Supply a System.Reflection.Assembly reference to the assembly that
+            contains the embedded resource.
+            </param>
+            <returns>
+            If the function succeeds, it returns a byte array containing the raw
+            bytes that comprise the embeeded resource. Hence, this method can
+            load ANY embedded resource.
+            </returns>
+            <remarks>
+            Since all other resource types ultimately come out as byte arrays,
+            the text file loaders call upon this routine to extract their data.
+            
+            The notes in the cited reference refreshed my memory of observations
+            that I made and documented a couple of weeks ago. However, it was a
+            lot easier to let Google find a reference document that was probably
+            intended for students in the Computer Science department at Columbia
+            University, at http://www1.cs.columbia.edu/~lok/csharp/refdocs/System.IO/types/Stream.html"/>.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.MoreForIterationsToComeLE(System.Int32,System.Int32)">
+            <summary>
+            Return TRUE if the FOR loop driven by pintLoopIndex has one or more
+            iteration to go, given that the limit criterion is pintLoopIndex is less
+            than to pintLimit.
+            </summary>
+            <param name="pintLoopIndex">
+            Specify the integer loop index.
+            </param>
+            <param name="pintLimit">
+            Specify the integer limit value.
+            </param>
+            <returns>
+            This function returns TRUE if the index and limit indicate that one
+            or more iterations remain.
+            </returns>
+            <remarks>
+            Sometimes, it is more sensible to test whether there are iterations
+            remaining.
+            </remarks>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.IsFirstForIteration(System.Int32,System.Int32)"/>
+            <seealso cref="M:WizardWrx.ApplicationHelpers2.Util.IsLastForIterationLE(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.NameValueCollectionFromEmbbededList(System.String,System.String)">
+            <summary>
+            Construct a NameValueCollection from the tab delimited list read 
+            from a text file stored in an embedded resource.
+            </summary>
+            <param name="pstrUnqualifiedResourceName">
+            Specify the name of the text file as it appears in the Solution
+            Explorer (or the Windows Explorer, for that matter).
+            
+            IMPORTNAT: The file must be marked as an embedded resource; do this
+            in the Solution Explorer by displaying the properties of the file.
+            </param>
+            <param name="pstrExpectedLabelRow">
+            The specified string is checked against the label row; unless both
+            are identical, the resource is assumed to be corrupted, and the
+            program throws an exception and croaks.
+            </param>
+            <returns>
+            If the method succeeds, it returns a NameValueCollection of
+            key/value pairs that contains exactly one value per key.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.RegistryKeyContainsValue(Microsoft.Win32.RegistryKey,System.String)">
+            <summary>
+            Return TRUE if a specified value exists on a specified key of the
+            Windows Registry.
+            </summary>
+            <param name="phRegKey">
+            Pass in a handle to the Registry subkey that is supposed to contain
+            the required REG_MULTI_SZ value.
+            </param>
+            <param name="pstrValueName">
+            pass in a string that contains the name of the value to be queried
+            and returned if present. See notes in the Return Value comment.
+            </param>
+            <returns>
+            The function returns true if the key contains a value with the 
+            specified name. Otherwise, the return value is false.
+            </returns>
+            <remarks>
+            This was written as a service routine for companion methods
+            GetRegDwordValue and GetRegMultiStringValue. However, since it is
+            almost certain to have additonal uses, I decided to mark it public.
+            </remarks>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.Util.GetInternalResourceName(System.String,System.Reflection.Assembly)">
+            <summary>
+            Use the list of Manifest Resource Names returned by method
+            GetManifestResourceNames on a specified assembly. Each of several
+            methods employs a different mechanism to identify the assembly of
+            interest.
+            </summary>
+            <param name="pstrResourceName">
+            Specify the name of the file from which the embedded resource was
+            created. Typically, this will be the local name of the file in the
+            source code tree.
+            </param>
+            <param name="pasmSource">
+            Pass a reference to the Assembly that is supposed to contain the
+            desired resource.
+            </param>
+            <returns>
+            If the function succeeds, the return value is the internal name of
+            the requested resource, which is fed to GetManifestResourceStream on
+            the same assembly, which returns a read-only Stream backed by the
+            embedded resource. If the specified resource is not found, it
+            returns null.
+            </returns>
+            <remarks>
+            Since I cannot imagine any use for this method beyond its
+            infrastructure role in this class, I marked it private.
+            </remarks>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.CONSOLE_APP_BOJ_NO_UTC">
+            <summary>
+              Looks up a localized string similar to {0}, version {1}{2}Begin @ {3}{2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.CONSOLE_APP_EOJ_NO_UTC">
+            <summary>
+              Looks up a localized string similar to {0}{1} End - {2}{0}Elapsed time: {3}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.CONSOLE_APP_EOJ_REPLACEMENT_TOKEN">
+            <summary>
+              Looks up a localized string similar to  End{0}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.CONSOLE_APP_EOJ_SPLIT_TOKEN">
+            <summary>
+              Looks up a localized string similar to  End - .
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_ARGNAME_TPL">
+            <summary>
+              Looks up a localized string similar to                Argument Name    = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_ARGVALUE_TPL">
+            <summary>
+              Looks up a localized string similar to                Argument Value   = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_ASM_SUBSYSTEM">
+            <summary>
+              Looks up a localized string similar to While attempting to identify the subsystem of {0}, GetExeSubsystem returned exit code {1}: {2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_BAD_LABEL_ROW">
+            <summary>
+              Looks up a localized string similar to The label row in embedded resource {0} is invalid.{3}Actual Label Row   = {1}{3}Expected Label Row = {2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_BAD_RECORD">
+            <summary>
+              Looks up a localized string similar to The field count in row {1} in embedded resource {0} is incorrect.{5}Actual Field Count   = {2}{5}Expected Field Count = {3}{5}Complete Row         = {4}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_DUPLICATE_KEY">
+            <summary>
+              Looks up a localized string similar to The key field in row {1} in embedded resource {0} is a duplicate.{4}Key value    = {2}{4}Complete row = {3}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_EMBEDDED_RESOURCE_NOT_FOUND">
+            <summary>
+              Looks up a localized string similar to Resource {0} cannot be found in assembly {1}..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_EMBEDDED_RESOURCE_READ_ERROR">
+            <summary>
+              Looks up a localized string similar to An error occurred while reading data from resources embedded in an assembly.{3}Assembly Full Name     = {0}{3}Internal Resource Name = {1}{3}I/O Error Message      = {2}{3}{3}The associated Inner Exception may contain additional clues..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_EMBEDDED_RESOURCE_READ_TRUNCATED">
+            <summary>
+              Looks up a localized string similar to An error occurred while reading a file from resources embedded in an assembly.{3}Internal Name = {0}{3}Expected File Length (bytes) = {1}{3}Bytes successfully read = {2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_EMPTY_MAP">
+            <summary>
+              Looks up a localized string similar to Embedded key map {0} is empty..
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_EX_EVTMSG_TPL">
+            <summary>
+              Looks up a localized string similar to An {0} exception was caught in routine {1}:{3}               Message          = {2}{3}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_EX_MSG_TPL">
+            <summary>
+              Looks up a localized string similar to           An {0} exception was caught in routine {1}:{3}               Message          = {2}{3}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_FILENAME_TPL">
+            <summary>
+              Looks up a localized string similar to                File Name        = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_FORMATSTRING_TPL">
+            <summary>
+              Looks up a localized string similar to                Format String    = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_INNER">
+            <summary>
+              Looks up a localized string similar to           Inner Exception:{1}               Message          = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_METHOD">
+            <summary>
+              Looks up a localized string similar to                Exception Method = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_OBJNAME_TPL">
+            <summary>
+              Looks up a localized string similar to                Object Name      = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_SOURCE">
+            <summary>
+              Looks up a localized string similar to                Exception Source = {0}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.ERRMSG_UNBALANCED">
+            <summary>
+              Looks up a localized string similar to The sizes of internal tables s_astrTrimStart and s_astrExceptionTypeNames are unequal.{2}    s_astrTrimStart Elemnent Count          = {0}{2}    s_astrExceptionTypeNames  Elemnent Count = {1}{2}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.MSG_APPSTATUSCODE">
+            <summary>
+              Looks up a localized string similar to {1}    Exit code = {0}{1}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.NORMAL_EXIT_INTERNAL_ERROR">
+            <summary>
+              Looks up a localized string similar to Error caught in NormalExit routine: NormalExitAction value of {0} is invalid.{2}                                    Treating as {1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.STACKTRACE_TPL">
+            <summary>
+              Looks up a localized string similar to {1}Stack Trace Begin:{1}{0}{1}End of Stack Trace{1}{1}.
+            </summary>
+        </member>
+        <member name="P:WizardWrx.ApplicationHelpers2.Properties.Resources.THIS_IS_THE_LAST">
+            <summary>
+              Looks up a localized string similar to      There are no further exceptions to report.{0}.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.FileIOFlags">
+            <summary>
+            Use these flags to document stream I/O method calls.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.FileIOFlags.FILE_COPY_OVERWRITE_FORBIDDEN">
+            <summary>
+            File copy and stream I/O operations on existing files must fail.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.FileIOFlags.FILE_COPY_OVERWRITE_PERMITTED">
+            <summary>
+            File copy and stream I/O operations on existing files overwrite.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.FileIOFlags.FILE_OUT_APPEND">
+            <summary>
+            Opening an output stream on a file that exists extends the file.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.FileIOFlags.FILE_OUT_CREATE">
+            <summary>
+            Opening an output stream on a file that exists overwrites the file.
+            Otherwise, a new file is created.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.FileIOFlags.MAKE_STREAM_IO_ASYNCHRONOUS">
+            <summary>
+            Open stream for asynchronous I/O.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.FileIOFlags.MAKE_STREAM_IO_SYNCHRONOUS">
+            <summary>
+            Open stream for synchronous I/O. This is the default.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.SpecialCharacters">
+            <summary>
+            Use these constants when you want or need your listings to be crystal
+            clear about certain potentially ambiguous literals.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.COLON">
+            <summary>
+            Use this when your code calls for a colon literal, when you want the
+            listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.COMMA">
+            <summary>
+            Use this when your code calls for a comma literal, when you want the
+            listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.DOUBLE_QUOTE">
+            <summary>
+            Use this when your code calls for a double quotation mark literal, 
+            when you want the listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.NUL">
+            <summary>
+            Use this when your code calls for a literal null character, and you
+            want the listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.SEMICOLON">
+            <summary>
+            Use this when your code calls for a semicolon literal, when you want
+            the listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.SINGLE_QUOTE">
+            <summary>
+            Use this when your code calls for a single quotation mark literal, 
+            when you want the listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.SPACE">
+            <summary>
+            Use this when your code calls for a single space when you want the
+            listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SpecialCharacters.TAB">
+            <summary>
+            Use this when your code calls for a tab literal, when you want the
+            listing to be crystal clear about what it is.
+            </summary>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.CSVFileInfo">
+            <summary>
+            Use these constants and service routines to simplify working with CSV
+            type files.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CSVFileInfo.EMPTY_FILE">
+            <summary>
+            The Length property of a file returns this value to indicate that a
+            file is absolutely empty.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CSVFileInfo.LABEL_ROW">
+            <summary>
+            When you use Syatem.IO.File.ReadAllLines to read an entire file into
+            an array of strings, this constant refers to the label row of a
+            labeled CSV file.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.CSVFileInfo.FIRST_RECORD">
+            <summary>
+            When you use Syatem.IO.File.ReadAllLines to read an entire file into
+            an array of strings, this constant refers to the first data row of a
+            labeled CSV file.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.CSVFileInfo.RecordCount(System.String[])">
+            <summary>
+            Derive the record count from the length of an array of records
+            loaded from a labeled CSV type file.
+            </summary>
+            <param name="pastrWholeFile"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.SysDateFormatters">
+            <summary>
+            This class implements my stalwart date formatter, ReformatSysDateP6C,
+            which I created ininitially as a Windows Interface Language (WIL, 
+            a. k. a. WinBatch) library function, Reformat_Date_YmdHms_P6C, in
+            October 2001, although its roots go back much further in my WIL script
+            develpment.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_YYYY_MM_DD">
+            <summary>
+            Apply the following format to a date: YYYY/MM/DD
+            
+            With respect to the date only, this format confirms to the ISO 8601
+            standard for time representation.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_MM_DD_YY">
+            <summary>
+            Apply the following format to a date: MM/DD/YY
+            
+            This is the standard short format used in the USA.
+            
+            Only the date is returned, including only the year of century, and
+            the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_MM_DD_YYYY">
+            <summary>
+            Apply the following format to a date: MM/DD/YYYY
+            
+            This is the standard format used in the USA.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_DD_MM_YYYY">
+            <summary>
+            Apply the following format to a date: DD/MM/YYYY
+            
+            This is the standard format used in most of the English speaking
+            world, by all military organizations of which I am aware, Europeans,
+            and others who take their lead from any of the above groups.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_HH_MM">
+            <summary>
+            Apply the following format to a time: hh:mm
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            This is a standard format used in most of the English speaking
+            world, by all military organizations of which I am aware, Europeans,
+            and others who take their lead from any of the above groups.
+            
+            Only the time is returned, and the hour and minute have leading
+            zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_HH_MM_SS">
+            <summary>
+            Apply the following format to a time: hh:mm:ss
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            This is a standard format used in most of the English speaking
+            world, by all military organizations of which I am aware, Europeans,
+            and others who take their lead from any of the above groups.
+            
+            Only the time is returned, and the hour, minute, and second have 
+            leading zeros if any of them is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_HH_MM_SS_TTT">
+            <summary>
+            Apply the following format to a time: hh:mm:ss.ttt
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            The final token, ttt, is the milliseconds portion of the time,
+            which is reported with leading zeros.
+            
+            This is an extension of a standard format used in most of the
+            English speaking world, by all military organizations of which I am
+            aware, Europeans, and others who take their lead from any of the
+            above groups.
+            
+            Only the time is returned, and the hour, minute, and second have 
+            leading zeros if any of them is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_YYYY_MM_DD_HH_MM_SS">
+            <summary>
+            Apply the following format to a date and time: YYYY/MM/DD hh:mm:ss
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            This format conforms fully to the ISO 8601 standard for time
+            representation.
+            
+            The month, day, hour, minute, and second have leading zeros if any
+            of them is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_YYYY_MM_DD_HH_MM_SS_TTT">
+            <summary>
+            Apply the following format to a date and time: YYYY/MM/DD hh:mm:ss.ttt
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            This format conforms fully to the ISO 8601 standard for time
+            representation.
+            
+            The final token, ttt, is the milliseconds portion of the time,
+            which is reported with leading zeros.
+            
+            The month, day, hour, minute, and second have leading zeros if any
+            of them is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_WWW_DD_MM_YYYY">
+            <summary>
+            Apply the following format to a date: WWW DD/MM/YYYY
+            
+            The first token, WWW, represents the three letter abbreviation of
+            the weekday name, which is derived from the regional settings in the
+            Windows Control Panel. The returned string conforms to the settings
+            in the UICulture of the calling thread.
+            
+            This is the standard format used in most of the English speaking
+            world, by all military organizations of which I am aware, Europeans,
+            and others who take their lead from any of the above groups.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_WWW_MM_DD_YYYY">
+            <summary>
+            Apply the following format to a date: WWW DD/MM/YYYY
+            
+            The first token, WWW, represents the three letter abbreviation of
+            the weekday name, which is derived from the regional settings in the
+            Windows Control Panel. The returned string conforms to the settings
+            in the UICulture of the calling thread.
+            
+            This is the standard format used in the USA.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_WW_DD_MM_YYYY">
+            <summary>
+            Apply the following format to a date: WW DD/MM/YYYY
+            
+            The first token, WW, represents enough of the three letter weekday
+            name abbreviation, which is derived from the regional settings in
+            the Windows Control Panel, to uniquely identify the weekday. The
+            returned string conforms to the settings in the UICulture of the
+            calling thread.
+            
+            This is the standard format used in most of the English speaking
+            world, by all military organizations of which I am aware, Europeans,
+            and others who take their lead from any of the above groups.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_WW_MM_DD_YYYY">
+            <summary>
+            Apply the following format to a date: WW DD/MM/YYYY
+            
+            The first token, WW, represents enough of the three letter weekday
+            name abbreviation, which is derived from the regional settings in
+            the Windows Control Panel, to uniquely identify the weekday. The
+            returned string conforms to the settings in the UICulture of the
+            calling thread.
+            
+            This is the standard format used in the USA.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_WWWW_DD_MM_YYYY">
+            <summary>
+            Apply the following format to a date: WWWW DD/MM/YYYY
+            
+            The first token, WWWW, represents full name of the weekday, which is
+            derived from the regional settings in the Windows Control Panel. The
+            returned string conforms to the settings in the UICulture of the
+            calling thread.
+            
+            This is the standard format used in most of the English speaking
+            world, by all military organizations of which I am aware, Europeans,
+            and others who take their lead from any of the above groups.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFD_WWWW_MM_DD_YYYY">
+            <summary>
+            Apply the following format to a date: WWWW DD/MM/YYYY
+            
+            The first token, WWWW, represents full name of the weekday, which is
+            derived from the regional settings in the Windows Control Panel. The
+            returned string conforms to the settings in the UICulture of the
+            calling thread.
+            
+            This is the standard format used in the USA.
+            
+            Only the date is returned, all four digits of the year are included,
+            and the month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFDYYYYMMDD_HHMMSS">
+            <summary>
+            Apply the following format to a date and time: YYYYMMDD_hhmmss
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            This format conforms fully to the ISO 8601 standard for time
+            representation.
+            
+            The month, day, hour, minute, and second have leading zeros if any
+            of them is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFDYYYYMMDD">
+            <summary>
+            Apply the following format to a date and time: YYYYMMDD
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            This format conforms fully to the ISO 8601 standard for time
+            representation.
+            
+            The month and day have leading zeros if either is less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RFDHHMMSS">
+            <summary>
+            Apply the following format to a date and time: hhmmss
+            
+            The returned string represents the hours on a 24 hour clock.
+            
+            At present, 12 hour (AM/PM) representation is unsupported.
+            
+            This format conforms fully to the ISO 8601 standard for time
+            representation.
+            
+            The hour, minute, and second have leading zeros if any of them is
+            less than 10.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.SysDateFormatters.RSD_TOKENS">
+            <summary>
+            The strings in this array are the substitution tokens supported by
+            the date formatters in this class.
+            </summary>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.SysDateFormatters.ReformatNow(System.String)">
+            <summary>
+            This method has a nearly exact analogue in the constellations of WIL
+            User Defined Functions that gave rise to its immediate predecessor,
+            a like named function implemented in straight C, with a little help
+            from the Windows National Language Subsystem, which underlies the
+            CultureInfo class.
+            </summary>
+            <param name="pstrFormat">
+            This System.String is a combination of tokens and literal text that
+            governs the formatting of the date.
+            </param>
+            <returns>
+            The return value is a string containing the date and/or time in
+            argument pdtm, formatted according to the rules spelled out in
+            format string pstrFormat.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.SysDateFormatters.ReformatUtcNow(System.String)">
+            <summary>
+            In the original constellation of WinBatch functions and their C
+            descendents, this function took the form of an optional argument to
+            ReformatNow. I think I prefer this way.
+            </summary>
+            <param name="pstrFormat">
+            This System.String is a combination of tokens and literal text that
+            governs the formatting of the date.
+            </param>
+            <returns>
+            The return value is a string containing the date and/or time in
+            argument pdtm, formatted according to the rules spelled out in
+            format string pstrFormat.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.SysDateFormatters.ReformatSysDate(System.DateTime,System.String)">
+            <summary>
+            ReformatSysDate is the core function of the constellation of
+            routines that grew from the original WIL script. Substitution tokens
+            drive construction of a formatted date string.
+            </summary>
+            <param name="pdtm">
+            This System.DateTime is the time to be formatted.
+            </param>
+            <param name="pstrFormat">
+            This System.String is a combination of tokens and literal text that
+            governs the formatting of the date.
+            </param>
+            <returns>
+            The return value is a string containing the date and/or time in
+            argument pdtm, formatted according to the rules spelled out in
+            format string pstrFormat.
+            </returns>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.DisplayFormats">
+            <summary>
+            Pass these constants to the ToString method on an object of the
+            appropriate type to render the object for printing.
+            
+            The comment associated with each constant identifies the types for
+            which it is appropriate.
+            
+            There are service methods to facilitate using the Date/Time formatting
+            constants, which cannot be fed to ToString, except, perhaps, with a
+            custom formatting engine. Use these service methods, or call the
+            ReformatSysDate function, which also belongs to this library, directly.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it as an arbitrary string of hexadecimal digits.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL_2">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it as a string of 2 hexadecimal digits.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL_4">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it as a string of 4 hexadecimal digits.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL_8">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it as a string of 8 hexadecimal digits.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL_PREFIX_0H_LC">
+            <summary>
+            Substitute this into a format string as a prefix to a hexadecimal
+            number display. This string renders exactly as shown, 0h.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL_PREFIX_0H_UC">
+            <summary>
+            Substitute this into a format string as a prefix to a hexadecimal
+            number display. This string renders exactly as shown, 0H.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL_PREFIX_0X_LC">
+            <summary>
+            Substitute this into a format string as a prefix to a hexadecimal
+            number display. This string renders exactly as shown, 0x.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.HEXADECIMAL_PREFIX_0X_UC">
+            <summary>
+            Substitute this into a format string as a prefix to a hexadecimal
+            number display. This string renders exactly as shown, 0X.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.NUMBER_PER_REG_SETTINGS">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it according to the current settings in the Regional Settings
+            part of the Windows Control Panel.
+            
+            This format string causes the formatting engine to obey ALL of the
+            settings, including the number of digits to display after the
+            decimal point for a whole number.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.NUMBER_PER_REG_SETTINGS_0D">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it according to the current settings in the Regional Settings
+            part of the Windows Control Panel.
+            
+            This format string causes the formatting engine to obey all of the
+            settings, EXCEPT the number of digits to display after the decimal
+            point for a whole number.
+            
+            This format string overrides the digits after decimal value
+            specified by the iDigits value of Windows Registry key
+            HKCU\Control Panel\International, causing it to behave as if it had
+            been set to 0.
+            
+            The override applies only to the instance ToString method being
+            called; the Registry is unchanged.
+            
+            See http://technet.microsoft.com/en-us/library/cc978638.aspx.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.NUMBER_PER_REG_SETTINGS_2D">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it according to the current settings in the Regional Settings
+            part of the Windows Control Panel.
+            
+            This format string causes the formatting engine to obey all of the
+            settings, EXCEPT the number of digits to display after the decimal
+            point for a whole number.
+            
+            This format string overrides the digits after decimal value
+            specified by the iDigits value of Windows Registry key
+            HKCU\Control Panel\International, causing it to behave as if it had
+            been set to 2, which happens to be the default for a US
+            installation. Nevertheless, uses this value if changes made by the
+            user would mess up your work.
+            
+            The override applies only to the instance ToString method being
+            called; the Registry is unchanged.
+            
+            See http://technet.microsoft.com/en-us/library/cc978638.aspx.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.NUMBER_PER_REG_SETTINGS_3D">
+            <summary>
+            Pass this constant to the ToString method on any integral type to
+            format it according to the current settings in the Regional Settings
+            part of the Windows Control Panel.
+            
+            This format string causes the formatting engine to obey all of the
+            settings, EXCEPT the number of digits to display after the decimal
+            point for a whole number.
+            
+            This format string overrides the digits after decimal value
+            specified by the iDigits value of Windows Registry key
+            HKCU\Control Panel\International, causing it to behave as if it had
+            been set to 3.
+            
+            The override applies only to the instance ToString method being
+            called; the Registry is unchanged.
+            
+            See http://technet.microsoft.com/en-us/library/cc978638.aspx.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.PERCENT">
+            <summary>
+            Pass this constant to the ToString method on a single or double
+            precision floating point number to be displayed as an integral
+            percentage.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.PERCENT_DIGITS_2">
+            <summary>
+            Pass this constant to the ToString method on a single or double
+            precision floating point number to be displayed as a fixed point
+            percentage, accurate to two decimal places.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.STANDARD_DISPLAY_DATE_FORMAT">
+            <summary>
+            I use this with my SysDateFormatters class to format a date (sans
+            time) so that it prints as yyyy/mm/dd.
+            
+            IMPORTANT: This string specifically targets the methods in the
+            SysDateFormatters class. SysDateFormatters strings are incompatible
+            with ToString.
+            </summary>
+            <example>
+            2014/09/04
+            </example>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.STANDARD_DISPLAY_DATE_TIME_FORMAT">
+            <summary>
+            I use this with my SysDateFormatters class to format a date and time
+            so that it prints as yyyy/mm/dd hh:mm:ss.
+            
+            IMPORTANT: This string specifically targets the methods in the
+            SysDateFormatters class. SysDateFormatters strings are incompatible
+            with ToString.
+            </summary>
+            <example>
+            2014/09/04 16:17:30
+            </example>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.DisplayFormats.STANDARD_DISPLAY_TIME_FORMAT">
+            <summary>
+            I use this with my SysDateFormatters class to format a time (sans
+            date) so that it prints as hh:mm:ss.
+            
+            IMPORTANT: This string specifically targets the methods in the
+            SysDateFormatters class. SysDateFormatters strings are incompatible
+            with ToString.
+            </summary>
+            <example>
+            16:17:30
+            </example>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.DisplayFormats.FormatDateForShow(System.DateTime)">
+            <summary>
+            Use my standard format string for displaying date stamps in
+            reports, to format a DateTime structure.
+            </summary>
+            <param name="pdtmTestDate">
+            Specify the populated DateTime to be formatted. Since only the date
+            goes into the format, the time component MAY be uninitialized.
+            </param>
+            <returns>
+            The return value is a string representation of the date and time,
+            rendered according to constant STANDARD_DISPLAY_TIME_FORMAT.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.DisplayFormats.FormatDateTimeForShow(System.DateTime)">
+            <summary>
+            Use my standard format string for displaying date/time stamps in
+            reports, to format a DateTime structure.
+            </summary>
+            <param name="pdtmTestDate">
+            Specify the populated DateTime to be formatted. Since the date and
+            time go into the output string, the entire structure must be
+            initialized.
+            </param>
+            <returns>
+            The return value is a string representation of the date and time,
+            rendered according to constant STANDARD_DISPLAY_DATE_TIME_FORMAT.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.DisplayFormats.FormatTimeForShow(System.DateTime)">
+            <summary>
+            Use my standard format string for displaying time stamps in reports,
+            to format a DateTime structure.
+            </summary>
+            <param name="pdtmTestDate">
+            Specify the populated DateTime to be formatted. Since only the time
+            goes into the format, the date component MAY be uninitialized.
+            </param>
+            <returns>
+            The return value is a string representation of the date and time,
+            rendered according to constant STANDARD_DISPLAY_TIME_FORMAT.
+            </returns>
+        </member>
+        <member name="T:WizardWrx.ApplicationHelpers2.ListInfo">
+            <summary>
+            This static class exposes handy constants for working with buffers,
+            lists, and substrings.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ListInfo.BEGINNING_OF_BUFFER">
+            <summary>
+            Use this to signify the beginning of a binary I/O buffer.
+            
+            Coincidentally, this happens to be ArrayInfo.ARRAY_FIRST_ELEMENT,
+            which is logical, since a buffer is an array.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ListInfo.BINARY_SEARCH_NOT_FOUND">
+            <summary>
+            Since the BinarySearch method on a List returns the array subscript
+            where the value was found, a return value of less than zero
+            (BINARY_SEARCH_NOT_FOUND) means that no matching item exists in the
+            list.
+            
+            Coincidentally, this happens to be ArrayInfo.ARRAY_INVALID_INDEX.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ListInfo.EMPTY_STRING_LENGTH">
+            <summary>
+            The Length property of a string returns a value of zero
+            (EMPTY_STRING_LENGTH) when the string is empty.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ListInfo.INDEXOF_NOT_FOUND">
+            <summary>
+            This constant defines the value returned by the IndexOf method on a
+            string to indicate that the search character or substring is not
+            found.
+            
+            Coincidentally, this happens to be ArrayInfo.ARRAY_INVALID_INDEX.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ListInfo.LIST_IS_EMPTY">
+            <summary>
+            The Count property of a list returns a value of zero (LIST_IS_EMPTY)
+            when the list is empty.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ListInfo.SUBSTR_BEGINNING">
+            <summary>
+            Since a string is an array of Unicode characters, it makes sense to
+            treat substrings as arrays.
+            
+            Coincidentally, this happens to be ArrayInfo.ARRAY_FIRST_ELEMENT,
+            which is logical, since a substring is an array of Unicode
+            characters.
+            </summary>
+        </member>
+        <member name="F:WizardWrx.ApplicationHelpers2.ListInfo.SUBSTR_SECOND_CHAR">
+            <summary>
+            Since a string is an array of Unicode characters, it makes sense to
+            treat substrings as arrays.
+            
+            Coincidentally, this happens to be ArrayInfo.ARRAY_SECOND_ELEMENT,
+            which is logical, since a substring is an array of Unicode
+            characters.
+            </summary>
+            
+            If the function cannot return the requested character, the return
+            value is SpecialCharacters.NUL, the null character.
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.ListInfo.FirstCharOfString(System.String)">
+            <summary>
+            Return the first character of a string.
+            </summary>
+            <param name="pstrIn">
+            Specify the string from whhich to return the first character.
+            </param>
+            <returns>
+            Unless the input string is empty (or null), the return value is its
+            first character.
+            
+            If the function cannot return the requested character, the return
+            value is SpecialCharacters.NUL, the null character.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.ListInfo.LastCharacterOfString(System.String)">
+            <summary>
+            Return the last character of a string.
+            </summary>
+            <param name="pstrIn">
+            Specify the string from whhich to return the last character.
+            </param>
+            <returns>
+            Unless the input string is empty (or null), the return value is its
+            last character.
+            
+            If the function cannot return the requested character, the return
+            value is SpecialCharacters.NUL, the null character.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.ListInfo.NthCharacterOfString(System.String,System.Int32)">
+            <summary>
+            Returns the character at the Nth position in a string.
+            </summary>
+            <param name="pstrIn">
+            Specify the string from whhich to return the last character.
+            </param>
+            <param name="pintOrdinalPosition">
+            Specify the ordinal position of the desired character. Unlike array
+            subscripts, which start at zero, ordinals start at one.
+            </param>
+            <returns>
+            Unless the input string is empty (or null), or pintOrdinalPosition
+            is less than 1 or greater than the length of the string, the return
+            value is the character at the specified (Nth) position.
+            
+            If the function cannot return the requested character, the return
+            value is SpecialCharacters.NUL, the null character.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.ListInfo.PenultimateCharactrOfString(System.String)">
+            <summary>
+            Return the next to last, or penultimate, character of a string.
+            </summary>
+            <param name="pstrIn">
+            Specify the string from whhich to return the penultimate character.
+            </param>
+            <returns>
+            Unless the input string is empty (or null), the return value is its
+            penultimate character.
+            
+            If the function cannot return the requested character, the return
+            value is SpecialCharacters.NUL, the null character.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.ApplicationHelpers2.ListInfo.SecondCharacterOfString(System.String)">
+            <summary>
+            Return the second character of a string.
+            </summary>
+            <param name="pstrIn">
+            Specify the string from whhich to return the second character.
+            </param>
+            <returns>
+            Unless the input string is empty (or null), the return value is its
+            second character.
+            
+            If the function cannot return the requested character, the return
+            value is SpecialCharacters.NUL, the null character.
+            </returns>
+        </member>
+    </members>
+</doc>

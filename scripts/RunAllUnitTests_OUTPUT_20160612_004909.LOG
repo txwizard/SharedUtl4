@@ -1,0 +1,535 @@
+    
+Step 1 of 5: Establish the data directory as the current working directory. 
+    
+    
+Step 2 of 5: Set the working directory to C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data 
+    
+    
+Step 3 of 5 Begin: Decide which build to execute. 
+    
+    
+Step 3 of 5 Done: Build = Debug. 
+    
+    
+Step 4 of 5: ..\SharedUtl4_TestStand\bin\Debug\SharedUtl4_TestStand.exe 
+    
+SharedUtl4_TestStand, version 3.0.360.42426
+Begin @ 2016-06-12 00:49:00.644 (2016-06-12 05:49:00.644 UTC)
+
+Data Directory = C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\
+
+Begin Tests of MaxStringLength Method:
+
+    Test # 1:
+
+Source of Test Data                = LinesInTextFile
+Fully Qualified Name of Input File = C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MaxStringLength.TXT
+Date Input File Last Modified      = 2012/11/19 11:49:34
+Size, in Bytes, of Input File      = 236
+Number of Lines in Input File      = 4
+Length of Longest Line             = 91
+
+    Test # 1 done
+
+
+MaxStringLength tests completed
+
+
+Begin Tests of MergeNewItemsIntoArray Method:
+
+    Test # 1:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Master.TXT	2012/11/21 12:08:54	893	22	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_01.TXT	2012/11/21 12:16:14	92	3	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_01.TXT	2016/06/12 00:49:00	929	20	
+
+    Test # 1 done
+
+    Test # 2:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_01.TXT	2016/06/12 00:49:00	929	22	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_02.TXT	2012/11/21 12:18:58	56	3	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_02.TXT	2016/06/12 00:49:00	974	21	
+
+    Test # 2 done
+
+    Test # 3:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_02.TXT	2016/06/12 00:49:00	974	23	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_03.TXT	2012/11/21 12:24:38	52	3	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_03.TXT	2016/06/12 00:49:00	1,015	22	
+
+    Test # 3 done
+
+    Test # 4:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_03.TXT	2016/06/12 00:49:00	1,015	24	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_04.TXT	2012/11/21 12:26:34	54	3	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_04.TXT	2016/06/12 00:49:00	1,058	23	
+
+    Test # 4 done
+
+    Test # 5:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_04.TXT	2016/06/12 00:49:00	1,058	25	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_05.TXT	2012/11/21 12:27:42	97	4	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_05.TXT	2016/06/12 00:49:00	1,144	25	
+
+    Test # 5 done
+
+    Test # 6:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_05.TXT	2016/06/12 00:49:00	1,144	27	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_06.TXT	2012/11/21 12:31:48	131	4	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_06.TXT	2016/06/12 00:49:00	1,219	26	
+
+    Test # 6 done
+
+    Test # 7:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_06.TXT	2016/06/12 00:49:00	1,219	28	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_07.TXT	2012/11/21 12:37:40	142	5	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_07.TXT	2016/06/12 00:49:00	1,350	29	
+
+    Test # 7 done
+
+    Test # 8:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_07.TXT	2016/06/12 00:49:00	1,350	31	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_08.TXT	2012/11/21 12:44:20	282	7	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_08.TXT	2016/06/12 00:49:00	1,533	32	
+
+    Test # 8 done
+
+    Test # 9:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_08.TXT	2016/06/12 00:49:00	1,533	34	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_09.TXT	2012/11/21 12:48:14	128	5	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_09.TXT	2016/06/12 00:49:00	1,650	35	
+
+    Test # 9 done
+
+    Test # 10:
+
+Description	FileName	ModDate	Size	LineCount
+Master File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_09.TXT	2016/06/12 00:49:00	1,650	37	
+New Items File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Case_10.TXT	2012/11/21 12:48:54	146	5	
+Output File	C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Test_Data\MergeNewItemsIntoArray_Output_10.TXT	2016/06/12 00:49:00	1,785	38	
+
+    Test # 10 done
+
+
+MergeNewItemsIntoArray tests completed
+
+DigestFileTests Begin: Files to test = 5
+
+    File # 1: Name           = Plaintext_File_1_Block.TXT
+              Length         = 8192
+              MD5 Digest     = db4a7159ee560ee774c5fbb7cc07ae7d - Pass
+              SHA-1   Digest = 21fbf5ad88254e853c7ff2b60aa891b6074d400d
+              SHA-256 Digest = 8dd2402c084bda9ff251119535a83946d476a833601b74e599c4a9854c094475
+              SHA-384 Digest = c7494d8eb69df26d6c83f2490ebdf8d2144b1b2be7f1940733890c8f235e57bfb967c1d834ae4bf1942a0287bd2dfdaa
+              SHA-512 Digest = 8d12c8d14d4154772dd48c1140f4516391ce640afa735d3276ec6ef7828c218934926cd9c6363ece5805f2c32524010f95acc28893af0d2fdb10b308a0b512e1
+
+              Repeating SHA-256, SHA-384, and SHA-512 with same data as strings.
+
+              SHA-256 Digest = 8dd2402c084bda9ff251119535a83946d476a833601b74e599c4a9854c094475
+              SHA-384 Digest = c7494d8eb69df26d6c83f2490ebdf8d2144b1b2be7f1940733890c8f235e57bfb967c1d834ae4bf1942a0287bd2dfdaa
+              SHA-512 Digest = 8d12c8d14d4154772dd48c1140f4516391ce640afa735d3276ec6ef7828c218934926cd9c6363ece5805f2c32524010f95acc28893af0d2fdb10b308a0b512e1
+
+    File # 2: Name           = Plaintext_File_2_Fractional_Block.TXT
+              Length         = 8114
+              MD5 Digest     = babdd89bad8cf15d7f0a385df6f9322c - Pass
+              SHA-1   Digest = da2bd64dffa24e03e68e1d48f00ace9b6c840d8d
+              SHA-256 Digest = da31435197de0b90942e6f8c1f2fbd8a119fb923a9aaf97723c5016a5c2c95bf
+              SHA-384 Digest = 6e71c422463d9bfd2c7591fa5c8b79c2e30042cbc22c55fd3930dca8e9957a47cf8a61fd1890968e59c8cdc7bb56b6e9
+              SHA-512 Digest = 26880a7d749ffa6062afab7e0120b82284727ec78680a61a32776a4b6d0d9fb9a14ca1d2c0a6d2cc0a28af8a62492fad0ed925fb06b5ad80dbaea0c3ced9d686
+
+              Repeating SHA-256, SHA-384, and SHA-512 with same data as strings.
+
+              SHA-256 Digest = da31435197de0b90942e6f8c1f2fbd8a119fb923a9aaf97723c5016a5c2c95bf
+              SHA-384 Digest = 6e71c422463d9bfd2c7591fa5c8b79c2e30042cbc22c55fd3930dca8e9957a47cf8a61fd1890968e59c8cdc7bb56b6e9
+              SHA-512 Digest = 26880a7d749ffa6062afab7e0120b82284727ec78680a61a32776a4b6d0d9fb9a14ca1d2c0a6d2cc0a28af8a62492fad0ed925fb06b5ad80dbaea0c3ced9d686
+
+    File # 3: Name           = Plaintext_File_3_1_Plus_Blocks.TXT
+              Length         = 11962
+              MD5 Digest     = d6ab7fbb4e2b89023283ff31b944fa82 - Pass
+              SHA-1   Digest = 469679c4a989e42ffb78be9d7493b2f4b05b6a5e
+              SHA-256 Digest = 3ea95e922a0f6ca6396607cf5c9469eaa78b8cde35d2ccbc1c8114dde4e207bb
+              SHA-384 Digest = 45cfc7d42ce38617c4dceb285068d0383c07d4b8ae630fdffe3da8ce7a2598edbc77996f8fa3dffd4d43293adb7f4ce5
+              SHA-512 Digest = dee319180e1b9128fb013597c6be024afa507bbfa249ebf5369bc00ec410f7f6495807b16a5e7a8fc19a184334fdb61888d8496e8b20e2709d96975fcbacd96f
+
+              Repeating SHA-256, SHA-384, and SHA-512 with same data as strings.
+
+              SHA-256 Digest = 3ea95e922a0f6ca6396607cf5c9469eaa78b8cde35d2ccbc1c8114dde4e207bb
+              SHA-384 Digest = 45cfc7d42ce38617c4dceb285068d0383c07d4b8ae630fdffe3da8ce7a2598edbc77996f8fa3dffd4d43293adb7f4ce5
+              SHA-512 Digest = dee319180e1b9128fb013597c6be024afa507bbfa249ebf5369bc00ec410f7f6495807b16a5e7a8fc19a184334fdb61888d8496e8b20e2709d96975fcbacd96f
+
+    File # 4: Name           = Plaintext_File_4_4_Plus_Blocks.TXT
+              Length         = 37804
+              MD5 Digest     = 4c1da67c0aa7b45c00bd3788d0d1a7a7 - Pass
+              SHA-1   Digest = 38180eab75916b7c38413bb01d2652a1ac1fce57
+              SHA-256 Digest = 7f0b6c990603faeb2ecf1cbfd2a30f1e08af330403fbe5825457467612e21e18
+              SHA-384 Digest = 313d7f85992c0d6a80fe6fee86d723292078b4b22f91b068da5097e5e73bebf060b905f505a81f74fb60a4e74b943f04
+              SHA-512 Digest = ffcb273f7fa6636e5d49e52588d36d257d1089fc6df94286cf43872119409c00508b4f6f7e10e76bbf1b4e51d48ecacf7710639c0ebe913d5bcf0ca7066306e6
+
+              Repeating SHA-256, SHA-384, and SHA-512 with same data as strings.
+
+              SHA-256 Digest = 7f0b6c990603faeb2ecf1cbfd2a30f1e08af330403fbe5825457467612e21e18
+              SHA-384 Digest = 313d7f85992c0d6a80fe6fee86d723292078b4b22f91b068da5097e5e73bebf060b905f505a81f74fb60a4e74b943f04
+              SHA-512 Digest = ffcb273f7fa6636e5d49e52588d36d257d1089fc6df94286cf43872119409c00508b4f6f7e10e76bbf1b4e51d48ecacf7710639c0ebe913d5bcf0ca7066306e6
+
+    File # 5: Name           = Plaintext_File_4_Exactly_8_Blocks.TXT
+              Length         = 65536
+              MD5 Digest     = 28d47106cb3a9ddcf81500299fb74e24 - Pass
+              SHA-1   Digest = c735e9cce037b4a83fc67e63405674da8211b6c8
+              SHA-256 Digest = 73fef9210e0aca229a78cf29cb8ae0841ea2ad36feefd2ace6da81cd06588254
+              SHA-384 Digest = e110602767b5b9f2179274fc2ed9e1969fa15bf06ae95a0187a0341e5bddcb10e5b3291e91a46b9403958c8e6cd93608
+              SHA-512 Digest = 2bb8c597bdd78b82b85e35eccc2d159a5aff142f43565c733400e4ede89c7d85eecbd0c6cc17a29c78151597efff58b3e0b6d825b686f3c182813ba2993337be
+
+              Repeating SHA-256, SHA-384, and SHA-512 with same data as strings.
+
+              SHA-256 Digest = 73fef9210e0aca229a78cf29cb8ae0841ea2ad36feefd2ace6da81cd06588254
+              SHA-384 Digest = e110602767b5b9f2179274fc2ed9e1969fa15bf06ae95a0187a0341e5bddcb10e5b3291e91a46b9403958c8e6cd93608
+              SHA-512 Digest = 2bb8c597bdd78b82b85e35eccc2d159a5aff142f43565c733400e4ede89c7d85eecbd0c6cc17a29c78151597efff58b3e0b6d825b686f3c182813ba2993337be
+
+DigestFileTests Done!
+
+ReportDetailsTests Begin
+
+
+The DisplayOrder properties are auto-generated.
+
+Longest Label = 24
+Longest Value = 3
+
+24 =  14
+24 =  14
+24 =  24
+24 = 104
+
+ReportDetailsTests Done!
+
+
+ReportDetailsTests Begin
+
+
+The following table lists key attributes of every ASCII character.
+
+Character   0 (0x00): Display Value = NUL/Null
+Character   1 (0x01): Display Value = 
+Character   2 (0x02): Display Value = 
+Character   3 (0x03): Display Value = 
+Character   4 (0x04): Display Value = 
+Character   5 (0x05): Display Value = 
+Character   6 (0x06): Display Value = 
+Character   7 (0x07): Display Value = BEL (Alarm)
+Character   8 (0x08): Display Value = BS (Backspace)
+Character   9 (0x09): Display Value = HT (Horizontal Tab)
+Character  10 (0x0a): Display Value = CR (Carriage Return)
+Character  11 (0x0b): Display Value = VT (Vertical Tab)
+Character  12 (0x0c): Display Value = FF (Form Feed)
+Character  13 (0x0d): Display Value = LF (Line Feed)
+Character  14 (0x0e): Display Value = 
+Character  15 (0x0f): Display Value = 
+Character  16 (0x10): Display Value = 
+Character  17 (0x11): Display Value = 
+Character  18 (0x12): Display Value = 
+Character  19 (0x13): Display Value = 
+Character  20 (0x14): Display Value = 
+Character  21 (0x15): Display Value = 
+Character  22 (0x16): Display Value = 
+Character  23 (0x17): Display Value = 
+Character  24 (0x18): Display Value = 
+Character  25 (0x19): Display Value = 
+Character  26 (0x1a): Display Value = EOF (DOS End of File)
+Character  27 (0x1b): Display Value = ESC (Escape, for Printer)
+Character  28 (0x1c): Display Value = 
+Character  29 (0x1d): Display Value = 
+Character  30 (0x1e): Display Value = 
+Character  31 (0x1f): Display Value = 
+Character  32 (0x20): Display Value = SP (Single Space)
+Character  33 (0x21): Display Value = Exclamation Point
+Character  34 (0x22): Display Value = Double Quote
+Character  35 (0x23): Display Value = Hash or Pound
+Character  36 (0x24): Display Value = Dollar
+Character  37 (0x25): Display Value = Percent
+Character  38 (0x26): Display Value = Ampersand
+Character  39 (0x27): Display Value = Single Quote
+Character  40 (0x28): Display Value = Left Parenthesis
+Character  41 (0x29): Display Value = Right Parenthesis
+Character  42 (0x2a): Display Value = Asterisk
+Character  43 (0x2b): Display Value = Plus
+Character  44 (0x2c): Display Value = Comma
+Character  45 (0x2d): Display Value = Minus/Hyphen
+Character  46 (0x2e): Display Value = Period/Full Stop
+Character  47 (0x2f): Display Value = Forward Slash
+Character  48 (0x30): Display Value = Numeral 0
+Character  49 (0x31): Display Value = Numeral 1
+Character  50 (0x32): Display Value = Numeral 2
+Character  51 (0x33): Display Value = Numeral 3
+Character  52 (0x34): Display Value = Numeral 4
+Character  53 (0x35): Display Value = Numeral 5
+Character  54 (0x36): Display Value = Numeral 6
+Character  55 (0x37): Display Value = Numeral 7
+Character  56 (0x38): Display Value = Numeral 8
+Character  57 (0x39): Display Value = Numeral 9
+Character  58 (0x3a): Display Value = Colon
+Character  59 (0x3b): Display Value = Semicolon
+Character  60 (0x3c): Display Value = Left Angle Bracket
+Character  61 (0x3d): Display Value = Equals
+Character  62 (0x3e): Display Value = Right Angle Bracket
+Character  63 (0x3f): Display Value = Question Mark
+Character  64 (0x40): Display Value = At
+Character  65 (0x41): Display Value = A
+Character  66 (0x42): Display Value = B
+Character  67 (0x43): Display Value = C
+Character  68 (0x44): Display Value = D
+Character  69 (0x45): Display Value = E
+Character  70 (0x46): Display Value = F
+Character  71 (0x47): Display Value = G
+Character  72 (0x48): Display Value = H
+Character  73 (0x49): Display Value = Upper Case I
+Character  74 (0x4a): Display Value = J
+Character  75 (0x4b): Display Value = K
+Character  76 (0x4c): Display Value = L
+Character  77 (0x4d): Display Value = M
+Character  78 (0x4e): Display Value = N
+Character  79 (0x4f): Display Value = Upper Case O
+Character  80 (0x50): Display Value = P
+Character  81 (0x51): Display Value = Q
+Character  82 (0x52): Display Value = R
+Character  83 (0x53): Display Value = S
+Character  84 (0x54): Display Value = T
+Character  85 (0x55): Display Value = U
+Character  86 (0x56): Display Value = Upper Case V
+Character  87 (0x57): Display Value = W
+Character  88 (0x58): Display Value = Upper Case X
+Character  89 (0x59): Display Value = Y
+Character  90 (0x5a): Display Value = Upper Case Z
+Character  91 (0x5b): Display Value = Left Square Bracket
+Character  92 (0x5c): Display Value = Backslash
+Character  93 (0x5d): Display Value = Right Square Bracket
+Character  94 (0x5e): Display Value = Carat
+Character  95 (0x5f): Display Value = Underscore
+Character  96 (0x60): Display Value = Back-Quote/Back-tick
+Character  97 (0x61): Display Value = a
+Character  98 (0x62): Display Value = b
+Character  99 (0x63): Display Value = c
+Character 100 (0x64): Display Value = d
+Character 101 (0x65): Display Value = e
+Character 102 (0x66): Display Value = f
+Character 103 (0x67): Display Value = g
+Character 104 (0x68): Display Value = h
+Character 105 (0x69): Display Value = Lower Case I
+Character 106 (0x6a): Display Value = j
+Character 107 (0x6b): Display Value = k
+Character 108 (0x6c): Display Value = Lower Case L
+Character 109 (0x6d): Display Value = m
+Character 110 (0x6e): Display Value = n
+Character 111 (0x6f): Display Value = Lower Case O
+Character 112 (0x70): Display Value = p
+Character 113 (0x71): Display Value = q
+Character 114 (0x72): Display Value = r
+Character 115 (0x73): Display Value = s
+Character 116 (0x74): Display Value = t
+Character 117 (0x75): Display Value = u
+Character 118 (0x76): Display Value = Lower Case V
+Character 119 (0x77): Display Value = Lower case W
+Character 120 (0x78): Display Value = Lower Case X
+Character 121 (0x79): Display Value = y
+Character 122 (0x7a): Display Value = Lower Case Z
+Character 123 (0x7b): Display Value = Left French Brace
+Character 124 (0x7c): Display Value = Vertical Bar/Pipe
+Character 125 (0x7d): Display Value = Right French Brace
+Character 126 (0x7e): Display Value = Tilde
+Character 127 (0x7f): Display Value =  (Last Valid 7 Bit Character)
+Character 128 (0x80): Display Value = ? (Start High ASCII Range)
+Character 129 (0x81): Display Value = ?
+Character 130 (0x82): Display Value = ?
+Character 131 (0x83): Display Value = ?
+Character 132 (0x84): Display Value = ?
+Character 133 (0x85): Display Value = ?
+Character 134 (0x86): Display Value = ?
+Character 135 (0x87): Display Value = ?
+Character 136 (0x88): Display Value = ?
+Character 137 (0x89): Display Value = ?
+Character 138 (0x8a): Display Value = ?
+Character 139 (0x8b): Display Value = ?
+Character 140 (0x8c): Display Value = ?
+Character 141 (0x8d): Display Value = ?
+Character 142 (0x8e): Display Value = ?
+Character 143 (0x8f): Display Value = ?
+Character 144 (0x90): Display Value = ?
+Character 145 (0x91): Display Value = ?
+Character 146 (0x92): Display Value = ?
+Character 147 (0x93): Display Value = ?
+Character 148 (0x94): Display Value = ?
+Character 149 (0x95): Display Value = ?
+Character 150 (0x96): Display Value = ?
+Character 151 (0x97): Display Value = ?
+Character 152 (0x98): Display Value = ?
+Character 153 (0x99): Display Value = Trade Mark
+Character 154 (0x9a): Display Value = ?
+Character 155 (0x9b): Display Value = ?
+Character 156 (0x9c): Display Value = ?
+Character 157 (0x9d): Display Value = ?
+Character 158 (0x9e): Display Value = ?
+Character 159 (0x9f): Display Value = ?
+Character 160 (0xa0): Display Value = ˇ
+Character 161 (0xa1): Display Value = ≠
+Character 162 (0xa2): Display Value = õ
+Character 163 (0xa3): Display Value = ú
+Character 164 (0xa4): Display Value = 
+Character 165 (0xa5): Display Value = ù
+Character 166 (0xa6): Display Value = ›
+Character 167 (0xa7): Display Value = 
+Character 168 (0xa8): Display Value = "
+Character 169 (0xa9): Display Value = c
+Character 170 (0xaa): Display Value = ¶
+Character 171 (0xab): Display Value = Æ
+Character 172 (0xac): Display Value = ™
+Character 173 (0xad): Display Value = -
+Character 174 (0xae): Display Value = r
+Character 175 (0xaf): Display Value = _
+Character 176 (0xb0): Display Value = ¯
+Character 177 (0xb1): Display Value = Plus or Minus
+Character 178 (0xb2): Display Value = Squared
+Character 179 (0xb3): Display Value = Cubed
+Character 180 (0xb4): Display Value = '
+Character 181 (0xb5): Display Value = Greek Letter Mu
+Character 182 (0xb6): Display Value = 
+Character 183 (0xb7): Display Value = Centered Dot
+Character 184 (0xb8): Display Value = ,
+Character 185 (0xb9): Display Value = 1
+Character 186 (0xba): Display Value = ß
+Character 187 (0xbb): Display Value = Ø
+Character 188 (0xbc): Display Value = One-fourth
+Character 189 (0xbd): Display Value = One-half
+Character 190 (0xbe): Display Value = Three-fourths
+Character 191 (0xbf): Display Value = ®
+Character 192 (0xc0): Display Value = A
+Character 193 (0xc1): Display Value = A
+Character 194 (0xc2): Display Value = A
+Character 195 (0xc3): Display Value = A
+Character 196 (0xc4): Display Value = é
+Character 197 (0xc5): Display Value = è
+Character 198 (0xc6): Display Value = í
+Character 199 (0xc7): Display Value = Ä
+Character 200 (0xc8): Display Value = E
+Character 201 (0xc9): Display Value = ê
+Character 202 (0xca): Display Value = E
+Character 203 (0xcb): Display Value = E
+Character 204 (0xcc): Display Value = I
+Character 205 (0xcd): Display Value = I
+Character 206 (0xce): Display Value = I
+Character 207 (0xcf): Display Value = I
+Character 208 (0xd0): Display Value = D
+Character 209 (0xd1): Display Value = •
+Character 210 (0xd2): Display Value = O
+Character 211 (0xd3): Display Value = O
+Character 212 (0xd4): Display Value = O
+Character 213 (0xd5): Display Value = O
+Character 214 (0xd6): Display Value = ô
+Character 215 (0xd7): Display Value = x
+Character 216 (0xd8): Display Value = O
+Character 217 (0xd9): Display Value = U
+Character 218 (0xda): Display Value = U
+Character 219 (0xdb): Display Value = U
+Character 220 (0xdc): Display Value = ö
+Character 221 (0xdd): Display Value = Y
+Character 222 (0xde): Display Value = _
+Character 223 (0xdf): Display Value = ·
+Character 224 (0xe0): Display Value = Ö
+Character 225 (0xe1): Display Value = †
+Character 226 (0xe2): Display Value = É
+Character 227 (0xe3): Display Value = a
+Character 228 (0xe4): Display Value = Ñ
+Character 229 (0xe5): Display Value = Ü
+Character 230 (0xe6): Display Value = ë
+Character 231 (0xe7): Display Value = á
+Character 232 (0xe8): Display Value = ä
+Character 233 (0xe9): Display Value = Ç
+Character 234 (0xea): Display Value = à
+Character 235 (0xeb): Display Value = â
+Character 236 (0xec): Display Value = ç
+Character 237 (0xed): Display Value = °
+Character 238 (0xee): Display Value = å
+Character 239 (0xef): Display Value = ã
+Character 240 (0xf0): Display Value = d
+Character 241 (0xf1): Display Value = §
+Character 242 (0xf2): Display Value = ï
+Character 243 (0xf3): Display Value = ¢
+Character 244 (0xf4): Display Value = ì
+Character 245 (0xf5): Display Value = o
+Character 246 (0xf6): Display Value = î
+Character 247 (0xf7): Display Value = ˆ
+Character 248 (0xf8): Display Value = o
+Character 249 (0xf9): Display Value = ó
+Character 250 (0xfa): Display Value = £
+Character 251 (0xfb): Display Value = ñ (ASCII Check Mark)
+Character 252 (0xfc): Display Value = Å
+Character 253 (0xfd): Display Value = y
+Character 254 (0xfe): Display Value = _
+Character 255 (0xff): Display Value = ò (The End)
+    Format strings to test = 9
+
+        String  1: This is the degenerate case; it is devoid of format items.
+                   Highest Index: -1
+
+        String  2: This string contains one {0} format item.
+                   Highest Index: 0
+
+        String  3: This string contains two {0} format {1} item.
+                   Highest Index: 1
+
+        String  4: {0}This string contains three {2} format {1} item.
+                   Highest Index: 2
+
+        String  5: {0}This string contains four {2} format {10} item, one {1} of which has a high index.
+                   Highest Index: 10
+
+        String  6: {0}This string contains four and 1/2 {0) {2} format {10} item, one {1} of which has a high index.
+                   Highest Index: 10
+
+1 error found in format string: {0}This string contains four and 1/2 {0) {2} format {10} item, one {1} of which has a high index.
+
+An System.ArgumentOutOfRangeException exception was caught in routine set_DisplayOrder:
+               Message          = Specified argument was out of the range of valid values.
+Exception Method = Void set_DisplayOrder(ItemDisplayOrder)
+Exception Source = WizardWrx.SharedUtl4
+
+Stack Trace Begin:
+   at WizardWrx.ReportDetail.set_DisplayOrder(ItemDisplayOrder value) in c:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs:line 968
+   at WizardWrx.ReportDetail..ctor(String label, String displayvalue, ItemDisplayOrder itemdisplayorder, String displayformat, Object[] supplementarydetails) in c:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs:line 726
+   at SharedUtl4_TestStand.FormatStringParsing_Drills.ListAllErrors(List`1 plstAllErrors) in c:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\FormatStringParsing_Drills.cs:line 310
+   at SharedUtl4_TestStand.FormatStringParsing_Drills.TestFormatItemCounters() in c:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\FormatStringParsing_Drills.cs:line 255
+   at SharedUtl4_TestStand.Program.ReportDetailsTests(Boolean pfTestSorting) in c:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Program.cs:line 579
+   at SharedUtl4_TestStand.Program.Main(String[] args) in c:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Program.cs:line 244
+End of Stack Trace
+
+There are no further exceptions to report.
+The application terminated with a run-time exception.
+
+    Exit code = 1
+
+
+
+SharedUtl4_TestStand End
+2016-06-12 00:49:01.050 (2016-06-12 05:49:01.050 UTC)
+Elapsed time: 00:00:00.4056007
+    
+Step 4 of 5: Done! 
+    
+    
+Step 5 of 5: Save the output file into which this record is being written by appending a time stamp to its base name. 
+    

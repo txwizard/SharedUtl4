@@ -1,0 +1,315 @@
+BOJ C:\bin\LockVisualStudio20xxProperties.CMD
+
+----------------------------------------------------------------------
+Unlocking Properties source files in directory CD
+----------------------------------------------------------------------
+
+-------------------------------------------------
+Step 1: Apply the write protect flags.
+-------------------------------------------------
+
+
+-------------------------------------------------
+Step 2: Demonstrate the outcome of step 1.
+-------------------------------------------------
+
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\Properties\Resources.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\Properties\Resources.resx
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\Properties\Resources.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\Properties\Resources.resx
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\Resources.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\Resources.resx
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Resources.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Resources.resx
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Settings.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Settings.settings
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Settings.cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\Properties\AssemblyInfo.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\Properties\Resources.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\ASCIICharacterDisplayInfo.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\ASCII_Character_Display_Table.cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\Properties\AssemblyInfo.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\Properties\Resources.Designer.cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\FormatItem.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\FormatItemsCollection.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\FormatStringError.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\FormatStringParser.cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\NOTES\FormatStringEngine_AssemblyInfo(0).cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\NOTES\SharedUtl4_AssemblyInfo(0).cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\AssemblyInfo.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\Resources.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\DigestFile.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\DigestString.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ErrorMessage.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ErrorMessagesCollection.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ListHelpers.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportHelpers.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\StringThings.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Utl.cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\AssemblyInfo.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Resources.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Settings.Designer.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\DigestTestCases.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\FormatStringParsing_Drills.cs
+A    R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MaxStringLength_Tester.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\MergeNewItemsIntoArray_Tester.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Program.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Settings.cs
+     R     C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\TestItemSortByString.cs
+
+-------------------------------------------------
+Step 3: List the file sizes and last write dates.
+-------------------------------------------------
+
+ Volume in drive C is SYS
+ Volume Serial Number is 2430-E62E
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\Properties
+
+07/19/2014  21:53             3,213 Resources.Designer.cs
+07/19/2014  21:53             6,057 Resources.resx
+               2 File(s)          9,270 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\Properties
+
+07/19/2014  23:01            10,839 Resources.Designer.cs
+07/19/2014  23:01            10,952 Resources.resx
+               2 File(s)         21,791 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties
+
+07/31/2014  17:33             9,298 Resources.Designer.cs
+07/31/2014  17:33             9,425 Resources.resx
+               2 File(s)         18,723 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties
+
+07/18/2014  23:41            21,044 Resources.Designer.cs
+07/18/2014  23:41            13,964 Resources.resx
+               2 File(s)         35,008 bytes
+
+     Total Files Listed:
+               8 File(s)         84,792 bytes
+               0 Dir(s)  28,631,519,232 bytes free
+ Volume in drive C is SYS
+ Volume Serial Number is 2430-E62E
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand
+
+11/19/2012  12:52             1,269 Settings.cs
+               1 File(s)          1,269 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties
+
+07/31/2014  18:52             3,790 Settings.Designer.cs
+07/31/2014  18:52             1,478 Settings.settings
+               2 File(s)          5,268 bytes
+
+     Total Files Listed:
+               3 File(s)          6,537 bytes
+               0 Dir(s)  28,631,519,232 bytes free
+ Volume in drive C is SYS
+ Volume Serial Number is 2430-E62E
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo
+
+07/19/2014  22:29             7,233 ASCIICharacterDisplayInfo.cs
+07/19/2014  23:26             9,583 ASCII_Character_Display_Table.cs
+               2 File(s)         16,816 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\Properties
+
+09/26/2014  01:22             1,442 AssemblyInfo.cs
+07/19/2014  21:53             3,213 Resources.Designer.cs
+               2 File(s)          4,655 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine
+
+09/26/2014  01:22            77,631 FormatItem.cs
+07/16/2014  10:37             6,927 FormatItemsCollection.cs
+07/19/2014  22:29             7,724 FormatStringError.cs
+07/19/2014  23:00            28,710 FormatStringParser.cs
+               4 File(s)        120,992 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\Properties
+
+09/26/2014  01:22             1,490 AssemblyInfo.cs
+07/19/2014  23:01            10,839 Resources.Designer.cs
+               2 File(s)         12,329 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\NOTES
+
+09/23/2014  10:47             1,490 FormatStringEngine_AssemblyInfo(0).cs
+09/23/2014  10:47             1,723 SharedUtl4_AssemblyInfo(0).cs
+               2 File(s)          3,213 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4
+
+09/21/2014  22:03            14,992 DigestFile.cs
+09/21/2014  22:45             8,100 DigestString.cs
+09/21/2014  20:46            23,437 ErrorMessage.cs
+09/21/2014  20:46             7,293 ErrorMessagesCollection.cs
+11/21/2012  23:46            18,961 ListHelpers.cs
+07/21/2014  21:17            69,444 ReportDetail.cs
+07/21/2014  20:51            17,965 ReportDetails.cs
+09/26/2014  01:22            16,213 ReportHelpers.cs
+07/18/2014  11:50            12,243 StringThings.cs
+09/21/2014  20:44            27,155 Utl.cs
+              10 File(s)        215,803 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties
+
+09/26/2014  01:22             1,724 AssemblyInfo.cs
+07/31/2014  17:33             9,298 Resources.Designer.cs
+               2 File(s)         11,022 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand
+
+07/31/2014  18:52             5,030 DigestTestCases.cs
+09/23/2014  02:50            16,042 FormatStringParsing_Drills.cs
+09/26/2014  01:22             8,772 MaxStringLength_Tester.cs
+07/08/2014  00:04            14,880 MergeNewItemsIntoArray_Tester.cs
+09/23/2014  00:55            38,859 Program.cs
+11/19/2012  12:52             1,269 Settings.cs
+11/23/2012  00:44             4,439 TestItemSortByString.cs
+               7 File(s)         89,291 bytes
+
+ Directory of C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Proj
+ects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties
+
+09/26/2014  01:22             1,740 AssemblyInfo.cs
+07/18/2014  23:41            21,044 Resources.Designer.cs
+07/31/2014  18:52             3,790 Settings.Designer.cs
+               3 File(s)         26,574 bytes
+
+     Total Files Listed:
+              34 File(s)        500,695 bytes
+               0 Dir(s)  28,631,515,136 bytes free
+
+-------------------------------------------------
+Step 4: Purge the editor backup files.
+-------------------------------------------------
+
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+NOTES\Development_Notes_2.81.TXT.bak...deleted.
+NOTES\FormatStringEngine_AssemblyInfo.cs.bak...deleted.
+NOTES\SharedUtl4_AssemblyInfo.cs.bak...deleted.
+3 files found
+
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+NOTES\Development_Notes_2.81(0).TXT...deleted.
+NOTES\Development_Notes_2.81(1).TXT...deleted.
+NOTES\Development_Notes_2.81(2).TXT...deleted.
+NOTES\Development_Notes_2.81(3).TXT...deleted.
+NOTES\Development_Notes_2.81(4).TXT...deleted.
+NOTES\Development_Notes_2.81(5).TXT...deleted.
+NOTES\FormatStringEngine_AssemblyInfo(0).cs...
+Error opening NOTES\FormatStringEngine_AssemblyInfo(0).cs for delete: Access is
+denied.
+
+NOTES\SharedUtl4_AssemblyInfo(0).cs...
+Error opening NOTES\SharedUtl4_AssemblyInfo(0).cs for delete: Access is denied.
+
+8 files found
+
+
+-------------------------------------------------
+EOJ LockVisualStudio20xxProperties.CMD
+-------------------------------------------------
+
+WWPause version 2, 0, 0, 3
+Fri 26 Sep 2014 06:34:25 UTC
+Fri 26 Sep 2014 01:34:25 Local
+
+Please press RETURN when ready...
+
+
+================================================================================
+09/26/2014 01:39:35 - Delete the files that LockVisualStudio20xxProperties.CMD
+                      left behind because it marked them Read Only before the
+                      delete step ran.
+================================================================================
+
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx
+_Libs\SharedUtl4\NOTES>cd..
+
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx
+_Libs\SharedUtl4>    sdelete -a -s *.bak
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+No files/folders found that match *.bak.
+
+
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx
+_Libs\SharedUtl4>    sdelete -a -s *(?).*
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+NOTES\FormatStringEngine_AssemblyInfo(0).cs...deleted.
+NOTES\SharedUtl4_AssemblyInfo(0).cs...deleted.
+2 files found
+
+
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx
+_Libs\SharedUtl4>
+
+================================================================================
+09/26/2014 01:40:35 - Unlock LockVisualStudio20xxProperties.CMD for editing,
+                      lock it when done, and delete the editor backup files.
+================================================================================
+
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+
+C:\Documents and Settings\DAG\My Documents>attrib C:\bin\LockVisualStudio20xxProperties.CMD -r
+
+C:\Documents and Settings\DAG\My Documents>attrib C:\bin\LockVisualStudio20xxProperties.CMD +r
+
+C:\Documents and Settings\DAG\My Documents>attrib C:\bin\LockVisualStudio20xxProperties.CMD
+A    R     C:\bin\LockVisualStudio20xxProperties.CMD
+
+C:\Documents and Settings\DAG\My Documents>sdelete -a -s C:\bin\*(?).*
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+C:\bin\LockVisualStudio20xxProperties(0).CMD...deleted.
+1 files found
+
+
+C:\Documents and Settings\DAG\My Documents>sdelete -a -s C:\bin\*.bak
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+C:\bin\LockVisualStudio20xxProperties.CMD.bak...deleted.
+1 files found
+
+
+C:\Documents and Settings\DAG\My Documents>

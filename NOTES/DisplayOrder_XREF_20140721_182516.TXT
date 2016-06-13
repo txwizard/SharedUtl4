@@ -1,0 +1,88 @@
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^605^             public uint uintDefaultDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1007^                     raDefaultColumnLabels [ intCurrent ].DefaultOrder = _aRules [ intCurrent ].uintDefaultDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1066^         /// Given a field number, return the DefaultDisplayOrder property from its rule.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1073^         /// The returned string is the DefaultDisplayOrder value defined in the
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1076^         public uint GetDefaultDisplayOrder ( long plngFieldNumber )
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1079^                 return _aRules [ RuleIndexFromFieldNumber ( plngFieldNumber ) ].uintDefaultDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1084^         }   // public uint GetDefaultDisplayOrder
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1873^                         rule.uintDefaultDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^1878^                         rule.uintDefaultDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\NOLANB\DataEaseDirectoryReader\WizardWrx.BinaryIO\TableDrivenConversionEngine.cs^2188^                             rruleNew.uintDefaultDisplayOrder = ParseUnsignedInteger (
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^43^                               2) Add DisplayOrder as an instance property that
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^44^                                  defaults to zero. To make DisplayOrder useful,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^201^         private uint _uintDisplayOrder = StandardConstants.ZERO;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^295^         /// Create a ReportDetail, and set its Label and DisplayOrder
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^301^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^302^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^306^             uint puintDisplayOrder )
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^309^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^317^         /// Create a ReportDetail, and set its Label, DisplayOrder, and 
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^323^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^324^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^331^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^335^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^344^         /// Create a ReportDetail, and set its Label, DisplayOrder, 
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^350^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^351^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^361^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^366^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^405^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^406^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^411^             uint puintDisplayOrder )
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^415^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^423^         /// Create a ReportDetail, and set its Label, Value, DisplayOrder, and
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^432^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^433^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^441^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^446^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^455^         /// Create a ReportDetail, and set its Label, Value, DisplayOrder,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^464^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^465^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^476^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^482^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^520^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^521^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^526^             uint puintDisplayOrder )
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^530^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^539^         /// DisplayOrder, and DisplayFormat properties.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^548^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^549^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^557^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^562^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^572^         /// DisplayOrder, DisplayFormat, and SupplementaryDetails properties.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^581^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^582^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^593^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^599^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^635^         /// DisplayValue, and DisplayOrder properties.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^647^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^648^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^654^             uint puintDisplayOrder )
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^659^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^668^         /// DisplayValue, DisplayOrder, and DisplayFormat properties.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^680^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^681^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^690^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^696^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^706^         /// DisplayValue, DisplayOrder, DisplayFormat, and SupplementaryDetails
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^719^         /// <param name="puintDisplayOrder">
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^720^         /// DisplayOrder must be greater than zero.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^732^             uint puintDisplayOrder ,
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^739^             this.DisplayOrder = puintDisplayOrder;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^834^         public uint DisplayOrder
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^836^             get { return _uintDisplayOrder; }
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^843^                 _uintDisplayOrder = value;
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^845^             }   // public uint DisplayOrder setter method
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^846^         }   // public uint DisplayOrder
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^1418^                 _uintDisplayOrder , 
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetail.cs^1497^                 return _uintDisplayOrder.CompareTo ( dtl._uintDisplayOrder );
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs^37^                                  automatically increment a newDisplayOrder
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs^125^                 //  My initial implementation set the DisplayOrder on the new
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs^133^                 if ( prDtl.DisplayOrder == StandardConstants.ZERO )
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs^134^                 {   // If it arrives with a nonzero DisplayOrder, leave it.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs^135^                     prDtl.DisplayOrder = ( uint ) ( ( this.Count * s_uintIncrement ) );
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs^136^                 }   // if ( prDtl.DisplayOrder == StandardConstants.ZERO )
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\ReportDetails.cs^209^         /// DisplayOrder property.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\Properties\Resources.Designer.cs^100^         ///   Looks up a localized string similar to ERROR: The DisplayOrder property cannot be set to zero..
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Resources.Designer.cs^478^         ///   Looks up a localized string similar to {0}The DisplayOrder properties are auto-generated.{0}.
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\Properties\Resources.Designer.cs^487^         ///   Looks up a localized string similar to {0}The DisplayOrder properties of selected items were explicitly set.{0}.

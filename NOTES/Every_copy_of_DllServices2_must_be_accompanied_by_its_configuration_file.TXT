@@ -1,0 +1,539 @@
+   Every copy of DllServices2 must be accompanied by its configuration file.
+
+================================================================================
+
+-------------------------------------------------------------------------------------------------------------------------------
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config:
+-------------------------------------------------------------------------------------------------------------------------------
+
+    ============================================================================
+    Revision History
+    ============================================================================
+
+    Date       By  Synopsis
+    ========== === =============================================================
+    2016/06/05 DAG Amend the formatting of this headnote to conform to my visual
+                   formatting convention, in preparation for making this version
+                   once again the reference version, and updating all production
+                   copies.
+    ============================================================================
+-->
+
+================================================================================
+2016-06-05 15:52:43
+================================================================================
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\DAVE>P6FileStatsWin.PL -fC:\WizardWrx.DLLServices2.dll -s "-oC:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_%COMPUTERNAME%.CSV"
+P6FileStatsWin version 2.52
+Copyright 2001, P6 Consulting, 2008-2010, WizardWrx.
+All rights reserved world wide.
+P6 Consulting and WizardWrx are trade marks of Simple Soft Services, Inc.
+
+Sunday 05 June 2016 - 15:41:41
+
+Command submitted to shell: dir C:\WizardWrx.DLLServices2.dll /b /s
+
+Awaiting respone ...
+220 items returned by shell
+Done!
+
+Launching C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_ENIGMA.CSV in Microsoft Excel.
+
+Thank you for using P6FileStatsWin!
+
+C:\Users\DAVE>P6FileStatsWin.PL -fC:\WizardWrx.DLLServices2.dll.config -s "-oC:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_CFG_%COMPUTERNAME%.CSV"
+P6FileStatsWin version 2.52
+Copyright 2001, P6 Consulting, 2008-2010, WizardWrx.
+All rights reserved world wide.
+P6 Consulting and WizardWrx are trade marks of Simple Soft Services, Inc.
+
+Sunday 05 June 2016 - 15:51:02
+
+Command submitted to shell: dir C:\WizardWrx.DLLServices2.dll.config /b /s
+
+Awaiting respone ...
+214 items returned by shell
+Done!
+
+Launching C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_CFG_ENIGMA.CSV in Microsoft Excel.
+
+Thank you for using P6FileStatsWin!
+
+C:\Users\DAVE>Date2FN.exe -r "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_%COMPUTERNAME%.CSV"
+Date2FN, version 1.3.72.500
+Begin @ 2016-06-05 15:52:22.927 (2016-06-05 20:52:22.927 UTC)
+
+Original File Name       = C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_ENIGMA.CSV
+Time Stamp Mask          = YYYYMMDD_hhmmss
+Flag File As Read Only   = True
+Directory Recursion Flag = False
+UQ Filespec Flag         = False
+New File Name            = C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_ENIGMA_20160605_154857.CSV
+
+Date2FN End
+2016-06-05 15:52:23.067 (2016-06-05 20:52:23.067 UTC)
+Elapsed time: 0:00:00:00.140
+
+C:\Users\DAVE>Date2FN.exe -r "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_CFG_%COMPUTERNAME%.CSV"
+Date2FN, version 1.3.72.500
+Begin @ 2016-06-05 15:52:33.352 (2016-06-05 20:52:33.352 UTC)
+
+Original File Name       = C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_CFG_ENIGMA.CSV
+Time Stamp Mask          = YYYYMMDD_hhmmss
+Flag File As Read Only   = True
+Directory Recursion Flag = False
+UQ Filespec Flag         = False
+New File Name            = C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\NOTES\Inventory_DllServices2_CFG_ENIGMA_20160605_155115.CSV
+
+Date2FN End
+2016-06-05 15:52:33.477 (2016-06-05 20:52:33.477 UTC)
+Elapsed time: 0:00:00:00.124
+
+C:\Users\DAVE>
+
+================================================================================
+2016-06-05 16:29:12
+================================================================================
+
+DLLServices2_Config_Inventory_Labels
+DLLServices2_Config_Inventory_Details
+DLLServices2_Config_Inventory_Newest
+DLLServices2_Config_Inventory_Next_Newest
+DLLServices2_Config_Inventory_Third_Newest
+DLLServices2_Config_Inventory_Copy_in_bin
+DLLServices2_Config_Inventory_Today
+DLLServices2_Config_Inventory_Master_Copy
+
+	2015/10/08 DAG Swap the foreground and background colors on the two RecoverablelException color properties so that the background color for fatal exceptions is red, while the background color for the recoverable exceptions is yellow. Hence, it is always the background color that distinguishes fatal and recoverable exceptions.
+
+
+================================================================================
+2016-06-05 18:14:05 - Since it is the master (reference) copy, amendements are
+                      always made and tested on the copy in the root directory
+                      of the DllServices2 project.
+================================================================================
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config"
+     R       C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config" -r
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config"
+             C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2
+
+2015-10-08  23:31             6,172 WizardWrx.DLLServices2.dll.config
+               1 File(s)          6,172 bytes
+               0 Dir(s)  543,570,219,008 bytes free
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config"
+             C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\ExceptionLogger.cs"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2
+
+2016-06-04  16:07           147,088 ExceptionLogger.cs
+               1 File(s)        147,088 bytes
+               0 Dir(s)  543,569,408,000 bytes free
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\ExceptionLogger.cs"
+     R       C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\ExceptionLogger.cs
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\ExceptionLogger.cs" -r
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\ExceptionLogger.cs"
+             C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\ExceptionLogger.cs
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\ExceptionLogger.cs" +r
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2
+
+2016-06-05  18:12             8,468 WizardWrx.DLLServices2.dll.config
+               1 File(s)          8,468 bytes
+               0 Dir(s)  543,568,560,128 bytes free
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config" +r
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config"
+A    R       C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\*.bak"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2
+
+2015-10-08  23:31             6,172 WizardWrx.DLLServices2.dll.config.bak
+               1 File(s)          6,172 bytes
+               0 Dir(s)  543,568,498,688 bytes free
+
+C:\Users\DAVE>sdelete.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\*.bak"
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config.bak...deleted.
+1 files found
+
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\*(*)*"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2
+
+2015-10-08  23:31             6,172 WizardWrx.DLLServices2.dll(0).config
+               1 File(s)          6,172 bytes
+               0 Dir(s)  543,568,572,416 bytes free
+
+C:\Users\DAVE>sdelete.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\*(*)*"
+
+SDelete - Secure Delete v1.61
+Copyright (C) 1999-2012 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+SDelete is set for 1 pass.
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll(0).config...deleted.
+1 files found
+
+
+C:\Users\DAVE>
+
+
+================================================================================
+2016-06-05 18:22:38
+================================================================================
+
+Amend the formatting of this headnote to conform to my visual formatting convention, in preparation for making this version once again the reference version, and updating all production copies.
+
+================================================================================
+2016-06-05 18:45:03
+================================================================================
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\DAVE>"C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD"
+BOJ "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD"
+
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\FixEventLogExport\FixEventLogExport\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\FixEventLogExport\FixEventLogExport\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\FixEventLogExport\FixEventLogExport\bin\x86\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\FixEventLogExport\FixEventLogExport\bin\x86\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\FixEventLogExport\FixEventLogExport_Distribution_Package\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2TestStand\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2TestStand\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\RedirectedStreamTester\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\RedirectedStreamTester\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\CSV2JSONRT\CSV2JSONRT\bin\x86\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\CSV2JSONRT\CSV2JSONRT\bin\x86\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\MemCalc\MemCalc\WizardWrx.DllServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\MemCalc\MemCalc\bin\Debug\WizardWrx.DllServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\RGUNC_Tag_Browser\CreateAlternativesTable\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\bin\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\ConsoleOutputSpeedTest\ConsoleOutputSpeedTest\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\TimeZoneLab\TimeZoneLab\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\TimeZoneLab\TimeZoneLab\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\TimeZoneLab\TimeZoneLab\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\Date2FN\Date2FN\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\WWEnumEnvironmentStrings\WWEnumEnvironmentStrings\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\WWEnumEnvironmentStrings\WWEnumEnvironmentStrings\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\WWEnumEnvironmentStrings\WWEnumEnvironmentStrings\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\WWEnumEnvironmentStrings\WWEnumEnvironmentStrings\bin\x86\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\DataEaseDirectoryReader\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\DataEaseDirectoryReader\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\DataEaseDirectoryReader\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\SupportMethodTester\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\SupportMethodTester\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\SupportMethodTester\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\EZPayFileMonitor\EZPayFileMonitor\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\EZPayFileMonitor\EZPayFileMonitor\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\EZXFER_Cloud_Manager\EZXFER_Cloud_Manager\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\EZXFER_Cloud_Manager\EZXFER_Cloud_Manager\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\EZXFER_Cloud_Manager\EZXFER_Cloud_Manager\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\CertStoreLister\CertStoreLister\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\CertStoreLister\CertStoreLister\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\PolyCat\NOTES\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\PolyCat\PolyCat\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\PolyCat\PolyCat\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\PolyCat\PolyCat\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers2\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers2\ApplicationHelpers2\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers2\ApplicationHelpers2\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers2\ApplicationHelpers2TestHarness\ApplicationHelpers2TestHarness\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers2\ApplicationHelpers2TestHarness\ApplicationHelpers2TestHarness\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers2\ApplicationHelpers2TestHarness\ApplicationHelpers2TestHarness\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers3\TestStand\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers3\TestStand\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\_Deprecated_Libraries\ApplicationHelpers3\TestStand\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\AnyCSV\AnyCSVTestStand\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\AnyCSV\AnyCSVTestStand\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\AnyCSV\AnyCSVTestStand\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\AnyCSV\CSVTestStand\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\AnyCSV\CSVTestStand\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\AnyCSV\CSVTestStand\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\ConsoleAppAids2\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\ConsoleAppAids2\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\ConsoleAppAids2\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\EOJTEST\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\EOJTEST\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\EOJTEST\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\TestStand\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\TestStand\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\ConsoleAppAids2\TestStand\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\MailForAllApps\TestStand\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\MailForAllApps\TestStand\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\MailForAllApps\TestStand\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4_TestStand\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\ZZRdInts\ZZRdInts\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\ZZRdInts\ZZRdInts\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\ZZRdInts\ZZRdInts\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+
+EOJ UpdateExistingConfigs_20160605.CMD
+
+C:\Users\DAVE>
+
+
+================================================================================
+2016-06-05 19:10:05 - Add missing configuration files.
+================================================================================
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts
+
+2016-06-05  18:44            23,024 UpdateExistingConfigs_20160605.CMD
+               1 File(s)         23,024 bytes
+               0 Dir(s)  543,567,118,336 bytes free
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD"
+A            C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD" +r
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD"
+A    R       C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\UpdateExistingConfigs_20160605.CMD
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts
+
+2016-06-05  19:05             6,508 AddMissingingConfigs_20160605.CMD
+               1 File(s)          6,508 bytes
+               0 Dir(s)  543,566,983,168 bytes free
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+A            C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD" +r
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+A    R       C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD
+
+C:\Users\DAVE>"C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+BOJ "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+The filename, directory name, or volume label syntax is incorrect.
+
+EOJ AddMissingingConfigs_20160605.CMD
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD" -r
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD" +r
+
+C:\Users\DAVE>attrib.exe "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+A    R       C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD
+
+C:\Users\DAVE>dir "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+ Volume in drive C is Gateway
+ Volume Serial Number is D841-419A
+
+ Directory of C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts
+
+2016-06-05  19:09             6,257 AddMissingingConfigs_20160605.CMD
+               1 File(s)          6,257 bytes
+               0 Dir(s)  543,566,376,960 bytes free
+
+C:\Users\DAVE>"C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+BOJ "C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\scripts\AddMissingingConfigs_20160605.CMD"
+
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Programming\Visual_Studio_6\DLL\ProcessInfo\CDeclToStdCallMigrationTool\CDeclToStdCallMigrationTool\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\MassUpdateColorIndex\MassUpdateColorIndex\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\MassUpdateColorIndex\MassUpdateColorIndex\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\MultiCat\MultiCat\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Console_Apps\NFiles\NFiles\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\DataEase\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\DataEaseDirectoryReader\DataEase\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\EZPayWebPmtsNotifier\EZPayWebPmtsNotifier\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\NOLANB\EZPayWebPmtsNotifier\EZPayWebPmtsNotifier\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\BitView\BitView\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\Tools_for_Programmers\MemView\MemView\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\obj\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\obj\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\MailForAllApps\MailForAllApps\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\MailForAllApps\MailForAllApps\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\FormatStringEngine\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\WinFormsHelpers\WinFormsHelpers\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\WinFormsHelpers\WinFormsHelpers\bin\Release\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\CSharp_Lab\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\CSharp_Lab\bin\x86\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\CSharp_Lab\CSharp_Lab\bin\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\DLLServices2\DLLServices2\WizardWrx.DLLServices2.dll.config -> C:\Users\DAVE\Documents\Visual Studio 2013\Projects\_Laboratory\CSharp_Lab\CSharp_Lab\bin\x86\Debug\WizardWrx.DLLServices2.dll.config
+1 File(s) copied
+
+EOJ AddMissingingConfigs_20160605.CMD
+
+C:\Users\DAVE>

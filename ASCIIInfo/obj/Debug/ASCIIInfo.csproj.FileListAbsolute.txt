@@ -1,0 +1,17 @@
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\bin\Debug\WizardWrx.ASCIIInfo.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\bin\Debug\WizardWrx.ASCIIInfo.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\WizardWrx.Properties.Resources.resources
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\WizardWrx.ASCIIInfo.dll
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\WizardWrx.ASCIIInfo.pdb
+C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\bin\Debug\WizardWrx.ASCIIInfo.XML
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\bin\Debug\WizardWrx.ASCIIInfo.XML
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\bin\Debug\WizardWrx.ASCIIInfo.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\bin\Debug\WizardWrx.ASCIIInfo.pdb
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\ASCIIInfo.csprojResolveAssemblyReference.cache
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\WizardWrx.Properties.Resources.resources
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\ASCIIInfo.csproj.GenerateResource.Cache
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\WizardWrx.ASCIIInfo.dll
+C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\ASCIIInfo\obj\Debug\WizardWrx.ASCIIInfo.pdb

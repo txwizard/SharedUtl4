@@ -1,0 +1,45 @@
+"C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\_archive\Archive_SharedUtl4.CMD" Begin
+
+Project Assembly = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+Backup Directory = C:\COMMON_DATA\Assorted_Zips\program_source\Visual Studio 2010
+
+WWSourceCodeArchiver, version 2.0.11.25045
+Begin @ 09/21/2014 23:14:11 (09/22/2014 04:14:11 UTC)
+
+ProjectPath            = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release\WizardWrx.SharedUtl4.dll
+TargetPath             = C:\COMMON_DATA\Assorted_Zips\program_source\Visual Studio 2010\
+Product Type           = DynamicLinkLibrary
+
+Program Directory Name = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Release
+Program File Name      = WizardWrx.SharedUtl4.dll
+    File Size          = 31,232
+    Create Date (LOC)  = 2014/07/07 16:08:59.071
+    Create Date (UTC)  = 2014/07/07 21:08:59.071
+    Mod Date (LOC)     = 2014/09/21 22:47:04.904
+    Mod Date (UTC)     = 2014/09/22 03:47:04.904
+Project Name           = SharedUtl4
+Project Root           = C:\Documents and Settings\DAG\My Documents\Visual Studio 2010\Projects\WizardWrx_Libs\SharedUtl4\
+Assembly FullName      = WizardWrx.SharedUtl4, Version=2.8.293.39212, Culture=neutral, PublicKeyToken=null
+    BaseName           = WizardWrx.SharedUtl4
+    Full Version       = 2.8.293.39212
+    Culture            = neutral
+    PublicKeyToken     = null
+
+2014/09/21 23:14:12.609 Creating archive.
+2014/09/21 23:14:17.843 The archive was successfully created.
+2014/09/21 23:14:18.015 Archive flag reset on 332 project files.
+
+Archive FQFN           = C:\COMMON_DATA\Assorted_Zips\program_source\Visual Studio 2010\WizardWrx.SharedUtl4_2_8_293_39212.7z
+    File Size          = 910,319
+    Create Date (LOC)  = 2014/09/21 23:14:12.750
+    Create Date (UTC)  = 2014/09/22 04:14:12.750
+    Mod Date (LOC)     = 2014/09/21 23:14:17.828
+    Mod Date (UTC)     = 2014/09/22 04:14:17.828
+
+WWSourceCodeArchiver End - 09/21/2014 23:14:18 (09/22/2014 04:14:18 UTC)
+Elapsed time: 00:00:06.625
+WWPause version 2, 0, 0, 3
+Mon 22 Sep 2014 04:14:18 UTC
+Sun 21 Sep 2014 23:14:18 Local
+
+Please press RETURN when ready...
