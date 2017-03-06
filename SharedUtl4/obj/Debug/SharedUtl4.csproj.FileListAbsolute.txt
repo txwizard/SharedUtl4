@@ -34,7 +34,6 @@ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Sh
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.dll
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.SharedUtl4.pdb
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.BitMath.dll
-C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.ConsoleAppAids2.dll
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.DLLServices2.dll
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.FormatStringEngine.dll
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.AnyCSV.dll
@@ -44,8 +43,6 @@ C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\Sh
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.FormatStringEngine.xml
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.BitMath.pdb
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.BitMath.xml
-C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.ConsoleAppAids2.pdb
-C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.ConsoleAppAids2.xml
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.DLLServices2.pdb
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.DLLServices2.xml
 C:\Users\DAVE\Documents\Visual Studio 2013\Projects\WizardWrx_Libs\SharedUtl4\SharedUtl4\bin\Debug\WizardWrx.AnyCSV.pdb

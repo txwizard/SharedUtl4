@@ -35,4 +35,4 @@ using System.Runtime.InteropServices;
 
 // For this library, version numbering starts at 2.0, reflecting the maturity of
 // the code from which it was assembled.
-[assembly: AssemblyVersion ( "3.0.369.*")]
+[assembly: AssemblyVersion ( "3.0.373.*")]

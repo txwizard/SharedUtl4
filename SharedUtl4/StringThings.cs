@@ -18,7 +18,7 @@
 
     Author:             David A. Gray
 
-    License:            Copyright (C) 2014-2016, David A. Gray. 
+    License:            Copyright (C) 2014-2017, David A. Gray. 
 						All rights reserved.
 
                         Redistribution and use in source and binary forms, with
@@ -68,6 +68,13 @@
                               correct misspelled words flagged by the spelling
                               checker add-in, and incorporate my three-clause
                               BSD license.
+
+	2017/03/04 3.1     DAG    Eliminate dependence on WizardWrx.ConsoleAppAids2
+                              in ReportUnresolvedEnvironmentStrings by changing
+                              its return type from void to unsigned integer, and
+                              passing the specified exit code through, so that
+                              the call can be wrapped inside the ultimate exit
+                              routine.
     ============================================================================
 */
 
@@ -214,6 +221,11 @@ namespace WizardWrx
         /// This routine is intended to report the error and exit the calling
         /// console application, returning the specified value as its exit code.
         /// </param>
+		/// <returns>
+		/// The exit code is passed through, so that the control need not return
+		/// to the caller, but may exit through Environment.Exit, either
+		/// directly or indirectly.
+		/// </returns>
         /// <remarks>
         /// This routine never returns control to its caller. Hence, the calling
         /// routine must capture the count returned by companion method
@@ -222,7 +234,7 @@ namespace WizardWrx
         /// should not proceed with the specified inputs.
         /// </remarks>
         /// <see cref="CountUnresolvedEnvironmentStrings"/>
-        public static void ReportUnresolvedEnvironmentStrings (
+        public static uint ReportUnresolvedEnvironmentStrings (
             string pstrInput ,
             uint puintNEnvStrDlms ,
             uint puintExitCode )
@@ -273,7 +285,7 @@ namespace WizardWrx
             }   // for ( uint uintOccurrence = FIRST_ERROR ; uintOccurrence == puintNEnvStrDlms ; uintOccurrence++ )
 
             Console.Error.WriteLine ( sbMessage );      // Write the whole message in one go. ToString happens implictly.
-            ConsoleAppAids2.ConsoleAppStateManager.GetTheSingleInstance ( ).ErrorExit ( puintExitCode );
+			return puintExitCode;
         }   // public static void ReportUnresolvedEnvironmentStrings
     }   // public static class StringThings
 }   // partial namespace WizardWrx

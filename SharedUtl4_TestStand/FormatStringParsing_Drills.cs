@@ -304,7 +304,7 @@ namespace SharedUtl4_TestStand
 					  intI++ )
             {
                 FormatStringError fse = plstAllErrors [ intI ];
-                string [ ] astrErrorDetails = fse.Spiit ( );
+                string [ ] astrErrorDetails = fse.Split ( );
                 int intNDetails = astrErrorDetails.Length;						// Save a trip into the collection.
                 ReportDetails rptDtlsColl = new ReportDetails ( intNDetails );
 

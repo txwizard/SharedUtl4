@@ -35,13 +35,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.XML" />
     <Reference Include="WizardWrx.BitMath">
       <HintPath>..\..\BitMath\BitMath\bin\Release\WizardWrx.BitMath.dll</HintPath>
-    </Reference>
-    <Reference Include="WizardWrx.ConsoleAppAids2, Version=5.3.271.35034, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ConsoleAppAids2\ConsoleAppAids2\bin\Release\WizardWrx.ConsoleAppAids2.dll</HintPath>
     </Reference>
     <Reference Include="WizardWrx.DLLServices2, Version=5.3.162.1712, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

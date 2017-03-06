@@ -233,7 +233,7 @@
             <summary>
             Replace a basic format item of the form "{n}" where "n" is the item
             number, with a composite item that right aligns a numeric value in a
-            screen width that will acommodate the maximum value that will be
+            screen width that will accommodate the maximum value that will be
             substituted for it in the current instance.
             </summary>
             <param name="pstrInputFormatString">
@@ -261,7 +261,7 @@
             <summary>
             Replace a basic format item of the form "{n}" where "n" is the item
             number, with a composite item that right aligns a numeric value in a
-            screen width that will acommodate the maximum value that will be
+            screen width that will accommodate the maximum value that will be
             substituted for it in the current instance.
             </summary>
             <param name="pstrInputFormatString">
@@ -289,7 +289,7 @@
             <summary>
             Replace a basic format item of the form "{n}" where "n" is the item
             number, with a composite item that right aligns a numeric value in a
-            screen width that will acommodate the maximum value that will be
+            screen width that will accommodate the maximum value that will be
             substituted for it in the current instance.
             </summary>
             <param name="pstrInputFormatString">
@@ -317,7 +317,7 @@
             <summary>
             Replace a basic format item of the form "{n}" where "n" is the item
             number, with a composite item that right aligns a numeric value in a
-            screen width that will acommodate the maximum value that will be
+            screen width that will accommodate the maximum value that will be
             substituted for it in the current instance.
             </summary>
             <param name="pstrInputFormatString">
@@ -339,6 +339,41 @@
             display pintHighestValue using the numeric formatting defined by the
             current Region and Language settings in the Windows Control Panel,
             overriding the decimal places value with a value of zero.
+            </returns>
+        </member>
+        <member name="M:WizardWrx.FormatStringEngine.FormatItem.AdjustItemNumberWidthPerMaxValue(System.String,System.Int32,WizardWrx.FormatStringEngine.FormatItem.Alignment,System.Int32,System.String)">
+            <summary>
+            Replace a basic format item of the form "{n}" where "n" is the item
+            number, with a composite item that right aligns a numeric value in a
+            screen width that will accommodate the maximum value that will be
+            substituted for it in the current instance.
+            </summary>
+            <param name="pstrFormat">
+            Specify a valid format string to upgrade. The string must contain a
+            token of the form {n}, where n is equal to pintItemIndex.
+            </param>
+            <param name="pintItemIndex">
+            Specify the index of the item to be upgraded. The integer must be
+            positive, and pstrFormat must contain at least once instance of a
+            correspondingly numbered format item.
+            </param>
+            <param name="penmAlignment">
+            Specify Left or Right. Center alignment is unsupported, although it
+            could be achieved with custom code.
+            </param>
+            <param name="pintMaximumWidth">
+            The maximum width is a positive integer that specifies the desired
+            width of the item.
+            </param>
+            <param name="pstrFormatString">
+            Specify a Standard Numeric, Date, or Text format string or a custom
+            string composed around a standard string.
+            </param>
+            <returns>
+            The return value is a new format control string, with the original
+            vanilla format item at the specified index replaced with a new one
+            that has its width adjusted precisely to accommodate the widest
+            expected value.
             </returns>
         </member>
         <member name="M:WizardWrx.FormatStringEngine.FormatItem.UpgradeFormatItem(System.String,System.Int32,System.String)">
@@ -499,13 +534,13 @@
             unsigned integer.
             </param>
             <param name="puintY">
-            Y is the total number of items in the list, expreased as an unsigned
+            Y is the total number of items in the list, expressed as an unsigned
             integer.
             </param>
             <returns>
             The returned string is literally "X of Y," where X and Y are the two
             integers representing, respectively, the current item number and the
-            total number of items in the set. Thhe formatting of X and Y is such
+            total number of items in the set. The formatting of X and Y is such
             that a list is guaranteed to be vertically aligned, because X is set
             in a right aligned field whose width is the same as that of a string
             representation of Y.
@@ -521,13 +556,13 @@
             signed integer.
             </param>
             <param name="puintY">
-            Y is the total number of items in the list, expreased as an unsigned
+            Y is the total number of items in the list, expressed as an unsigned
             integer.
             </param>
             <returns>
             The returned string is literally "X of Y," where X and Y are the two
             integers representing, respectively, the current item number and the
-            total number of items in the set. Thhe formatting of X and Y is such
+            total number of items in the set. The formatting of X and Y is such
             that a list is guaranteed to be vertically aligned, because X is set
             in a right aligned field whose width is the same as that of a string
             representation of Y.
@@ -543,13 +578,13 @@
             unsigned integer.
             </param>
             <param name="pintY">
-            Y is the total number of items in the list, expreased as a signed
+            Y is the total number of items in the list, expressed as a signed
             integer.
             </param>
             <returns>
             The returned string is literally "X of Y," where X and Y are the two
             integers representing, respectively, the current item number and the
-            total number of items in the set. Thhe formatting of X and Y is such
+            total number of items in the set. The formatting of X and Y is such
             that a list is guaranteed to be vertically aligned, because X is set
             in a right aligned field whose width is the same as that of a string
             representation of Y.
@@ -565,13 +600,13 @@
             signed integer.
             </param>
             <param name="pintY">
-            Y is the total number of items in the list, expreased as a signed
+            Y is the total number of items in the list, expressed as a signed
             integer.
             </param>
             <returns>
             The returned string is literally "X of Y," where X and Y are the two
             integers representing, respectively, the current item number and the
-            total number of items in the set. Thhe formatting of X and Y is such
+            total number of items in the set. The formatting of X and Y is such
             that a list is guaranteed to be vertically aligned, because X is set
             in a right aligned field whose width is the same as that of a string
             representation of Y.
@@ -646,7 +681,7 @@
             </param>
             <returns>
             The new value is the sum of pintCurrentValue times ten and a single
-            digit integer prepresentation of pchrNextDigit, which replaces
+            digit integer representation of pchrNextDigit, which replaces
             pintCurrentValue in the instance.
             </returns>
         </member>
@@ -731,7 +766,7 @@
             </returns>
             <remarks>
             This piece was originally coded inline, trading a tad of code bloat
-            for efficiency. The additional complexity significcantly tips the
+            for efficiency. The additional complexity significantly tips the
             balance in favor of refactoring.
             </remarks>
         </member>
@@ -740,7 +775,7 @@
              Given an array of objects of any type, return the length of the
              longest string made from them. See Remarks.
              </summary>
-             <param name="plstobjs">
+             <param name="plstObjs">
              This argument expects a generic List of strings.
              </param>
              <returns>
@@ -800,7 +835,7 @@
              <summary>
              Gets or sets the optional ItemFormat property of the item.
             
-             A return value of null (Nothin in Visual Basic) means that the
+             A return value of null (Nothing in Visual Basic) means that the
              ItemFormat property is undefined, which is permissible, since it is
              optional.
              </summary>
@@ -953,7 +988,7 @@
             This constant delimits the field label from its value.
             </summary>
         </member>
-        <member name="M:WizardWrx.FormatStringEngine.FormatStringError.Spiit">
+        <member name="M:WizardWrx.FormatStringEngine.FormatStringError.Split">
             <summary>
             Split the message into an array of parts, each containing a property
             value and its label.
@@ -975,6 +1010,10 @@
             Under the covers, Split passes the string returned by a call to the
             instance ToString method to the static WizardWrx.AnyCSV.Parser.Parse
             method, which does most of the work.
+            
+            IMPORTANT: Since the new version of WizardWrx.AnyCSV.dll has a COM
+            interface, it had to target the x86 platform. This can eventually be
+            corrected by building a parallel version that isn't exposed to COM.
             </remarks>
         </member>
         <member name="M:WizardWrx.FormatStringEngine.FormatStringError.ToString">

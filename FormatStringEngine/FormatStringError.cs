@@ -72,6 +72,11 @@
 
                               Reclassify this class as infrastructure, and mark
                               it Internal.
+
+    2017/03/04 3.1     DAG    Document the reason that the Split method raises a
+                              warning about WizardWrx.AnyCSV.Parser.Parse having
+                              a more restrictive build target (x86) than this
+                              library (MSIL).
     ============================================================================
 */
 
@@ -162,8 +167,12 @@ namespace WizardWrx.FormatStringEngine
         /// Under the covers, Split passes the string returned by a call to the
         /// instance ToString method to the static WizardWrx.AnyCSV.Parser.Parse
         /// method, which does most of the work.
+		/// 
+		/// IMPORTANT: Since the new version of WizardWrx.AnyCSV.dll has a COM
+		/// interface, it had to target the x86 platform. This can eventually be
+		/// corrected by building a parallel version that isn't exposed to COM.
         /// </remarks>
-        public string [ ] Spiit ( )
+        public string [ ] Split ( )
         {
             return WizardWrx.AnyCSV.Parser.Parse (
                 this.ToString ( ) ,

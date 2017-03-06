@@ -27,7 +27,7 @@
 						have either left the WizardWrx.SharedUtl2 namespace or
 						fallen into disuse.
 
-    License:            Copyright (C) 2014-2016, David A. Gray. 
+    License:            Copyright (C) 2014-2017, David A. Gray. 
 						All rights reserved.
 
                         Redistribution and use in source and binary forms, with
@@ -87,6 +87,13 @@
                               correct misspelled words flagged by the spelling
                               checker add-in, and incorporate my three-clause
                               BSD license.
+
+	2017/03/04 3.1     DAG    Correct a typographical error in a comment, which
+                              came to my attention during a search for the
+                              reference to Util.ARRAY_FIRST_ELEMENT that caused
+                              the compiler to emit a warning about an obsolete
+                              object. The offending reference is local (another
+                              constant defined herein).
     ============================================================================
 */
 
@@ -245,7 +252,7 @@ namespace WizardWrx
         /// Beginning is an alias for ARRAY_FIRST_ELEMENT.
         /// </summary>
 		[Obsolete ( "This constant is identical to WizardWrx.ArrayInfo.ARRAY_FIRST_ELEMENT. Set a reference to WizardWrx.DLLServices2, and use that constant." )]
-		public const int BEGINNING = ARRAY_FIRST_ELEMENT;
+		public const int BEGINNING = ArrayInfo.ARRAY_FIRST_ELEMENT;
 
 
         /// <summary>
@@ -284,7 +291,7 @@ namespace WizardWrx
             //	as a hexadecimal string. Although this For loop will never
             //	contain more than one statement, I left the braces to separate
             //	that statement from the third line of the For statement, which I
-            //	spread across three lines bacause of its length.
+            //	spread across three lines because of its length.
             //  ----------------------------------------------------------------
 
             for ( int intOffset = ArrayInfo.ARRAY_FIRST_ELEMENT ;

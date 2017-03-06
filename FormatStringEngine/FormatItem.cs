@@ -15,7 +15,7 @@
                         which is created and maintained by the FormatStringParser
                         class.
 
-    License:            Copyright (C) 2014-2016, David A. Gray.
+    License:            Copyright (C) 2014-2017, David A. Gray.
                         All rights reserved.
 
                         Redistribution and use in source and binary forms, with
@@ -81,6 +81,14 @@
                               correct misspelled words flagged by the spelling
                               checker add-in, and incorporate my three-clause
                               BSD license.
+ 
+	2017/03/05 3.1     DAG    Add the AdjustItemNumberWidthPerMaxValue overload
+                              that I created in ProductVersionSetter.exe, in
+                              which it was proven before I moved it into this
+                              class, then discovered an existing overload that
+                              is actually better suited to its use therein,
+                              though I shall keep the new overload, at least for
+                              now.
     ============================================================================
 */
 
@@ -318,7 +326,7 @@ namespace WizardWrx.FormatStringEngine
 		/// <summary>
 		/// Gets or sets the optional ItemFormat property of the item.
 		///
-		/// A return value of null (Nothin in Visual Basic) means that the
+		/// A return value of null (Nothing in Visual Basic) means that the
 		/// ItemFormat property is undefined, which is permissible, since it is
 		/// optional.
 		/// </summary>
@@ -675,7 +683,7 @@ namespace WizardWrx.FormatStringEngine
 		/// <summary>
 		/// Replace a basic format item of the form "{n}" where "n" is the item
 		/// number, with a composite item that right aligns a numeric value in a
-		/// screen width that will acommodate the maximum value that will be
+		/// screen width that will accommodate the maximum value that will be
 		/// substituted for it in the current instance.
 		/// </summary>
 		/// <param name="pstrInputFormatString">
@@ -718,13 +726,13 @@ namespace WizardWrx.FormatStringEngine
 					pintHighestValue.ToString ( ).Length ,  // uint      puintMaximumWidth
 					Alignment.Right ,                       // Alignment penmAlignment
 					INTEGER_PER_CONTROL_PANEL ) );          // string    pstrFormatString
-		}   // public static string AdjustItemNumberWidthPerMaxValue (1 of 4)
+		}   // public static string AdjustItemNumberWidthPerMaxValue (1 of 5)
 
 
 		/// <summary>
 		/// Replace a basic format item of the form "{n}" where "n" is the item
 		/// number, with a composite item that right aligns a numeric value in a
-		/// screen width that will acommodate the maximum value that will be
+		/// screen width that will accommodate the maximum value that will be
 		/// substituted for it in the current instance.
 		/// </summary>
 		/// <param name="pstrInputFormatString">
@@ -765,13 +773,13 @@ namespace WizardWrx.FormatStringEngine
 					pintHighestValue.ToString ( ).Length ,  // uint      puintMaximumWidth
 					FormatItem.Alignment.Right ,            // Alignment penmAlignment
 					INTEGER_PER_CONTROL_PANEL ) );          // string    pstrFormatString
-		}   // public static string AdjustItemNumberWidthPerMaxValue (2 of 4)
+		}   // public static string AdjustItemNumberWidthPerMaxValue (2 of 5)
 
 
 		/// <summary>
 		/// Replace a basic format item of the form "{n}" where "n" is the item
 		/// number, with a composite item that right aligns a numeric value in a
-		/// screen width that will acommodate the maximum value that will be
+		/// screen width that will accommodate the maximum value that will be
 		/// substituted for it in the current instance.
 		/// </summary>
 		/// <param name="pstrInputFormatString">
@@ -812,13 +820,13 @@ namespace WizardWrx.FormatStringEngine
 					puintHighestValue.ToString ( ).Length , // uint      puintMaximumWidth
 					FormatItem.Alignment.Right ,            // Alignment penmAlignment
 					INTEGER_PER_CONTROL_PANEL ) );          // string    pstrFormatString
-		}   // public static string AdjustItemNumberWidthPerMaxValue (3 of 4)
+		}   // public static string AdjustItemNumberWidthPerMaxValue (3 of 5)
 
 
 		/// <summary>
 		/// Replace a basic format item of the form "{n}" where "n" is the item
 		/// number, with a composite item that right aligns a numeric value in a
-		/// screen width that will acommodate the maximum value that will be
+		/// screen width that will accommodate the maximum value that will be
 		/// substituted for it in the current instance.
 		/// </summary>
 		/// <param name="pstrInputFormatString">
@@ -859,7 +867,58 @@ namespace WizardWrx.FormatStringEngine
 					puintHighestValue.ToString ( ).Length , // uint      puintMaximumWidth
 					FormatItem.Alignment.Right ,            // Alignment penmAlignment
 					INTEGER_PER_CONTROL_PANEL ) );          // string    pstrFormatString
-		}   // public static string AdjustItemNumberWidthPerMaxValue (4 of 4)
+		}   // public static string AdjustItemNumberWidthPerMaxValue (4 of 5)
+
+
+		/// <summary>
+		/// Replace a basic format item of the form "{n}" where "n" is the item
+		/// number, with a composite item that right aligns a numeric value in a
+		/// screen width that will accommodate the maximum value that will be
+		/// substituted for it in the current instance.
+		/// </summary>
+		/// <param name="pstrFormat">
+		/// Specify a valid format string to upgrade. The string must contain a
+		/// token of the form {n}, where n is equal to pintItemIndex.
+		/// </param>
+		/// <param name="pintItemIndex">
+		/// Specify the index of the item to be upgraded. The integer must be
+		/// positive, and pstrFormat must contain at least once instance of a
+		/// correspondingly numbered format item.
+		/// </param>
+		/// <param name="penmAlignment">
+		/// Specify Left or Right. Center alignment is unsupported, although it
+		/// could be achieved with custom code.
+		/// </param>
+		/// <param name="pintMaximumWidth">
+		/// The maximum width is a positive integer that specifies the desired
+		/// width of the item.
+		/// </param>
+		/// <param name="pstrFormatString">
+		/// Specify a Standard Numeric, Date, or Text format string or a custom
+		/// string composed around a standard string.
+		/// </param>
+		/// <returns>
+		/// The return value is a new format control string, with the original
+		/// vanilla format item at the specified index replaced with a new one
+		/// that has its width adjusted precisely to accommodate the widest
+		/// expected value.
+		/// </returns>
+		public static string AdjustItemNumberWidthPerMaxValue (
+			string pstrFormat ,
+			int pintItemIndex ,
+			FormatItem.Alignment penmAlignment ,
+			int pintMaximumWidth ,
+			string pstrFormatString )
+		{
+			return FormatItem.UpgradeFormatItem (
+				pstrFormat ,								// pstrFormat: 			Specify a valid format string to upgrade. The string must contain a token of the form {n}, where n is equal to pintItemIndex.
+				pintItemIndex ,								// pintItemIndex: 		Specify the index of the item to be upgraded. The integer must be positive, and pstrFormat must contain at least once instance of a correspondingly numbered format item.
+				FormatItem.AdjustToMaximumWidth (			// pstrUpgrade: Specify the upgraded format item, such as the string returned by the static AdjustToMaximumWidth method of this class.  Contrast this with pstrFormatString, which expects you to supply a standard or custom Numeric or DateTime format string, from which it constructs a complete, well formed Format Item.
+					pintItemIndex ,							//		pintItemIndex: 		Specify the index of the item to be upgraded. The integer must be positive, and pstrFormat must contain at least once instance of a correspondingly numbered format item.
+					pintMaximumWidth ,						//		pintMaximumWidth: 	The maximum width is a positive integer that specifies the desired width of the item.
+					FormatItem.Alignment.Right ,			//		penmAlignment:	 	Specify Left or Right. Center alignment is unsupported, although it could be achieved with custom code.
+					pstrFormatString ) );					//		pstrFormatString: 	Specify a Standard Numeric, Date, or Text format string or a custom string composed around a standard string.
+		}	// public static string AdjustItemNumberWidthPerMaxValue (5 of 5)
 
 
 		/// <summary>
@@ -1076,8 +1135,8 @@ namespace WizardWrx.FormatStringEngine
 				pintItemIndex ,                                     // int    pintItemIndex = Index (zero based) of format item to upgrade
 				FormatItem.AdjustToMaximumWidth (                   // string pstrUpgrade   = Replacement format item to substutite for {pintItemIndex}
 					pintItemIndex ,                                     // int                  pintItemIndex    = Index (zero based) of format item to upgrade
-					WizardWrx.StringTricks.LengthOfLongestString (      // int                  pintMaximumWidth = Width required to acommodate longest widest field value
-						pastrValueArray ) ,                                 // string [ ] pastrTheseStrings = Format must acommodate longest of these.
+					WizardWrx.StringTricks.LengthOfLongestString (      // int                  pintMaximumWidth = Width required to accommodate longest widest field value
+						pastrValueArray ) ,                                 // string [ ] pastrTheseStrings = Format must accommodate longest of these.
 					penmAlignment ,                                     // FormatItem.Alignment penmAlignment    = Format Items may be aligned either Left or Right. Choose.
 					pstrFormatString ) );                               // string               pstrFormatString = Unless null (or empty) this becomes the 3rd part of the FormatItem.
 		}   // public static string UpgradeFormatItem (3 of 5)
@@ -1119,24 +1178,6 @@ namespace WizardWrx.FormatStringEngine
 		/// string, in which the indicated plain vanilla format item has been
 		/// replaced with a dynamically generated composite format item.
 		/// </returns>
-		//public static string UpgradeFormatItem (
-		//    string pstrFormat ,
-		//    uint puintItemIndex ,
-		//    Alignment penmAlignment ,
-		//    string pstrFormatString ,
-		//    string [ ] pastrValueArray )
-		//{
-		//    return FormatItem.UpgradeFormatItem (
-		//        pstrFormat ,                                        // string pstrFormat    = Prototype format template string
-		//        puintItemIndex ,                                    // uint   pintItemIndex = Index (zero based) of format item to upgrade
-		//        FormatItem.AdjustToMaximumWidth (                   // string pstrUpgrade   = Replacement format item to substutite for {pintItemIndex}
-		//            puintItemIndex ,                                    // uint                 pintItemIndex    = Index (zero based) of format item to upgrade
-		//            WizardWrx.StringTricks.LengthOfLongestString (      // uint                 pintMaximumWidth = Width required to acommodate longest widest field value
-		//                pastrValueArray ) ,                                 // string [ ] pastrTheseStrings = Format must acommodate longest of these.
-		//            penmAlignment ,                                     // FormatItem.Alignment penmAlignment    = Format Items may be aligned either Left or Right. Choose.
-		//            pstrFormatString ) );                               // string               pstrFormatString = Unless null (or empty) this becomes the 3rd part of the FormatItem.
-		//}   // public static string UpgradeFormatItem (4 of 5)
-
 		public static string UpgradeFormatItem (
 			string pstrFormat ,
 			uint puintItemIndex ,
@@ -1149,8 +1190,8 @@ namespace WizardWrx.FormatStringEngine
 				puintItemIndex ,                                    // uint   pintItemIndex = Index (zero based) of format item to upgrade
 				FormatItem.AdjustToMaximumWidth (                   // string pstrUpgrade   = Replacement format item to substutite for {pintItemIndex}
 					puintItemIndex ,                                    // uint                 pintItemIndex    = Index (zero based) of format item to upgrade
-					MaxStringLength (                                   // uint                 pintMaximumWidth = Width required to acommodate longest widest field value
-						pastrValueArray ) ,                                 // string [ ] pastrTheseStrings = Format must acommodate longest of these.
+					MaxStringLength (                                   // uint                 pintMaximumWidth = Width required to accommodate longest widest field value
+						pastrValueArray ) ,                                 // string [ ] pastrTheseStrings = Format must accommodate longest of these.
 					penmAlignment ,                                     // FormatItem.Alignment penmAlignment    = Format Items may be aligned either Left or Right. Choose.
 					pstrFormatString ) );                               // string               pstrFormatString = Unless null (or empty) this becomes the 3rd part of the FormatItem.
 		}   // public static string UpgradeFormatItem (4 of 5)
@@ -1165,13 +1206,13 @@ namespace WizardWrx.FormatStringEngine
 		/// unsigned integer.
 		/// </param>
 		/// <param name="puintY">
-		/// Y is the total number of items in the list, expreased as an unsigned
+		/// Y is the total number of items in the list, expressed as an unsigned
 		/// integer.
 		/// </param>
 		/// <returns>
 		/// The returned string is literally "X of Y," where X and Y are the two
 		/// integers representing, respectively, the current item number and the
-		/// total number of items in the set. Thhe formatting of X and Y is such
+		/// total number of items in the set. The formatting of X and Y is such
 		/// that a list is guaranteed to be vertically aligned, because X is set
 		/// in a right aligned field whose width is the same as that of a string
 		/// representation of Y.
@@ -1199,13 +1240,13 @@ namespace WizardWrx.FormatStringEngine
 		/// signed integer.
 		/// </param>
 		/// <param name="puintY">
-		/// Y is the total number of items in the list, expreased as an unsigned
+		/// Y is the total number of items in the list, expressed as an unsigned
 		/// integer.
 		/// </param>
 		/// <returns>
 		/// The returned string is literally "X of Y," where X and Y are the two
 		/// integers representing, respectively, the current item number and the
-		/// total number of items in the set. Thhe formatting of X and Y is such
+		/// total number of items in the set. The formatting of X and Y is such
 		/// that a list is guaranteed to be vertically aligned, because X is set
 		/// in a right aligned field whose width is the same as that of a string
 		/// representation of Y.
@@ -1233,13 +1274,13 @@ namespace WizardWrx.FormatStringEngine
 		/// unsigned integer.
 		/// </param>
 		/// <param name="pintY">
-		/// Y is the total number of items in the list, expreased as a signed
+		/// Y is the total number of items in the list, expressed as a signed
 		/// integer.
 		/// </param>
 		/// <returns>
 		/// The returned string is literally "X of Y," where X and Y are the two
 		/// integers representing, respectively, the current item number and the
-		/// total number of items in the set. Thhe formatting of X and Y is such
+		/// total number of items in the set. The formatting of X and Y is such
 		/// that a list is guaranteed to be vertically aligned, because X is set
 		/// in a right aligned field whose width is the same as that of a string
 		/// representation of Y.
@@ -1267,13 +1308,13 @@ namespace WizardWrx.FormatStringEngine
 		/// signed integer.
 		/// </param>
 		/// <param name="pintY">
-		/// Y is the total number of items in the list, expreased as a signed
+		/// Y is the total number of items in the list, expressed as a signed
 		/// integer.
 		/// </param>
 		/// <returns>
 		/// The returned string is literally "X of Y," where X and Y are the two
 		/// integers representing, respectively, the current item number and the
-		/// total number of items in the set. Thhe formatting of X and Y is such
+		/// total number of items in the set. The formatting of X and Y is such
 		/// that a list is guaranteed to be vertically aligned, because X is set
 		/// in a right aligned field whose width is the same as that of a string
 		/// representation of Y.
@@ -1390,7 +1431,7 @@ namespace WizardWrx.FormatStringEngine
 		/// </param>
 		/// <returns>
 		/// The new value is the sum of pintCurrentValue times ten and a single
-		/// digit integer prepresentation of pchrNextDigit, which replaces
+		/// digit integer representation of pchrNextDigit, which replaces
 		/// pintCurrentValue in the instance.
 		/// </returns>
 		private static int AddDigitToInteger (
@@ -1519,7 +1560,7 @@ namespace WizardWrx.FormatStringEngine
 		/// </returns>
 		/// <remarks>
 		/// This piece was originally coded inline, trading a tad of code bloat
-		/// for efficiency. The additional complexity significcantly tips the
+		/// for efficiency. The additional complexity significantly tips the
 		/// balance in favor of refactoring.
 		/// </remarks>
 		private static string FinishFormatItem (
@@ -1542,7 +1583,7 @@ namespace WizardWrx.FormatStringEngine
 		/// Given an array of objects of any type, return the length of the
 		/// longest string made from them. See Remarks.
 		/// </summary>
-		/// <param name="plstobjs">
+		/// <param name="plstObjs">
 		/// This argument expects a generic List of strings.
 		/// </param>
 		/// <returns>
@@ -1559,20 +1600,20 @@ namespace WizardWrx.FormatStringEngine
 		/// dispenses with a redundant ToString call on each member of the
 		/// collection.
 		/// </remarks>
-		private static int MaxStringLength ( List<string> plstobjs )
+		private static int MaxStringLength ( List<string> plstObjs )
 		{   // Treat a null reference gracefully, as a degenerate case that returns zero.
 			int rintMaxLength = MagicNumbers.ZERO;
 
-			if ( plstobjs != null )
+			if ( plstObjs != null )
 			{
-				foreach ( string objCurrent in plstobjs )
+				foreach ( string objCurrent in plstObjs )
 				{   // Convert each object, in turn, to a string.
 					if ( objCurrent.Length > rintMaxLength )
 					{   // Update return value if string is longest so far.
 						rintMaxLength = objCurrent.Length;
 					}   // if ( strObjectAsString.Length > rintMaxLength )
-				}   // foreach ( object objCurrent in paobjs )
-			}   // if ( paobjs != null )
+				}   // foreach ( string objCurrent in plstObjs )
+			}   // if ( plstObjs != null )
 
 			return rintMaxLength;
 		}   // private static int MaxStringLength

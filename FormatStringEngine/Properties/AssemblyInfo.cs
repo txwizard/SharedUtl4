@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration ( "" )]
 [assembly: AssemblyCompany ( "David A. Gray" )]
 [assembly: AssemblyProduct ( "Format String Parsing Engine" )]
-[assembly: AssemblyCopyright ( "Copyright © 2014-2016, David A. Gray" )]
+[assembly: AssemblyCopyright ( "Copyright © 2014-2017, David A. Gray" )]
 [assembly: AssemblyTrademark ( "This library is distributed under a three-clause BSD license." )]
 [assembly: AssemblyCulture ( "" )]
 
@@ -32,4 +32,4 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion ( "3.0.131.*" )]
+[assembly: AssemblyVersion ( "3.1.135.*" )]

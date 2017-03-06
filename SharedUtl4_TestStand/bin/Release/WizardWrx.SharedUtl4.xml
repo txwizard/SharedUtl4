@@ -2052,6 +2052,11 @@
             This routine is intended to report the error and exit the calling
             console application, returning the specified value as its exit code.
             </param>
+            <returns>
+            The exit code is passed through, so that the control need not return
+            to the caller, but may exit through Environment.Exit, either
+            directly or indirectly.
+            </returns>
             <remarks>
             This routine never returns control to its caller. Hence, the calling
             routine must capture the count returned by companion method
